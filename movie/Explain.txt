@@ -1,0 +1,25 @@
+JSP  程序页面
+
+index.html 首页
+
+movielist.html     影片子页面
+playtable.html     影片排片
+moviegoseat.html   影片选座位 
+
+cinemalist.html    影院子页面
+cinemtable.html    影院排片
+cinemagoseat.html  影院选座位 
+
+commoncoupon.html  通劵选择页
+commonbuy.html     通券购购买页
+
+couponlist.html          兑换劵选择页
+couponbuy .html         兑换劵购买页
+moviepay.html      支付确认页
+
+共用文件夹
+
+common/404.html       错误页
+common/500.jsp          500
+common/success.jsp      成功页
+common/failed.jsp       失败页
