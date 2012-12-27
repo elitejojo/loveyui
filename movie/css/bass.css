@@ -1,48 +1,4 @@
 ﻿
-/*理念：1. bass 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
-     2. bass 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
-     3. bass 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
-特色：1. 适应中文；2. 基于最新主流浏览器。
-维护： 
-*/
-
-
-
-/** 清除内外边距 **/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,button,input,textarea,p,blockquote,th,td,blockquote { margin:0;padding:0;}
-body { font: 12px/1.6 tahoma, \5b8b\4f53, sans-serif;margin:0 auto; padding:0; }
-/** 重置列表元素 **/
-ul, ol { list-style: none; }
-/** 重置文本格式元素 **/
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
-sup { vertical-align: text-top; } /* 重置，减少对行高的影响 */
-sub { vertical-align: text-bottom; }
-/** 重置表格元素 **/
-table {border-collapse:collapse;border-spacing:0;}
-/* 重置 HTML5 元素 */
-article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
-summary, time, mark, audio, video {display: block; margin: 0;  padding: 0;}
-/** 设置默认字体 **/
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
-small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
-address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
-
-/** 重置表单元素 **/
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
-button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
-button, input, select, textarea /* for ie */ { font: 12px tahoma, arial, \5b8b\4f53, sans-serif;vertical-align:middle;}
-/* 重置标题 */
-h1,h2,h3,h4,h5,h6{font-size:14px;font-weight:700;}
-/* float clearing for IE7 */
-*+html .clearfix{ min-height: 1%;}
-/* float clearing for IE6 */
-* html .clearfix{ height: 1%; overflow: visible;}
-.clearfix{clear: both;font-size: 1px;}
-.fixfloat{zoom:1}
-.fixfloat:after,.clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden}
 
 .left,.f,.right,.r,.l{display:inline;float:left}
 .right,.r{float:right}
