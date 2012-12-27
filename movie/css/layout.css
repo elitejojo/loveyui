@@ -1,7 +1,6 @@
 ﻿/*
 双飞翼栅格布局 Flying Swing Grids Layout
 理念：简单质朴，语义化布局。
-维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
 */
 
 /* 居中 */
@@ -34,7 +33,7 @@
 }
 
 /*
-淘宝采用了 6 种栅格布局：
+采用了 6 种栅格布局：
 950                  .grid-m
 190    750           .grid-s5m0
 750    190           .grid-m0s5
@@ -50,6 +49,9 @@
 .grid-m0s5 .main-wrap { margin-right: 200px; }
 .grid-m0s5 .col-sub { width: 190px; margin-left: -190px; }
 
+.grid-m0e6 .main-wrap { margin-right: 268px; }
+.grid-m0e6 .col-sub { width: 258px; margin-left: -258px; }
+
 /** 三栏布局 **/
 .grid-s5m0e6 .main-wrap { margin: 0 240px 0 200px; }
 .grid-s5m0e6 .col-sub { width: 190px; margin-left: -100%; }
@@ -58,8 +60,4 @@
 .grid-e6m0s5 .main-wrap { margin: 0 200px 0 240px; }
 .grid-e6m0s5 .col-sub { width: 190px; margin-left: -190px; }
 .grid-e6m0s5 .col-extra { width: 230px; margin-left: -100%; }
-
-.grid-m0e6s5 .main-wrap { margin-right: 440px; }
-.grid-m0e6s5 .col-sub { width: 190px; margin-left: -190px; }
-.grid-m0e6s5 .col-extra { width: 230px; margin-left: -430px; }
 

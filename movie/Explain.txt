@@ -2,11 +2,11 @@ JSP  程序页面
 
 index.html 首页
 
-movielist.html     影片子页面
+movielist.html     影片列表页
 playtable.html     影片排片
 moviegoseat.html   影片选座位 
 
-cinemalist.html    影院子页面
+cinemalist.html    影院列表页
 cinemtable.html    影院排片
 cinemagoseat.html  影院选座位 
 
