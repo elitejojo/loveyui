@@ -1,3 +1,6 @@
+/**
+ * 选座事件，鼠标点击座位触发
+ */
 function selectSeat(obj, imgs)
 { //修改选中座位图片
     if (!checkIsLogin())
@@ -339,7 +342,9 @@ function ShowLoading(msg)
     });
 }
 
-
+/**
+ * 弹出错误信息对话框
+ */
 function ShowErrorMessage(msg)
 {
     $.XYTipsWindow(
@@ -399,6 +404,9 @@ function OpenUrl(url)
     }
 }
 
+/**
+ * 修改场次onmouseover事件
+ */
 function ShowOtherSeq()
 {
     $("#div_OtherSeq").show();
@@ -415,11 +423,17 @@ function ShowOtherSeq()
     });
 }
 
+/**
+ * 修改场次onmouseout事件
+ */
 function HideOtherSeq()
 {
     $("#div_OtherSeq").hide();
 }
 
+/**
+ * 修改场次时选择日期onclick事件
+ */
 function ShowSeqDateTime(obj, showDate)
 {
     $("#dtShowSeqDate a").removeAttr("class");
@@ -427,6 +441,7 @@ function ShowSeqDateTime(obj, showDate)
     $("#dd_ShowSeqDate a").hide();
     $("#dd_ShowSeqDate a[showdate='" + showDate + "']").show();
 }
+
 //改变验证码
 function ChangVerifyCode()
 {
@@ -446,6 +461,9 @@ function BindMobileNo()
     bind();
 }
 
+/**
+ * 选座完成后“下一步”onclick事件
+ */
 function validateInput()
 {
     if (!checkIsLogin())
