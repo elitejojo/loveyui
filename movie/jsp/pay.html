@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Sample page</title>
+	<link  rel="stylesheet"  href="../css/movie_tab.css">
+ 	<link rel="stylesheet"  href="../css/bass.css">
+ 	<link rel="stylesheet"  href="../css/layout.css">
+	<link  rel="stylesheet" href="../css/global.css">
+	<link  rel="stylesheet"  href="../css/style_movie.css">
+	<link  rel="stylesheet"  href="../css/style_movie_pay.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/movieTab.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var tab_operObj = $(".tab_item")
+			$("#movie_tab").movieTab({id:"movie_tab",callBack:tabCallBack,operClass:tab_operObj});	
+			function tabCallBack(){
+				//alert("e");		
+			}
+
+		});	
+	</script>
+	
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <!-- page head -->
+    </div>
+    <div id="content">
+		<div id="movie_info" id="movie_info"></div>
+		<!--支付模块-->
+		<div id="pay">
+			<!--优惠-->	
+			<div id="prefer" class="pay_module">	
+					<ul class="movie_tab" id="movie_tab">
+						<li>抵用券</li>
+						<li>优惠券</li>
+						<li>折扣券</li>
+					</ul>
+					<div id="prefer_info">
+						<ul class="tab_item module">
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="bank"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="bank"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="bank"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="bank"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						<div class="tab_item module disn">	
+								<dl>
+									<dt>
+										优惠券密码:
+									</dt>
+									<dd>
+										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/> 
+									</dd>
+									<dd>
+										<input type="button" value="使用" class="use_btn m_top" />	
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										&nbsp;	
+									</dt>
+									<dd class="c_gray">
+										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
+									</dd>
+									<dd>
+										&nbsp;	
+									</dd>
+								</dl>
+						</div>
+						<div class="tab_item module disn">	
+								<dl>
+									<dt>
+										折扣券密码:	
+									</dt>
+									<dd>
+										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/>  
+									</dd>
+									<dd>
+										<input type="button" value="使用" class="use_btn m_top" />	
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										&nbsp;	
+									</dt>
+									<dd class="c_gray">
+										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
+									</dd>
+									<dd>
+										&nbsp;	
+									</dd>
+								</dl>
+						</div>
+					</div>
+					
+			</div>
+			<!--优惠结束-->
+			<!--支付工具-->
+			<div id="pay_tool">
+			</div>
+			<!--支付工具结束-->		
+		</div>
+		<!--支付模块结束-->
+    </div>
+    <div id="footer">
+        <!-- page foot -->
+    </div>
+
+</div>
+
+</body>
+</html>
+		

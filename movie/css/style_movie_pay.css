@@ -1,0 +1,23 @@
+﻿#pay{width:948px;margin:0 auto;min-height:100px;height:auto;border:1px solid #e7e7e7;overflow:hidden;}
+.pay_module{width:100%;background:url("../images/tab_top_back.png") 0 0 no-repeat;min-height:50px;height:auto;padding-top:15px;padding-left:10px;}
+.use_btn{background:url("../images/use_btn.png") 0 0 no-repeat;width:61px;height:26px;color:#fff;text-align:center;border:none;}
+.use_btn_light{background:url("../images/use_btn_light.png") 0 0 no-repeat;}
+.h_30{height:30px;line-height:30px;}
+.w_150{width:150px;}
+.gray_border{border:1px solid  #e7e7e7;}
+.m_top{_margin-top:4px;}
+
+#prefer_info{width:928px;background:#ebf8ff;display:inline-block;min-height:50px;}
+#prefer_info .module{float:left;background:#fff;margin:15px 10px 12px 10px;padding:18px 20px;width:868px;}
+#prefer_info ul li{float:left;display:inline;width:410px;white-space:nowrap;margin:5px 10px;}
+
+#prefer_info ul li dl{width:100%;}
+#prefer_info ul li dl dt{float:left;display:inline-block;padding:0 5px;text-align:center;line-height:46px;height:46px;}
+#prefer_info ul li dl dt input{width:10px;margin-top:18px}/*IE6需要设置input的宽度*/
+#prefer_info ul li dl dd{float:left;display:inline-block;padding:5px 3px;height:46px;line-height:20px;overflow:hidden;}
+#prefer_info ul li dl dd p{width:205px;}
+
+#prefer_info div dl{float:left;width:868px;}
+#prefer_info div dl dt,dd{float:left;display:inline;padding:0 5px;height:30px;line-height:30px;color:#000;}
+#prefer_info div dl dt{text-align:right;padding-top:2px;}
+
