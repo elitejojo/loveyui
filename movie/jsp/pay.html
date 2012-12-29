@@ -13,8 +13,15 @@
 	<script type="text/javascript" src="../js/movieTab.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var tab_operObj = $(".tab_item")
-			$("#movie_tab").movieTab({id:"movie_tab",callBack:tabCallBack,operClass:tab_operObj});	
+			var tab_operObj = $(".prefer_tab_item");
+			$("#movie_tab").movieTab({callBack:tabCallBack,operClass:tab_operObj});	
+			function tabCallBack(){
+				//alert("e");		
+			}
+
+			
+			var pay_tab_operObj = $(".pay_tool_item");
+			$("#pay_tool_tab").movieTab({callBack:tabCallBack,operClass:pay_tab_operObj});	
 			function tabCallBack(){
 				//alert("e");		
 			}
@@ -33,14 +40,14 @@
 		<!--支付模块-->
 		<div id="pay">
 			<!--优惠-->	
-			<div id="prefer" class="pay_module">	
+			<div id="prefer" class="pay_module top_img_back">	
 					<ul class="movie_tab" id="movie_tab">
 						<li>抵用券</li>
 						<li>优惠券</li>
 						<li>折扣券</li>
 					</ul>
 					<div id="prefer_info">
-						<ul class="tab_item module">
+						<ul class="prefer_tab_item module">
 							<li>
 								<dl>
 									<dt>
@@ -90,7 +97,7 @@
 								</dl>
 							</li>
 						</ul>
-						<div class="tab_item module disn">	
+						<div class="prefer_tab_item module disn">	
 								<dl>
 									<dt>
 										优惠券密码:
@@ -114,7 +121,7 @@
 									</dd>
 								</dl>
 						</div>
-						<div class="tab_item module disn">	
+						<div class="prefer_tab_item module disn">	
 								<dl>
 									<dt>
 										折扣券密码:	
@@ -138,18 +145,153 @@
 									</dd>
 								</dl>
 						</div>
+						
 					</div>
-					
-			</div>
+					<div id="prefer_result">
+							<span>商品金额</span>
+							<span id="GOODS_AMT">&nbsp;(&nbsp;110.0&nbsp;)&nbsp;元</span>
+							<span>&nbsp;-&nbsp;</span>
+							<span>优惠金额</span>
+							<span>&nbsp;(&nbsp;10.0&nbsp;)&nbsp;元</span>
+					</div>
+					<div class="gray_img_border"></div>
+						
+					<div id="pay_result">
+							<span>应付总额</span>
+							<span class="c_red">90.00</span>
+							<span>元</span>		
+					</div>
+			</div>	
 			<!--优惠结束-->
 			<!--支付工具-->
-			<div id="pay_tool">
+			<div id="pay_tool" class="pay_module">
+				<ul class="movie_tab" id="pay_tool_tab">
+						<li>现金支付</li>
+						<li>商城货币支付</li>
+						<li>M值或积分支付</li>
+				</ul>
+				<div id="pay_tool_info">
+						<div class="pay_tool_item  pay_tool_list mt20">
+							<div id="pay_plat" class="left pb10 mb10 gray_back w928">
+								<div class="descri">第三方支付平台:</div>
+								<ul class="content">
+									<li>
+										<span>
+											<input type="radio" id="zhb" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="green_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb2" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb3" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb4" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+								</ul>
+							</div>
+							<div id="pay_bank" class="left pb10 mb10 gray_back w928">
+								<div class="descri">网银直接支付:</div>
+								<ul class="content">
+									<li>
+										<span >
+											<input type="radio" id="zhb" name="zhf" />
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="green_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb2" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb3" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb4" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+									<li>
+										<span>
+											<input type="radio" id="zhb5" name="zhf"/>
+										</span>
+										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
+									</li>
+								</ul>
+							</div>		
+						</div>
+						<div class="pay_tool_item disn pb10 mb10 mt20 pl20">	
+							<p class="ml30 f14 c_333 mt10 mb10">欢迎使用移动商城</p>
+							<p class="ml30 f14 c_333  mt10 mb10">合计金额</p>	
+						</div>
+						<div class="pay_tool_item disn pb10 mb10 mt20 pl20">	
+							<p class="ml30 f14 c_333 mt10 mb10">欢迎使用移动商城</p>
+							<p class="ml30 f14 c_333  mt10 mb10">合计金额</p>	
+						</div>
+						
+						<div class="pay_submit">
+								<input type="button" value="确认支付" class="pay_btn fb cw"/>
+						</div>
+					</div>
+					<!--end pay_tool_info-->
+					
 			</div>
-			<!--支付工具结束-->		
+			<!--支付工具结束-->	
+				
 		</div>
+		
 		<!--支付模块结束-->
-    </div>
-    <div id="footer">
+	</div>
+	<div class="gray_img_border w950"></div>
+	<div id="footer" style="height:50px;">
+		
         <!-- page foot -->
     </div>
 
