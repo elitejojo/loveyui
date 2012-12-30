@@ -1,12 +1,11 @@
 ;(function($){
 				$.fn.movieTab = function(options){
 					var _default = {
-						id:"",
 						callBack:function(){return true;},
 						operClass:{}
 					};
 					var _options = $.extend(options,{});
-					var tabs = $("#"+_options.id+" li");
+					var tabs = $("#"+$(this).attr("id")+" li");
 					for(var i = 0 ; i < tabs.length;i++){
 						if( i==0 ){
 							$(tabs[i]).addClass("blue");
