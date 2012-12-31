@@ -1,8 +1,9 @@
 ;(function($){
 				$.fn.movieTab = function(options){
 					var _default = {
-						callBack:function(){return true;},
-						operClass:{}
+						syn:true,//是否同步
+						callBack:function(){return true;},//选中之后的额外事件
+						operClass:{}//操作的对象
 					};
 					var _options = $.extend(options,{});
 					var tabs = $("#"+$(this).attr("id")+" li");
@@ -16,8 +17,12 @@
 						$(tabs[i]).click(function(){
 							resetClass();
 							$(this).removeClass("gray").addClass("blue");
-							$(_options.operClass[this.index]).show();
-							_options.callBack.call(this,arguments);
+							if( _options.syn&&_options.operClass.length>1 ){
+								$(_options.operClass[this.index]).show();
+								_options.callBack.call(this,arguments);
+							}else if( !_options.syn&&_options.operClass.length==1){
+								_options.callBack.call(this,arguments);
+							}	
 						}).mouseover(function(){
 							$(this).css("cursor","pointer");		
 						}).mouseout(function(){
@@ -27,7 +32,9 @@
 					function resetClass(){
 						for(var i = 0 ; i < tabs.length;i++){
 							$(tabs[i]).removeClass("blue").addClass("gray");
-							$(_options.operClass[i]).hide();
+							if( _options.syn&&_options.operClass.length>1 ){
+								$(_options.operClass[i]).hide();
+							}
 						}
 					}
 					

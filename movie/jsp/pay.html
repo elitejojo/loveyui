@@ -13,18 +13,41 @@
 	<script type="text/javascript" src="../js/movieTab.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var tab_operObj = $(".prefer_tab_item");
-			$("#movie_tab").movieTab({callBack:tabCallBack,operClass:tab_operObj});	
-			function tabCallBack(){
-				//alert("e");		
+
+			var PREFER_BANK_AMT = 0;
+			var perfer_tab_operObj = $(".prefer_tab_item");
+			$("#prefer_tab").movieTab({syn:true,callBack:prefertabCallBack,operClass:perfer_tab_operObj});	
+			function prefertabCallBack(){
+						
 			}
 
 			
 			var pay_tab_operObj = $(".pay_tool_item");
-			$("#pay_tool_tab").movieTab({callBack:tabCallBack,operClass:pay_tab_operObj});	
-			function tabCallBack(){
+			$("#pay_tool_tab").movieTab({syn:true,callBack:paytabCallBack,operClass:pay_tab_operObj});	
+			function paytabCallBack(){
 				//alert("e");		
 			}
+			//优惠银行切换
+			$("#prefer_bank_list").hide();
+			$("#pay_tool").show("slow");
+			$("#prefer_pay_sel").toggle(function(){
+				$(this).html("[-]取消支付优惠");
+				$("#prefer_bank_list").show("slow");
+			},function(){
+				$(this).html("[+]支付优惠");
+				$("#prefer_bank_list").hide("slow");
+				$("#pay_tool").show("slow");
+			});
+			//优惠银行事件
+			var preferBanks = $("#prefer_bank_list li dl dt input[type=radio]");
+			for(var i = 0 ; i < preferBanks.length ; i++){
+				$(preferBanks[i]).click(function(){
+					PREFER_BANK_AMT = $(this).val();
+					$("#pay_tool").hide("slow");
+					$("#prefer_bank_amt").html(PREFER_BANK_AMT);
+				});
+			}
+			
 
 		});	
 	</script>
@@ -38,65 +61,39 @@
     <div id="content">
 		<div id="movie_info" id="movie_info"></div>
 		<!--支付模块-->
-		<div id="pay">
-			<!--优惠-->	
-			<div id="prefer" class="pay_module top_img_back">	
-					<ul class="movie_tab" id="movie_tab">
+		<div class="oper_module">
+			<!--oper-->	
+			<div  class="oper_module_item top_img_back">	
+					<ul class="movie_tab" id="prefer_tab">
 						<li>抵用券</li>
 						<li>优惠券</li>
 						<li>折扣券</li>
 					</ul>
-					<div id="prefer_info">
-						<ul class="prefer_tab_item module">
-							<li>
+					<div id="prefer_info" class="green_back">
+						<div class="prefer_tab_item module">	
 								<dl>
 									<dt>
-										<input type="radio" id="icbc" name="bank"/>
+										抵用券密码:
 									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
 									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/> 
+									</dd>
+									<dd>
+										<input type="button" value="使用" class="use_btn m_top" />	
 									</dd>
 								</dl>
-							</li>
-							<li>
 								<dl>
 									<dt>
-										<input type="radio" id="icbc" name="bank"/>
+										&nbsp;	
 									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd class="c_gray">
+										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
+									</dd>
 									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+										&nbsp;	
 									</dd>
 								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="bank"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="bank"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-						</ul>
+						</div>
 						<div class="prefer_tab_item module disn">	
 								<dl>
 									<dt>
@@ -145,14 +142,69 @@
 									</dd>
 								</dl>
 						</div>
-						
+						<div class="module">
+							<a id="prefer_pay_sel" class="f18 c_red fb" href="javascript:;">[+]支付优惠</a>
+						<ul class="prefer_tab_item" id="prefer_bank_list">
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="prefer_bank" value="5"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="prefer_bank" value="10"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="prefer_bank" value="10"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>
+										<input type="radio" id="icbc" name="prefer_bank" value="5"/>
+									</dt>
+									<dd><img src="../images/bank_icbc.png"/></dd>
+									<dd>
+										<p>工行网银客户每单立减10元</p>
+										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						</div>
 					</div>
 					<div id="prefer_result">
 							<span>商品金额</span>
 							<span id="GOODS_AMT">&nbsp;(&nbsp;110.0&nbsp;)&nbsp;元</span>
 							<span>&nbsp;-&nbsp;</span>
+							<span>优惠券</span>
+							<span>&nbsp;(&nbsp;0&nbsp;)&nbsp;元</span>
+							<span>&nbsp;-&nbsp;</span>
 							<span>优惠金额</span>
-							<span>&nbsp;(&nbsp;10.0&nbsp;)&nbsp;元</span>
+							<span>&nbsp;(&nbsp;<label id="prefer_bank_amt">0</label>&nbsp;)&nbsp;元</span>
 					</div>
 					<div class="gray_img_border"></div>
 						
@@ -164,17 +216,17 @@
 			</div>	
 			<!--优惠结束-->
 			<!--支付工具-->
-			<div id="pay_tool" class="pay_module">
+			<div id="pay_tool" class="oper_module_item">
 				<ul class="movie_tab" id="pay_tool_tab">
 						<li>现金支付</li>
 						<li>商城货币支付</li>
 						<li>M值或积分支付</li>
 				</ul>
 				<div id="pay_tool_info">
-						<div class="pay_tool_item  pay_tool_list mt20">
+						<div class="pay_tool_item  item_list mt20 w928">
 							<div id="pay_plat" class="left pb10 mb10 gray_back w928">
-								<div class="descri">第三方支付平台:</div>
-								<ul class="content">
+								<div class="descri l_h50 txt_r w125">第三方支付平台:</div>
+								<ul class="content w768">
 									<li>
 										<span>
 											<input type="radio" id="zhb" name="zhf"/>
@@ -220,8 +272,8 @@
 								</ul>
 							</div>
 							<div id="pay_bank" class="left pb10 mb10 gray_back w928">
-								<div class="descri">网银直接支付:</div>
-								<ul class="content">
+								<div class="descri l_h50 txt_r w125">网银直接支付:</div>
+								<ul class="content w768">
 									<li>
 										<span >
 											<input type="radio" id="zhb" name="zhf" />
@@ -275,16 +327,18 @@
 							<p class="ml30 f14 c_333 mt10 mb10">欢迎使用移动商城</p>
 							<p class="ml30 f14 c_333  mt10 mb10">合计金额</p>	
 						</div>
-						
-						<div class="pay_submit">
-								<input type="button" value="确认支付" class="pay_btn fb cw"/>
-						</div>
+						<input type="hidden" name="GOODS_AMT" id="GOODS_AMT" />
+						<input type="hidden" name="PREFER_AMT" id="PREFER_AMT" />
+						<input type="hidden" name="PAY_AMT" id="PAY_AMT"/>		
 					</div>
+					
 					<!--end pay_tool_info-->
 					
 			</div>
 			<!--支付工具结束-->	
-				
+			<div class="pay_submit">
+								<input type="button" value="确认支付" class="pay_btn fb cw"/>
+					</div>	
 		</div>
 		
 		<!--支付模块结束-->
