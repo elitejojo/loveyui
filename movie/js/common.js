@@ -1,12 +1,12 @@
 /**
- * µ¯³ö¿ò
+ * å¼¹å‡ºæ¡†
  * @param {} msg
  */
 function ShowLoading(msg)
 {
     $.XYTipsWindow(
     {
-        ___title: "ÎÂÜ°ÌáÊ¾",
+        ___title: "æ¸©é¦¨æç¤º",
         ___content: "id:div_loading",
         ___width: "400",
         ___height: "50",
@@ -23,19 +23,19 @@ function ShowLoading(msg)
 }
 
 /**
- * µ¯³ö´íÎóĞÅÏ¢¶Ô»°¿ò
+ * å¼¹å‡ºé”™è¯¯ä¿¡æ¯å¯¹è¯æ¡†
  */
 function ShowErrorMessage(msg)
 {
     $.XYTipsWindow(
     {
-        ___title: "ÎÂÜ°ÌáÊ¾",
+        ___title: "æ¸©é¦¨æç¤º",
         ___content: "id:div_errormsg",
         ___width: "400",
         ___height: "120",
         ___showbg: true,
         ___showTitle: false,
-        ___button: ["È·¶¨"],
+        ___button: ["ç¡®å®š"],
         ___closeBox: false,
         ___fns: function ()
         {
@@ -48,14 +48,14 @@ function ShowErrorMsgAndRedirect(msg, url)
 {
     $.XYTipsWindow(
     {
-        ___title: "ÎÂÜ°ÌáÊ¾",
+        ___title: "æ¸©é¦¨æç¤º",
         ___content: "id:div_errormsg",
         ___width: "400",
         ___height: "120",
         ___showbg: true,
         ___showTitle: false,
         ___closeBox: false,
-        ___button: ["È·¶¨"],
+        ___button: ["ç¡®å®š"],
         ___callback: function ()
         {
             window.location.href = url;
@@ -74,18 +74,18 @@ function OpenUrl(url)
     a.setAttribute("target", "_blank");
     a.setAttribute("id", "ticket_openwin");
     document.body.appendChild(a);
-    if (a.click) a.click(); //ÅĞ¶ÏÊÇ·ñÖ§³Öclick() ÊÂ¼ş
-    else if (a.fireEvent) a.fireEvent('onclick'); //´¥·¢click() ÊÂ¼ş
+    if (a.click) a.click(); //åˆ¤æ–­æ˜¯å¦æ”¯æŒclick() äº‹ä»¶
+    else if (a.fireEvent) a.fireEvent('onclick'); //è§¦å‘click() äº‹ä»¶
     else if (document.createEvent)
     {
-        var evt = document.createEvent("MouseEvents"); //´´½¨click() ÊÂ¼ş
-        evt.initEvent("click", true, true); //³õÊ¼»¯click() ÊÂ¼ş
-        a.dispatchEvent(evt); //·Ö·¢click() ÊÂ¼ş
+        var evt = document.createEvent("MouseEvents"); //åˆ›å»ºclick() äº‹ä»¶
+        evt.initEvent("click", true, true); //åˆå§‹åŒ–click() äº‹ä»¶
+        a.dispatchEvent(evt); //åˆ†å‘click() äº‹ä»¶
     }
 }
 
 
-//ÆÀÂÛÖĞ»ñÈ¡ÆÀÂÛÄ¬ÈÏÍ¼Æ¬
+//è¯„è®ºä¸­è·å–è¯„è®ºé»˜è®¤å›¾ç‰‡
 function getPicturePath(path){
     if ($.trim(path) != "" && $.trim(path) != "0") {
         return "../resource/images/userface/" + path + ".jpg";
@@ -94,11 +94,11 @@ function getPicturePath(path){
     }
 }
 
-//ÆÀÂÛÖĞ»ñÈ¡ÓÃ»§Ãû
+//è¯„è®ºä¸­è·å–ç”¨æˆ·å
 function getUserName(userName) {
     if ($.trim(userName) != "") {
         var reg = /^(13[0-9]|15[0-9]|18[0-9]|14[0-9])\d{8}$/;
-        if (reg.test(userName)) { //ÅĞ¶ÏÊÇ·ñÊÖ»úºÅÂë
+        if (reg.test(userName)) { //åˆ¤æ–­æ˜¯å¦æ‰‹æœºå·ç 
             return userName.substring(0, userName.length - 4) + "****";
         } else {
             return userName;
@@ -107,7 +107,7 @@ function getUserName(userName) {
     return "";
 }
 
-// »ñÈ¡Ö¸¶¨²ÎÊıÖµ
+// è·å–æŒ‡å®šå‚æ•°å€¼
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);

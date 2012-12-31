@@ -1,13 +1,13 @@
 /**
  * 选座事件，鼠标点击座位触发
  */
-function selectSeat(obj, imgs)
+function changeImg(obj, imgs)
 { //修改选中座位图片
-    if (!checkIsLogin())
-    { //快速登录 
-        return false;
-    }
-    else
+//    if (!checkIsLogin()) //TODO
+//    { //快速登录 
+//        return false;
+//    }
+//    else
     {
         var $_l = $(obj).parent().prev().find("a"); //获取上一个座位 
         var $_r = $(obj).parent().next().find("a"); //获取下一个座位 
@@ -23,28 +23,28 @@ function selectSeat(obj, imgs)
                     if ($_l_2.html() == null || $_l_2.hasClass("selected"))
                     {
                         $(obj).removeClass("selected");
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                         $_l.removeClass("selected");
-                        $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                        $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
                         $("#ul_SeatList li").each(function ()
                         {
                             if ($(this).attr("id") == $_l.attr("id"))
                             {
                                 $(this).remove();
-                                $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                                $("#" + imgs).attr("src", "../images/free.png");
                             }
                         });
                     }
                     else
                     {
                         $(obj).removeClass("selected"); //移除选中状态
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                     }
                 }
                 else
                 {
                     $(obj).removeClass("selected"); //移除选中状态
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                 }
             }
             else if (!$_l.hasClass("selected") && $_l.html() != null && $_r.hasClass("selected"))
@@ -57,28 +57,28 @@ function selectSeat(obj, imgs)
                     if ($_r_2.html() == null || $_r_2.hasClass("selected"))
                     {
                         $(obj).removeClass("selected");
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                         $_r.removeClass("selected");
-                        $("#img_" + $_r.attr("id")).attr("src", "../img/selectSeat/free.png");
+                        $("#img_" + $_r.attr("id")).attr("src", "../images/free.png");
                         $("#ul_SeatList li").each(function ()
                         {
                             if ($(this).attr("id") == $_r.attr("id"))
                             {
                                 $(this).remove();
-                                $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                                $("#" + imgs).attr("src", "../images/free.png");
                             }
                         });
                     }
                     else
                     {
                         $(obj).removeClass("selected");
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                     }
                 }
                 else
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                 }
             }
             else if ($_l.hasClass("selected") && $_r.hasClass("selected"))
@@ -86,39 +86,39 @@ function selectSeat(obj, imgs)
                 if ($_l.hasClass("check") && !$_r.hasClass("check"))
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                     $_r.removeClass("selected");
-                    $("#img_" + $_r.attr("id")).attr("src", "../img/selectSeat/free.png");
+                    $("#img_" + $_r.attr("id")).attr("src", "../images/free.png");
 
                     $("#ul_SeatList li").each(function ()
                     {
                         if ($(this).attr("id") == $_r.attr("id"))
                         {
                             $(this).remove();
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                         }
                     });
                 }
                 else if (!$_l.hasClass("check") && $_r.hasClass("check"))
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                     $_l.removeClass("selected");
-                    $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                    $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
 
                     $("#ul_SeatList li").each(function ()
                     {
                         if ($(this).attr("id") == $_l.attr("id"))
                         {
                             $(this).remove();
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                         }
                     });
                 }
                 else if ($_l.hasClass("check") && $_r.hasClass("check"))
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                 }
                 else if (!$_l.hasClass("check") && !$_r.hasClass("check"))
                 {
@@ -129,32 +129,32 @@ function selectSeat(obj, imgs)
                         if ($_r_2.html() == null || $_r_2.hasClass("selected"))
                         { //右边+2有人或者为边缘
                             $(obj).removeClass("selected");
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                             $_r.removeClass("selected");
-                            $("#img_" + $_r.attr("id")).attr("src", "../img/selectSeat/free.png");
+                            $("#img_" + $_r.attr("id")).attr("src", "../images/free.png");
                             $_l.removeClass("selected");
-                            $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                            $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
                             $("#ul_SeatList li").each(function ()
                             {
                                 if ($(this).attr("id") == $_l.attr("id") || $(this).attr("id") == $_r.attr("id"))
                                 {
                                     $(this).remove();
-                                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                                    $("#" + imgs).attr("src", "../images/free.png");
                                 }
                             });
                         }
                         else
                         {
                             $(obj).removeClass("selected");
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                             $_l.removeClass("selected");
-                            $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                            $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
                             $("#ul_SeatList li").each(function ()
                             {
                                 if ($(this).attr("id") == $_l.attr("id"))
                                 {
                                     $(this).remove();
-                                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                                    $("#" + imgs).attr("src", "../images/free.png");
                                 }
                             });
                         }
@@ -162,15 +162,15 @@ function selectSeat(obj, imgs)
                     else
                     {
                         $(obj).removeClass("selected");
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                         $_l.removeClass("selected");
-                        $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                        $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
                         $("#ul_SeatList li").each(function ()
                         {
                             if ($(this).attr("id") == $_l.attr("id"))
                             {
                                 $(this).remove();
-                                $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                                $("#" + imgs).attr("src", "../images/free.png");
                             }
                         });
                     }
@@ -181,21 +181,21 @@ function selectSeat(obj, imgs)
                 if ($_l.hasClass("check"))
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                 }
                 else
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                     $_l.removeClass("selected");
-                    $("#img_" + $_l.attr("id")).attr("src", "../img/selectSeat/free.png");
+                    $("#img_" + $_l.attr("id")).attr("src", "../images/free.png");
 
                     $("#ul_SeatList li").each(function ()
                     {
                         if ($(this).attr("id") == $_l.attr("id"))
                         {
                             $(this).remove();
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                         }
                     });
                 }
@@ -205,21 +205,21 @@ function selectSeat(obj, imgs)
                 if ($_r.hasClass("check"))
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                 }
                 else
                 {
                     $(obj).removeClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                    $("#" + imgs).attr("src", "../images/free.png");
                     $_r.removeClass("selected");
-                    $("#img_" + $_r.attr("id")).attr("src", "../img/selectSeat/free.png");
+                    $("#img_" + $_r.attr("id")).attr("src", "../images/free.png");
 
                     $("#ul_SeatList li").each(function ()
                     {
                         if ($(this).attr("id") == $_r.attr("id"))
                         {
                             $(this).remove();
-                            $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                            $("#" + imgs).attr("src", "../images/free.png");
                         }
                     });
                 }
@@ -227,7 +227,7 @@ function selectSeat(obj, imgs)
             else if (($_r.html() != null && !$_r.hasClass("selected") && !$_r.hasClass("selected") && $_r.html() != null) || (!$_r.hasClass("selected") && $_r.html() == null) || ($_r.html() == null && !$_r.hasClass("selected")))
             {
                 $(obj).removeClass("selected");
-                $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                $("#" + imgs).attr("src", "../images/free.png");
             }
             if (!$(obj).hasClass("selected"))
             {
@@ -236,7 +236,7 @@ function selectSeat(obj, imgs)
                     if ($(this).attr("id") == $(obj).attr("id"))
                     {
                         $(this).remove();
-                        $("#" + imgs).attr("src", "../img/selectSeat/free.png");
+                        $("#" + imgs).attr("src", "../images/free.png");
                     }
                 });
             }
@@ -250,7 +250,7 @@ function selectSeat(obj, imgs)
             else if ($_l.html() == null || $_r.html() == null || $_l.hasClass("selected") || $_r.hasClass("selected"))
             {
                 $(obj).addClass("selected");
-                $("#" + imgs).attr("src", "../img/selectSeat/lock.png");
+                $("#" + imgs).attr("src", "../images/lock.png");
             }
             else if (!$_l.hasClass("selected") && !$_r.hasClass("selected"))
             {
@@ -259,7 +259,7 @@ function selectSeat(obj, imgs)
                 if ($_l_1.html() != null && $_r_1.html() != null && !$_l_1.hasClass("selected") && !$_r_1.hasClass("selected"))
                 {
                     $(obj).addClass("selected");
-                    $("#" + imgs).attr("src", "../img/selectSeat/lock.png");
+                    $("#" + imgs).attr("src", "../images/lock.png");
                 }
                 else
                 {
@@ -272,7 +272,7 @@ function selectSeat(obj, imgs)
         {
             var _html = "<li class='fl' id='" + $(obj).attr("seatno") + "'><b class='csz'>" + $(obj).attr("title") + "</b></li>"; //座位文本text 
             $("#ul_SeatList").append(_html);
-            $("#" + imgs).attr("src", "../img/selectSeat/lock.png");
+            $("#" + imgs).attr("src", "../images/lock.png");
         }
 
         var selectedVal = "";
@@ -318,89 +318,6 @@ function selectSeat(obj, imgs)
             $("#p_SeatCount").show();
             $("#spanEmptySeat").hide();
         }
-    }
-}
-
-
-function ShowLoading(msg)
-{
-    $.XYTipsWindow(
-    {
-        ___title: "温馨提示",
-        ___content: "id:div_loading",
-        ___width: "400",
-        ___height: "50",
-        ___showTitle: true,
-        ___showBoxbg: true,
-        ___showbg: true,
-        ___windowBgColor: "#000",
-        ___closeBox: false,
-        ___fns: function ()
-        {
-            $("#p_loading").html(msg);
-        }
-    });
-}
-
-/**
- * 弹出错误信息对话框
- */
-function ShowErrorMessage(msg)
-{
-    $.XYTipsWindow(
-    {
-        ___title: "温馨提示",
-        ___content: "id:div_errormsg",
-        ___width: "400",
-        ___height: "120",
-        ___showbg: true,
-        ___showTitle: false,
-        ___button: ["确定"],
-        ___closeBox: false,
-        ___fns: function ()
-        {
-            $("#p_msg").html(msg);
-        }
-    });
-}
-
-function ShowErrorMsgAndRedirect(msg, url)
-{
-    $.XYTipsWindow(
-    {
-        ___title: "温馨提示",
-        ___content: "id:div_errormsg",
-        ___width: "400",
-        ___height: "120",
-        ___showbg: true,
-        ___showTitle: false,
-        ___closeBox: false,
-        ___button: ["确定"],
-        ___callback: function ()
-        {
-            window.location.href = url;
-        },
-        ___fns: function ()
-        {
-            $("#p_msg").html(msg);
-        }
-    });
-}
-
-function OpenUrl(url)
-{
-    var a = document.createElement("a");
-    a.setAttribute("href", url);
-    a.setAttribute("target", "_blank");
-    a.setAttribute("id", "ticket_openwin");
-    document.body.appendChild(a);
-    if (a.click) a.click(); //判断是否支持click() 事件
-    else if (a.fireEvent) a.fireEvent('onclick'); //触发click() 事件
-    else if (document.createEvent)
-    {
-        var evt = document.createEvent("MouseEvents"); //创建click() 事件
-        evt.initEvent("click", true, true); //初始化click() 事件
-        a.dispatchEvent(evt); //分发click() 事件
     }
 }
 
@@ -466,10 +383,10 @@ function BindMobileNo()
  */
 function validateInput()
 {
-    if (!checkIsLogin())
-    { //快速登录
-        return false;
-    }
+//    if (!checkIsLogin()) //TODO
+//    { //快速登录
+//        return false;
+//    }
     var seatCount = $("#ul_SeatList li").length;
     if (seatCount <= 0)
     {
