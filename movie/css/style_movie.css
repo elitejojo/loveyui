@@ -3,4 +3,532 @@
 .hotActivity .hd_ht{width:190px;height:40px;background:#ff6600 url(../images/bg/lefthdbg.png) no-repeat bottom;
 text-align: center;}
 .hotActivity h3{color: #fff9d9;}
-.hotActivity  .hot_bd{ background:#fff2d3;height:100%; display: block; }
+.hotActivity  .hot_bd{ background:#fff2d3;height:100%; display:inline-block }
+.hotlist{padding: 5px; width: 180px}
+.hotlist_hd{float: left;width:70px;}
+.hotlist_bd{ padding-left: 80px;}
+.hotlist_bd h3 {background: none; font-size: 14px;height: auto;margin: 0 0 5px;}
+.hotlist_bd h3  a{color: #2E2926}
+.anchor span {
+    background-color:	#18A2E0;
+    border-radius: 2px 2px 2px 2px;
+    color: #336699;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    width: 72px;
+}
+.anchor span a{color: #fff}
+
+
+
+/*  xuanzuo*/
+.x_tip_info{ width:100%; float:left}
+
+
+/*  dd  */
+
+@charset "utf-8";
+/*by Denglh 2011-01-27*/
+.XYTipsWindow .boxLoading {
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -45px;
+	margin-top: -15px;
+	left: 50%;
+	top: 50%;
+	color: #f00;
+}
+.XYTipsWindow .boxLoading{
+	width:28px;
+	margin-left: -14px;
+	background:url("../images/loading.gif") no-repeat;
+	text-indent: -999em;
+	text-align: center;
+}
+.XYTipsWindow .boxTitle,
+.XYTipsWindow .boxTitle span,
+.XYTipsWindow .boxTitle span.hover,
+.XYTipsWindow .loadinglayer,
+.XYTipsWindow .tipslayer,
+.XYTipsWindow .arrowLeft,
+.XYTipsWindow .colseBtn,
+.XYTipsWindow .boxError em,
+.XYTipsWindow .dialogBtn,
+.XYTipsWindow .dialogBtn.hover{
+	background-image: url("../images/ico.png");
+	background-repeat: no-repeat;
+}
+.XYTipsWindow .boxTitle {
+	position: relative;
+	border: 1px solid #A6C9E1;
+	border-bottom: none;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 30px;
+	line-height: 30px;
+}
+.XYTipsWindow .boxTitle h3 {
+	float: left;
+	font-weight: normal;
+	color: #666;
+	font-size: 14px;
+	margin: 0;
+	text-indent: 10px;
+}
+.XYTipsWindow .boxTitle span {
+	position: absolute;
+	width: 10px;
+	background-position: -80px -40px;
+	text-indent: -10em;
+	right: 10px;
+	top: 10px;
+	height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.XYTipsWindow .boxTitle span.hover { background-position: -90px -40px; }
+.XYTipsWindow .loadinglayer{ line-height: 40px; background-position: 0 -100px!important; }
+.XYTipsWindow .tipslayer{
+	line-height: 20px;
+	text-align: left;
+}
+.XYTipsWindow .arrowLeft{
+	position: absolute;
+	width: 8px;
+	height: 16px;
+	background-position: -20px -170px;
+	text-indent: -9999em;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .colseBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	background-position: -55px -170px;
+	text-indent: -9999em;
+	cursor: pointer;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .boxError{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -15px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	color: #f00;
+}
+.XYTipsWindow .boxError em{
+	float: left;
+	width:30px;
+	height: 30px;
+	background-position: -35px -140px;
+}
+.XYTipsWindow .dialogBtn{
+	margin: 5px 5px 0 0;
+	width:80px;
+	height:35px;
+	background-position: 0 -30px;
+	border:none;
+	color:#333;
+}
+.XYTipsWindow .dialogBtn.hover{ background-position: 0 -65px; }
+.XYTipsWindow.shadow {
+	box-shadow:2px 2px 5px #C0BBB5;
+	-moz-box-shadow: 2px 2px 5px #C0BBB5;
+	-webkit-box-shadow:2px 2px 5px #C0BBB5;
+}
+/****共用常用样式****/
+.fl{float:left;}
+.flie6{float:left; _float:none;}
+.flie67{float:left; _float:none; +float:none;}
+.fr{float:right;}
+.center{text-align:center;}
+.none{display:none;}
+.clear{clear:both;}
+.Button_d{width:80px; height:32px; background:#90c302; border:0; font-size:14px; font-weight:600; color:#fff; text-align:center; display:block; line-height:32px;}
+.Button_d:hover{background:#a42536; color:#fff;}
+
+
+.Button_x{width:87px; height:24px; padding-top:2px; background:#90c302; border:0; color:#fff; text-align:center; cursor: pointer; display:block; line-height:24px; font-weight:bold}
+.Button_x:hover{background:#a42536; color:#fff;}
+
+.Button_x2{height:24px; background:#90c302; border:0; color:#fff; text-align:center; cursor: pointer; display:block; line-height:24px; font-size:12px; padding:0 8px; font-weight:bold;}
+.Button_x2:hover{background:#a42536; color:#fff;}
+
+.Button_x3{height:32px; background:#90c302; border:0; color:#fff; text-align:center; cursor: pointer; display:block; line-height:24px; font-size:12px; padding:0 8px; font-weight:bold;}
+.Button_x3:hover{background:#a42536; color:#fff;}
+f14{font-size:14px;}
+.f16{font-family:"微软雅黑"; font-size:16px; font-weight:600;}
+.f20{font-family:"微软雅黑"; font-size:20px; font-weight:600; color:#333;}
+.f22{font-family:"Century Gothic"; font-size:22px; font-weight:500; color:#555;}
+.f24{font-family:"Century Gothic"; font-size:22px; font-weight:500; color:#999;}
+.csz{color:#a42536;}
+.f12{font-size:12px;}
+
+
+/****内页快捷购票样式****/
+.Shortcut{height:230px; background:#efefef; position:relative; z-index:100; margin-bottom:25px;}
+.Shortcut h2{text-align:left; padding:10px 0 0 15px;}
+.Shortcut .Select{width:196px; padding:15px 0 15px 40px; position:relative; z-index:999;}
+
+.Shortcut .Select .aSelect{width:140px; height:26px; float:left; display:block;  border:solid 1px #ccc; line-height:30px; float:left; text-align:left; padding-left:35px; margin:0px 10px 20px 0;}
+.Shortcut .Select .aSelect .fl2{float:left; width:105px;}
+.Shortcut .Select .aSelect .fr2{width:30px; height:26px; border-left:solid 1px #ccc; float:right; background:url(../images/xxjiant.png) no-repeat 4px 3px;}
+.Shortcut .Select .xyp{background:url(../images/Shortcut_biao.png) no-repeat 5px 3px #fff;}
+.Shortcut .Select .xyy{background:url(../images/Shortcut_biao.png) no-repeat -173px 3px #fff;}
+.Shortcut .Select .xcc{background:url(../images/Shortcut_biao.png) no-repeat -352px 3px #fff;}
+.Shortcut .Select .Button_d{float:left; margin-left:35px; _margin-left:18px;}
+
+/****内页选择影片样式****/
+.Select_Moviebai{background:#fff; width:175px; height:13px; line-height:0; font-size:0; position:absolute; top:-13px; left:193px; border-left:solid 1px #ccc; border-right:solid 1px #ccc;}
+.Select_Movie{width:369px; background:#fff; border:solid 1px #ccc; position:absolute; z-index:1000; float:left; top:55px; left:-154px; line-height:24px;}
+.Select_Movie3{width:369px; padding:10px 0; text-align:left;}
+.Select_Movie3 p{width:369px;}
+.Select_Movie3 p a{padding:1px 4px; margin:0 5px; float:left; width:105px; color:#333;}
+.Select_Movie3 p .sel,
+.Select_Movie3 p a:hover{color:#FFFFFF; background:#90c302;}
+
+/****内页选择影院样式****/
+.Select_Cinemabai{background:#fff; width:175px; height:13px; line-height:0; font-size:0; position:absolute; top:-13px; left:193px; border-left:solid 1px #ccc; border-right:solid 1px #ccc;}
+.Select_Cinema{width:369px; background:#fff; border:solid 1px #ccc; position:absolute; z-index:1000; float:left; top:103px; left:-154px; line-height:24px;}
+.Select_Cinema3{width:369px; padding:10px 0; text-align:left;}
+.Select_Cinema3 dl{width:350px;}
+.Select_Cinema3 dt{width:60px; text-align:right; }
+.Select_Cinema3 dd{width:290px;}
+.Select_Cinema3 dd a{padding:1px 3px; margin:0 2px; float:left; width:135px; color:#333;}
+.Select_Cinema3 dd .sel,
+.Select_Cinema3 dd a:hover{color:#FFFFFF; background:#90c302;}
+
+/****内页选择场次样式****/
+.Select_Screeningsbai{background:#fff; width:175px; height:13px; line-height:0; font-size:0; position:absolute; top:-13px; left:193px; border-left:solid 1px #ccc; border-right:solid 1px #ccc;}
+.Select_Screenings{width:369px; background:#fff; border:solid 1px #ccc; position:absolute; z-index:1000; float:left; top:151px; left:-154px; line-height:24px;}
+.Select_Screenings3{width:369px; padding:10px 0; text-align:left;}
+.Select_Screenings3 dl{width:350px;}
+.Select_Screenings3 dt{width:350px; font-weight:bold;}
+.Select_Screenings3 dt a{color:#658b00}
+.Select_Screenings3 dd{width:350px;}
+.Select_Screenings3 a{padding:1px 5px; margin:0 5px; float:left; color:#333;}
+.Select_Screenings3 .sel,
+.Select_Screenings3 a:hover{color:#FFFFFF; background:#90c302;}
+
+
+
+
+/****右侧影片列表样式****/
+.cinema h2{height:37px; line-height:37px; text-indent:10px; font-size:14px; text-align:left; background:#a42536; color:#fff;}
+.cinema h2 a{padding-right:5px; font-size:12px; font-weight:normal;}
+.cinema h2 a:hover{ color:#90c302;}
+.cinema .cinema_nr{border:solid 1px #ccc; width:257px; text-align:left; line-height:24px; padding-bottom:15px;}
+.cinema_nr dl{width:235px; margin-top:15px; padding-left:15px;}
+.cinema_nr dl dt{width:71px;}
+.cinema_nr dl dd{width:150px; text-align:left; line-height:24px;}
+.cinema_nr dl dd p{width:150px;}
+.cinema_nr dl dd .title{margin-bottom:5px;}
+
+/****右侧活动样式****/
+.activity h2{ height:34px; line-height:34px; text-indent:10px; font-size:14px; text-align:left; background:#90c302; color:#fff;}
+.activity .activity_nr{border:solid 1px #ccc; padding:11px; width:235px; height:232px; text-align:left; line-height:22px;}
+.activity .activity_nr img{padding-bottom:6px;}
+.activity .activity_nr .Hide{width:235px;}
+.activity .activity_nr .Button_x{margin-top:8px;}
+
+/****影院选择样式****/
+.Cinema_select{width:621px; line-height:28px; padding:5px 10px; background:#efefef; text-align:left;}
+.Cinema_select dl{width:621px;}
+.Cinema_select dt{width:45px;}
+.Cinema_select dd{width:575px;}
+.Cinema_select a{padding:3px; margin:0 2px; white-space:nowrap;}
+.Cinema_select .sel,
+.Cinema_select a:hover{color:#FFFFFF; background:#90c302;}
+.Cinema_selectpop1{position:relative; z-index:0;}
+
+/****影片列表样式****/
+.Prompt{width:621px; height:40px; line-height:40px; padding:0 10px; background:#efefef; text-align:left;}
+.movie_list{margin-top:20px; border-bottom:solid 1px #efefef; padding-bottom:20px;}
+.movie_list .movie_listimg{width:170px; height:240px;}
+.movie_list ul{width:451px; text-align:left;}
+.movie_list ul li{width:451px; line-height:28px;}
+.movie_list ul .name{border-bottom:dashed 1px #efefef; padding-bottom:5px; margin-bottom:5px;}
+.movie_list ul .name dl{width:451px;}
+.movie_list ul .name dl dt{width:257px;}
+.movie_list ul .name dl dd{width:194px; text-align:right;}
+.movie_list ul li .expansion{width:180px;}
+.movie_list ul li .margin{margin-right:33px;}
+.movie_list ul .Button{padding-top:5px;}
+.movie_list ul .Button2,
+.movie_list ul .Button dl{width:437px;}
+.movie_list ul .pop{padding-top:10px; position:relative; z-index:0;}
+
+/****影院列表样式****/
+.movie_list .Cinema_listimg{width:170px; height:170px;}
+.movie_list ul .Cinema_name dl dt{width:351px;}
+.movie_list ul .Cinema_name dl dd{width:100px; text-align:right;}
+.movie_list ul .Bus dl{width:451px;}
+.movie_list ul .Bus dl dt{width:70px;}
+.movie_list ul .Bus dl dd{width:381px;}
+.movie_list ul .Bus dl .bus2{width:381px; height:54px; overflow:hidden;}
+
+.movie_list ul .hot_movie{width:431px; background:#efefef; height:auto; padding:3px 10px; margin:8px 0;}
+.movie_list ul .hot_movie dt{width:70px;}
+.movie_list ul .hot_movie dd{width:360px; height:auto; overflow:hidden; display: block; word-break: normal;word-wrap: break-word;}
+.movie_list ul .hot_movie dd a{padding:0 3px; white-space:nowrap; margin-right:5px; float:left;}
+
+.movie_list ul .hot_buyInfo{width:417px; background:#efefef; height:28px; line-height:28px; padding:5px 10px; margin:8px 0;}
+.movie_list ul .hot_buyInfo .Button_x2{width:40px;}
+
+
+/****影院详情页电影块样式****/
+.detail_name{border-bottom:dashed 1px #ccc; padding:10px 0 10px 0; height:28px; line-height:28px; z-index:1; position:relative;}
+.detail_name .detail_nameti1{width:527px; text-align:left;}
+.detail_name .detail_nameti2{width:100px; text-align:right; height:28px;}
+.detail_name .detail_nameti1 .Price_zi{padding:0 10px;}
+.detail_name .expansion2{width:77px; float:left;}
+.detail_name .detail_pop{width:110px; position:relative; z-index:1000;}
+
+.detail_list {margin-top:10px; border:0; padding-bottom:25px;}
+.detail_list .Bus{line-height:25px;}
+.detail_list .function{border:solid 1px #ccc; width:425px; margin-top:5px; padding:2px 5px; position:relative;}
+.detail_list .function span{float:left;}
+.detail_list .function .c1{background:url(../images/index_bj.png) no-repeat 0px -396px; width:50px; padding-left:30px;}
+.detail_list .function .c2{background:url(../images/index_bj.png) no-repeat -90px -396px; width:35px; padding-left:30px;}
+.detail_list .function .c3{background:url(../images/index_bj.png) no-repeat -175px -396px; width:40px; padding-left:50px;}
+.detail_list .function .c4{background:url(../images/index_bj.png) no-repeat -290px -396px; width:50px; padding-left:30px;}
+.detail_list .function .c5{background:url(../images/index_bj.png) no-repeat -390px -396px; width:50px; padding-left:30px;}
+
+/****小提示****/
+.Cinema_selectpopbai{background:url(../images/index_bj.png) no-repeat -918px -207px; width:17px; height:11px; line-height:0; font-size:0; position:absolute; top:60px; left:30px;}
+.Cinema_selectpop{width:280px; padding:5px 10px; height:50px; background:#fff; border:solid 1px #ccc; position:absolute; z-index:1000; float:left; top:-65px; left:198px; line-height:24px; text-align:left;}
+
+.function_selectpop3{top:-48px; left:2px; width:410px; height:20px; line-height:20px;}
+.function_selectpop4{top:-44px; left:6px; width:430px; height:30px;}
+.function_selectpopbai2{top:30px;}
+
+
+/****影片弹出影院样式****/
+.pop_cinemabai{background:#fff; width:200px; height:10px; line-height:0; font-size:0; position:absolute; top:-10px; left:189px; border-left:solid 1px #ccc; border-right:solid 1px #ccc; z-index:900;}
+.pop_cinemabai2{background:#fff; width:200px; height:10px; line-height:0; font-size:0; position:absolute; top:-10px; left:424px; border-left:solid 1px #a7c8e5; border-right:solid 1px #ccc; z-index:900;}
+.pop_cinema{width:625px; background:#fff; border:solid 1px #ccc; position:absolute; z-index:1000; float:left; top:50px; left:-190px; line-height:24px;}
+.pop_cinema dl{width:610px; padding:10px 0 10px 15px; text-align:left; line-height:28px;}
+.pop_cinema dt{width:590px; border-bottom:dashed 1px #efefef; padding-bottom:10px; margin-bottom:10px;}
+.pop_cinema dt a{padding:3px 5px; margin:0 5px;}
+.pop_cinema dd{width:590px; }
+.pop_cinema dd a{padding:1px 3px; margin:0 5px; float:left; width:130px; color:#333;}
+.pop_cinema dl .sel,
+.pop_cinema dl a:hover{color:#FFFFFF; background:#90c302;}
+
+.pop_cinemade{left:13px; top:44px;}
+.pop_cinemade2{left:-1px; _left:13px; +left:13Zpx;  top:44px;}
+.pop_cinemadebai{width:97px; left:527px;}
+
+/****模块抬头样式****/
+.module_title{width:641px; height:40px; line-height:40px; background:#efefef; text-align:left; }
+.module_title a{float:left; height:40px; display:block; text-align:center; line-height:40px; background:#efefef; position:relative; z-index:0; padding:0 30px;}
+.module_title .sel{background:#a42536; color:#fff;}
+
+
+/****排期选择影片样式****/
+.Cinema_select2{width:619px; line-height:30px; padding:5px 10px; border:solid 1px #efefef; margin-top:20px; text-align:left; float:left; _float:left;}
+.Cinema_select2 dl{width:619px;}
+.Cinema_select2 dt{width:70px; text-align:right;}
+.Cinema_select2 dd{width:549px; word-wrap: break-word; word-break:normal; display:block;margin-top:2px;}
+.Cinema_select2 a{padding:5px; margin:0 5px; white-space:nowrap; color:#333; float:left;line-height:20px;}
+.Cinema_select2 .sel,
+.Cinema_select2 a:hover{color:#FFFFFF; background:#90c302;}
+
+/****影院详情页影片样式****/
+.Cinema_Movies{width:619px; margin:20px 0 0 0; background:#efefef; padding:10px; float:left; _float:none;}
+.Cinema_Movies .Video_Information_img{width:71px; height:100px; margin-top:5px;}
+.Cinema_Movies ul{width:520px; text-align:left;}
+.Cinema_Movies ul li{width:520px; line-height:26px; }
+
+.Cinema_Movies .Video_Information_img2{width:41px; margin:10px 0 0 10px;}
+
+
+/****影院详情页排期列表样式****/
+.Movies_Select_bgdiv{width:641px; float:left; margin-top:10px;}
+.Movies_Select_bg{width:641px; float:left; border-bottom:1px dashed #efefef; position:relative; z-index:0;}
+.Movies_Select_bg2{border-bottom:2px solid #efefef; margin-bottom:8px; line-height:18px; font-size:14px; color:#333;}
+.Movies_Select_bg li{line-height:24px; vertical-align:middle; padding:10px 0; float:left;}
+.Movies_Select_bg .c1{width:90px;}
+.Movies_Select_bg .c2{width:130px;}
+.Movies_Select_bg .c3{width:100px;}
+.Movies_Select_bg .c4{width:120px;}
+.Movies_Select_bg .c6{width:120px;}
+.Movies_Select_bg .c5{width:70px;}
+.Movies_Select_bg .c7{width:200px; text-align:left;}
+.Movies_Select_bg .c8{width:70px;}
+.Movies_Select_bg .c9{width:90px;}
+.Movies_Select_bg .c10{width:90px;}
+.Movies_Select_bg .c11{width:96px;}
+.Movies_Select_bg .c12{width:70px; margin-left:10px;}
+
+/****详情页评论样式****/
+.detail_comment{width:641px; margin-top:20px;}
+.detail_comment h2{width:621px; padding:6px 10px; line-height:28px; font-size:14px; font-weight:normal; background:#efefef;}
+.detail_comment dl{width:641px; margin-top:12px; padding-bottom:5px; border-bottom:solid 1px #efefef;}
+.detail_comment dl dt{width:50px; padding-top:8px;}
+.detail_comment dl dd p,
+.detail_comment dl dd{width:580px; text-align:left; line-height:24px; padding-bottom:5px;}
+
+
+
+/****发表评论样式****/
+.post_comment{width:641px; margin-top:20px;}
+.post_comment h2{width:641px; line-height:30px; padding-bottom:10px; text-align:left;}
+.post_comment dl{width:641px; line-height:32px; padding:5px 0;}
+.post_comment dl dt{width:55px; text-align:right;}
+.post_comment dl dd{width:585px; text-align:left;}
+.post_comment dl dd .input{width:250px;}
+.post_comment dl dd img{vertical-align:middle;}
+.post_comment dl dd .textarea{width:560px;}
+
+/****剧照样式****/
+.stills{width:641px; text-align:center; margin-top:20px;}
+.stills2{width:621px; margin-top:20px; padding:10px; background:#efefef;}
+.stills2 .stills_left{width:27px; height:37px; background:url(../images/index_bj.png) -664px -602px; margin-top:12px;}
+.stills2 .stills_right{width:27px; height:37px; background:url(../images/index_bj.png) -704px -602px; margin-top:12px;}
+.stills2 ul{width:560px; overflow:hidden; height:64px; margin-left:3px;}
+.stills2 ul li{width:68px; height:64px; float:left;}
+.stills2 ul li a img{width:60px; height:60px; float:left;}
+.stills2 ul li a{width:60px; height:60px; float:left; display:block; border:solid 2px #efefef;}
+.stills2 ul li .sel,
+.stills2 ul li a:hover{border:solid 2px #e65522;}
+
+
+/****预告片样式****/
+.stills3{width:621px; margin-top:20px; padding:10px; background:#efefef;}
+.stills3 .stills_left{width:27px; height:37px; background:url(../images/index_bj.png) -664px -602px; margin-top:22px;}
+.stills3 .stills_right{width:27px; height:37px; background:url(../images/index_bj.png) -704px -602px; margin-top:22px;}
+.stills3 ul{width:530px; overflow:hidden; height:110px; margin-left:23px;}
+.stills3 ul li{width:130px; height:110px; float:left;}
+.stills3 ul li a img{width:110px; height:80px; float:left;}
+.stills3 ul li a{width:110px; height:80px; float:left; display:block; border:solid 2px #efefef;}
+.stills3 ul li .sel,
+.stills3 ul li a:hover{border:solid 2px #e65522;}
+.stills3 ul li p{line-height:28px; height:28px; width:110px;}
+
+/****买票步骤样式****/
+.step{width:920px; height:49px; background:#efefef; line-height:49px;}
+.step li{float:left; height:49px; text-align:left; padding-left:10px; overflow:hidden;}
+.step .c1{width:220px; background:url(../images/index_bj.png) 197px -433px;}
+.step .c2{width:220px; background:#95c60d url(../images/index_bj.png) 217px -484px; _background:#95c60d url(../images/index_bj.png) 218px -484px; +background:#95c60d url(../images/index_bj.png) 218px -484px;  color:#fff; padding-right:20px; font-weight:bold;}
+.step .c2 .f24{color:#fff;}
+.step .c4{width:220px; background:url(../images/index_bj.png) 191px -535px;}
+.step .c5{width:200px;}
+.step .c14 .f24,
+.step .c15 .f24,
+.step .c11 .f24,
+.step .c9 .f24,
+.step .c2 .f24{color:#fff;}
+
+.step .c14{width:220px; background:#95c60d; color:#fff; font-weight:bold;}
+
+
+
+.goseat_conxz2{width:519px; top:75px; left:316px; z-index:800;}
+.goseat_conxzbai{background:#fff; width:110px; height:13px; line-height:0; font-size:0; position:absolute; top:-13px; left:408px; border-left:solid 1px #a7c8e5; border-right:solid 1px #a7c8e5;}
+.goseat_conxz{width:519px; top:70px; left:381px; line-height:24px; z-index:900;}
+
+/****选座信息样式****/
+.goseat_con{width:898px; text-align:left; border:solid 1px #efefef; padding:5px 10px; line-height:28px; position:relative; z-index:1;}
+.goseat_con .expansion2{width:90px;}
+.goseat_con .goseat_confl{width:780px;}
+
+/****座位图样式****/
+.seat_ms{background:#efefef; height:22px; padding:6px 0; width:641px;}
+.seat_ms img{vertical-align:middle; padding:0 5px 0 20px;}
+.seat_title{width:641px; background:url(../images/index_bj.png) 15px -593px; height:52px; margin-top:15px;}
+.seat_tis{background:#efefef; width:327px; margin-left:150px; _margin-left:75px; line-height:28px;}
+.seat_tu{width:621px; overflow:auto; padding:15px 10px;}
+
+/****座位图右边样式****/
+.seat_ni{width:239px; padding:5px 10px; background:#efefef;}
+.seat_ni h2{width:239px;  line-height:32px;}
+.seat_ni p{width:239px; line-height:24px; text-align:left;}
+.seat_ni ul{width:239px; margin-bottom:10px;}
+.seat_ni ul li{width:110px; height:24px; line-height:24px; border:solid 1px #ccc; background:#fff; margin-top:5px;margin-left:5px;}
+
+.seat_shuru{width:222px; padding:0 15px 15px 20px; background:#fff; border:solid 1px #ccc; margin-top:15px;}
+.seat_shuru ul{width:222px;}
+.seat_shuru li{text-align:left; width:214px; float:left; line-height:24px; padding-top:10px;}
+.seat_shuru .input{width:200px; float:left;}
+.seat_shuru .input2{width:105px; margin-right:10px; _margin-right:5px;}
+.seat_tisi{width:239px; padding:10px 10px; background:#efefef; margin-top:15px; text-align:left;}
+.seat_tisi .fl{margin-top:10px;}
+.seat_tisi .fr{width:190px;}
+
+/****确认订单页面样式****/
+.buyInfo_title{width:920px; border-bottom:dashed 1px #efefef; text-align:left; line-height:28px; padding-bottom:10px;}
+.buyInfo_ts{width:226px; height:230px; _height:225px; +height:225px; padding:5px 10px; background:#efefef; margin-top:10px;}
+.buyInfo_ts2{height:160px; _height:155px; +height:155px;}
+.buyInfo_ts h2{width:226px;  line-height:48px; text-align:left;}
+.buyInfo_ts p{line-height:28px; text-align:left; padding-bottom:10px;}
+.buyInfo_ts .seat_tisi{width:226px; padding:20px 0; text-align:left; border-top:solid 1px #fff;}
+.buyInfo_ts .seat_tisi .fl{margin-top:10px;}
+.buyInfo_ts .seat_tisi .fr{width:180px;}
+.buyinfo_kyh2{width:898px; height:28px; line-height:28px; border:solid 1px #ccc; text-align:left; padding:6px 10px; position:relative;}
+.buyinfo_kyh2 .prompt_bj{margin:0 10px 0 20px;}
+
+
+
+/****使用卡券享受优惠样式****/
+.buyinfo_title{width:920px; height:40px; line-height:40px; background:#efefef; text-align:left;}
+.buyinfo_title a{float:left; height:40px; display:block; text-align:center; line-height:40px; position:relative; z-index:0; padding:0 30px;}
+.buyinfo_title .sel{background:#a42536; color:#fff;}
+.buyinfo_kyh{width:898px; height:40px; line-height:40px; border:solid 1px #efefef; margin-top:20px; text-align:left; padding:0 10px; position:relative;}
+.kuan{width:920px; padding-top:20px; line-height:30px; float:left; _float:none; }
+.kuan .input{width:200px; margin-right:15px;}
+.kuan .input2{width:130px;}
+.kuan p{padding-left:20px;}
+
+.buyinfo_kyh3{width:898px; line-height:28px; border:solid 1px #ccc; text-align:left; padding:5px 10px; margin-top:20px;}
+
+/****支付样式****/
+.buyinfo_title2{margin-top:25px;}
+.buyinfo_title2 .sel span{right:50px;}
+.sel_pay{width:910px; margin:25px 0; text-align:left;}
+.sel_pay a{ display:inline-block; width:90px;}
+.sel_pay a img{width:119px; height:42px; margin-left:8px;}
+.sel_pay label{width:180px; height:36px; display:inline-block; position:relative; float:left;}
+.sel_pay label a,
+.sel_pay label a:hover{ text-decoration:none;}
+.sel_pay label input{ margin-right:0; line-height:36px;}
+.sel_pay label img{position:absolute; left:16px; top:-4px;}
+
+
+/****订单成功页面样式****/
+.success_kuan{width:878px; padding:10px 20px; border:solid 1px #e7edf3;}
+.success_kuan .fl{padding-left:50px;}
+.success_kuan .fr{width:680px; text-align:left; line-height:28px;}
+
+/****查看地图页面样式****/
+.map{width:625px; height:475px; border:solid 1px #a1c5e4;}
+.map2{width:246px; text-align:left; line-height:28px;}
+.map2 dl{width:246px; padding:5px 0;}
+.map2 dl dt{width:65px; text-align:right;}
+.map2 dl dd{width:175px; line-height:18px; padding-top:5px;}
+.map3{border-top:solid 1px #e7edf3; margin-top:20px; padding-top:10px;}
+
+
+/****活动列表样式****/
+.actions_list li{ margin-bottom:15px; border-bottom:1px dashed #ccc; padding-bottom:10px;}
+.actions_list li p{ width:426px;margin-left:15px; line-height:27px;}
+.actions_content p{line-height:22px;}
+
+
+
+
+
