@@ -59,31 +59,74 @@
 
 #pay_tool_info{min-height:50px;padding-top:5px;min-height:395px;}
 
-.playList_module{float:left;width:758px;}
- .listHeader{float:left;width:758px;height:50px;}
-.playList_module .listTableHeader{float:left;display:inline-block;width:758px;height:34px;line-height:34px;background:#F2F2F2;}
-.playList_module .listTableHeader span{float:left;border-right:1px solid  #BBBBBB;text-align:center;min-width:86px;height:34px;line-height:34px;}
 
-.playList_module .listTableBody{position:relative;width:758px;height:304px;background:#fff;z-index:0;overflow:hidden;clear:both;}
-.playList_module .listTableBody table{position:relative;_position:absolute;float:left;width:100%;height:304px;text-align:center;overflow:hidden;z-index:0;}
-.playList_module .listTableBody table tr{height:60px;line-height:60px;}
-.playList_module .listTableBody table .odd{background:#FDF9EE;border-width:1px 0;border-style:solid;border-color:#FBECCB;}
+
+
+
+
+/*放映列表*/
+.E0_bl{border-left:1px solid #E0E0E0;}
+.E0_bt{border-top:1px solid #E0E0E0;}
+.E0_bb{border-bottom:1px solid #E0E0E0;}
+.E0_br{border-right:1px solid #E0E0E0;}
+
+.play_tab_con{padding-left:76px;clear:both;}
+.play_tab_con dt,dd{float:left;display:inline;}
+.play_tab_con dt{text-align: right;margin-top:2px;width: 66px;color: #999999;margin-left:-76px;}
+.play_tab_con dd{height: 100%;overflow: hidden;}
+.play_tab_con a {
+    color: #333333;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    line-height: 23px;
+    margin: 2px 3px 2px 0;
+    overflow: hidden;
+    padding: 0 5px;
+    text-decoration: none !important;
+}
+.play_tab_con a.select,.play_tab_con a:hover {
+    background: none repeat scroll 0 0 #4fa7ff;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+}
+.con_innerBox{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #A9E1FC;
+    overflow: hidden;
+    padding: 10px 10px 8px;
+	
+}
+
+.con_innerBox a {
+    display: block;
+    float: left;
+    margin-right: 4px;
+    width: 114px;
+	text-align:center;
+}
+
+
+.play_data_header{height:50px;}
+.play_data_table{width:100%;}
+.play_data_table .data_table_header{display:inline-block;width:100%;height:34px;line-height:34px;background:#F2F2F2;}
+.play_data_table .data_table_header span{display:inline-block;border-right:1px solid  #BBBBBB;text-align:center;min-width:86px;height:34px;line-height:34px;}
+
+.play_data_table .data_table_body{position:relative;width:100%;height:304px;background:#fff;z-index:0;overflow:hidden;clear:both;}
+.play_data_table .data_table_body table{position:relative;_position:absolute;float:left;width:100%;height:304px;text-align:center;overflow:hidden;z-index:0;}
+.play_data_table .data_table_body table tr{height:60px;line-height:60px;}
+.play_data_table .data_table_body table .odd{background:#FDF9EE;border-width:1px 0;border-style:solid;border-color:#FBECCB;}
 
 
 .scroller{float:right;display:none;width:14px;overflow:hidden;height:304px;}
-.scroller .decrease,.scroller .increase,.scroller .handle,.handle .handleL,.handle .handleR,.handle .handleC, .handle{background:url("../images/scoller_bg.png")}
+.scroller .decrease,.scroller .increase,.scroller .handle,.handle .handleL,.handle .handleR,.handle .handleC, .handle{background:url("../images/scoller_bg.png");}
 .scroller .decrease{background-position:0 -88px;}
 .scroller .scroll{background: none repeat scroll 0 0 #EEEEEE;height: 278px;width: 14px;z-index: 98;}
-.scroller .scroll .handle{background-position: 0 -113px;cursor: pointer;display: block;height: 100%;position: relative;width: 14px;
-}
+.scroller .scroll .handle{background-position: 0 -113px;cursor: pointer;display: block;height: 100%;position: relative;width: 14px;}
 .scroller .increase{background-position:0 -100px;}
-.decrease, .increase {cursor: pointer;display: block;height: 13px; overflow: hidden;/*position: absolute;*/width: 14px;z-index: 99;
-}
-.handle .handleL { background-position: 0 bottom;height: 99%;overflow: hidden;padding: 2px 0;width: 14px;
-}
-.handle .handleR {background-position: right -117px;height: 100%; width: 14px;
-}
-.handle .handleC {background-position: 0 center;height: 100%;width: 14px;
-}
+.decrease, .increase {cursor: pointer;display: block;height: 13px; overflow: hidden;/*position: absolute;*/width: 14px;z-index: 99;}
+.handle .handleL { background-position: 0 bottom;height: 99%;overflow: hidden;padding: 2px 0;width: 14px;}
+.handle .handleR {background-position: right -117px;height: 100%; width: 14px;}
+.handle .handleC {background-position: 0 center;height: 100%;width: 14px;}
 .playList_module .listBotoom{float:left;width:758px;height:50px;background:#F2F2F2;}
 

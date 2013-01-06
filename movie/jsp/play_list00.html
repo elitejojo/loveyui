@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Sample page</title>
+	<link  rel="stylesheet"  href="../css/movie_tab.css">
+ 	<link rel="stylesheet"  href="../css/bass.css">
+ 	<link rel="stylesheet"  href="../css/layout.css">
+	<link  rel="stylesheet" href="../css/global.css">
+	<link  rel="stylesheet"  href="../css/style_movie.css">
+	<link  rel="stylesheet"  href="../css/style_movie_pay.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/movieTab.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+<script type="text/javascript">
+	;(function($){
+		/**
+		  @required  : jquery.js,jquery-ui.js,jquery.mousewheel.js,*.css
+ 		 */		  
+		$.fn.movieScroller = function(options){
+			var _default = {
+				speed:20,//齿轮滚动速度		
+			};			
+			var _options = $.extend(_default,options||{});
+			//初始化滚动条的长度
+			var tr_h = $($("#listTableBodyData tr")[0]).height();
+			var m_sroll_h = 5*tr_h+4;
+			var trs = $("#listTableBodyData tr").length;
+			if(trs<=5){
+				$($(".scroller")[0]).hide();
+				$("#listTableBodyData").width($(this).width());
+			}else{
+				$( "#listTableBodyData" ).width($(this).width()-15);
+				$(".scroller").show();	
+				$( ".handle" ).height(m_sroll_h*(5/trs));	
+			}
+			//初始化滚动条的拖拽
+			$($( ".handle" )[0]).draggable({ axis: "y",containment: "parent",drag:resetPlayPos});
+			//拖动事件，修改播放列表的层的显示位置
+			function resetPlayPos(){
+				var sroll_length = parseInt($($( ".handle" )[0]).offset().top)-parseInt($( $(".decrease")[0] ).offset().top);
+				$("#listTableBodyData").offset({top:parseInt($($( ".scroll" )[0]).offset().top)-sroll_length});
+				
+			}
+			//滚动的最高点
+			var min_top = parseInt($($( ".decrease" )[0]).offset().top)+$($( ".decrease" )[0]).height();
+			//滚动的最低点
+			var max_top = parseInt($($( ".increase" )[0]).offset().top)-$($( ".handle" )[0]).height();
+			$("#listTableBodyData").mousewheel(function(event, delta, deltaX, deltaY){
+				var tem_top ;
+				if( delta>0 ){
+					tem_top = Math.max((parseInt($($( ".handle" )[0]).offset().top)-_options.speed),min_top);
+				}else{
+					tem_top = Math.min(parseInt($($( ".handle" )[0]).offset().top)+_options.speed,max_top);	
+				}
+				$(".handle").offset({top:tem_top});	
+				resetPlayPos();	
+				return false;			
+			});		
+		}				
+	})(jQuery);	
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var tab_operObj = $(".playList_tab_item");
+			$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});	
+			function tabCallBack(){
+					
+			}	
+			$("#play_list_info").movieScroller();			
+		});
+		
+	</script>
+	
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <!-- page head -->
+    </div>
+    <div id="content">
+		<div class="movie_info" id="movie_info"></div>
+		<!--播放列表模块-->
+		<div class="oper_module">
+			<!--m-->	
+			<div  class="oper_module_item top_img_back w750">	
+					<ul class="movie_tab w750" id="playDate_tab">
+						<li>12月18日&nbsp;今天</li>
+						<li>12月19日&nbsp;周三</li>
+						<li>12月20日&nbsp;周四</li>
+						<li>12月21日&nbsp;周五</li>
+						<li>12月22日&nbsp;周六</li>
+					</ul>
+					<div  class="item_list  green_back pb20 pl10 w750">
+						<div class="descri txt_l pl20 w55">选择区域:</div>
+							
+						<ul class="playList_tab_item content w600">
+							<li>
+								<a href="javascript;">解放西路万达</a>		
+							</li>
+							<li>
+								<a href="javascript;">河西万达</a>
+							</li>
+							<li>
+								<a href="javascript;">河西万达</a>
+							</li>
+							<li>
+								<a href="javascript;">河西万达</a>
+							</li>
+						</ul>
+						<div class="descri txt_l pl20 w55 clearfix"></div>
+						<ul class="content white_back w600 c_border">
+							<li>
+								<a href="javascript;">五角场万达</a>		
+							</li>
+							<li>
+								<a href="javascript;">五角场万达</a>
+							</li>
+							<li>
+								<a href="javascript;">五角场万达</a>
+							</li>
+							<li>
+								<a href="javascript;">五角场万达</a>
+							</li>
+						</ul>
+					</div>
+				
+			</div>	
+			<div id="playList">
+				<div class="listHeader">test</div>
+				<div class="playList_module mt20 ml10 mb20 b_border">	
+					
+					<div class="listTableHeader  b_border_b">
+						<span class="w86">放映时间</span>	
+						<span class="w110">语言版本</span>	
+						<span class="w110">放映厅</span>	
+						<span class="w110">现价(元)</span>	
+						<span class="w130">说明</span>	
+					</div>
+					<div class="listTableBody" id="play_list_info">
+						<table  id="listTableBodyData" class="scroll_content" >
+							<tr>
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr class="odd">
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr>
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr class="odd">
+							<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr>
+							<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+				            <tr>
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr class="odd">
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr>
+								<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr class="odd">
+							<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+							<tr>
+							<td class="w86" >111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w110">111111<td>
+								<td class="w130">111111<td>
+								<td>22222<td>
+							</tr>
+						</table>
+						<div class="scroller vertical" id="listTableScroll">
+							<span class="decrease"></span>
+							<div class="scroll">
+									<div class="handle">
+										<div class="handleL">
+											<div class="handleR">
+												<div class="handleC"></div>
+											</div>	
+										</div>
+									</div>
+							</div>
+							<span class="increase"></span>
+						</div>
+					</div>
+				
+					<div class="listBotoom b_border_t"></div>
+				</div>	
+			</div>	
+		</div>
+		<!--支付模块结束-->
+    </div>
+    <div id="footer">
+        <!-- page foot -->
+    </div>
+
+</div>
+
+</body>
+</html>
+		

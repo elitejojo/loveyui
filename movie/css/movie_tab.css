@@ -1,4 +1,4 @@
-.movie_tab{width:100%;height:27px;border-bottom:2px solid #4fa7ff;padding-left:10px}
+.movie_tab{height:27px;border-bottom:2px solid #4fa7ff;padding-left:10px}
 .movie_tab .blue{background:url("../images/tab_back_blue.gif") 0 0 no-repeat;color:#fff;font-weight:700;}
 .movie_tab .gray{background:url("../images/tab_back_gray.gif") 0 0 no-repeat;}
-.movie_tab li{float:left;display:inline-block;width:114px;height:27px;line-height:27px;text-align:center;margin:0px 5px;font-size:14px;}
+.movie_tab span{display:inline-block;width:114px;height:27px;line-height:27px;text-align:center;margin:0px 5px;font-size:14px;}

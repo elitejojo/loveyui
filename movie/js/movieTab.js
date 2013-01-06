@@ -6,7 +6,7 @@
 						operClass:{}//操作的对象
 					};
 					var _options = $.extend(options,{});
-					var tabs = $("#"+$(this).attr("id")+" li");
+					var tabs = $("#"+$(this).attr("id")+" span");
 					for(var i = 0 ; i < tabs.length;i++){
 						if( i==0 ){
 							$(tabs[i]).addClass("blue");
