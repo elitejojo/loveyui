@@ -56,7 +56,7 @@
 #prefer_info ul li dl dd p{width:205px;}
 
 #prefer_info div dl{float:left;width:868px;}
-#prefer_info div dl dt,dd{float:left;display:inline;padding:0 5px;height:30px;line-height:30px;color:#000;}
+#prefer_info div dl dt,dd{float:left;display:inline;padding:0 5px;color:#000;}
 #prefer_info div dl dt{text-align:right;padding-top:2px;}
 
 #prefer_result{color:#333;font-weight:700;font-size:16px;text-align:left;padding:20px 30px;}
@@ -109,6 +109,7 @@
 .movie_list ul li{width:100%;display:inline-block;padding:15px 0px;margin:0px 15px 0px 10px;}
 .movie_list ul .odd{border-top:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;background:#EDF6FF}
 .movie_pic{display:inline-block;width:120px;padding:0px 10px 10px 0px;height:160px;line-height:160px;margin-left:10px}
+.movie_pic img{ width:120px; height:160px; font-size:0}
 .movie_text{float:right;display:inline-block;width:580px;padding-left;10px;}
 .movie_list ul li .b_dash{display:inline-block;border-bottom:1px dashed  #EED4B9;height:1px;line-height:1px;width:100%;}
 .movie_text .title .descri{height:14px;height:14px;}
@@ -131,7 +132,7 @@ em { font-style: normal;}
 .tabs span{	display: inline-block; float: left;font-weight:700;font-size:14px;text-align:center;padding:4px 15px;
 }
 .tabs .circleRoundder{ float:left; display:inline-block;background-color: #FF820A;font-weight:700;color:#fff;-webkit-border-radius: 15px;	-moz-border-radius: 15px; cursor:pointer}
-
+.tabs .circleRoundder a{ color:#FFF}
 .pager{margin:5px auto;}
 .pager a{display:inline-block;width:25px;height:25px;line-height:25px;background-color: #FF820A;font-weight:700;color:#fff;-webkit-border-radius:5px;	-moz-border-radius:5px;text-align:center;}
 .pager .off{width:60px;}

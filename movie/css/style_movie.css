@@ -237,13 +237,12 @@ f14{font-size:14px;}
 .activity .activity_nr .Button_x{margin-top:8px;}
 
 /****影院选择样式****/
-.Cinema_select{width:621px; line-height:28px; padding:5px 10px; background:#efefef; text-align:left;}
-.Cinema_select dl{width:621px;}
-.Cinema_select dt{width:45px;}
-.Cinema_select dd{width:575px;}
-.Cinema_select a{padding:3px; margin:0 2px; white-space:nowrap;}
-.Cinema_select .sel,
-.Cinema_select a:hover{color:#FFFFFF; background:#90c302;}
+.Cinema_select{width:710px; line-height:28px; margin:8px;padding:5px 10px; background:#efefef; text-align:left;}
+.Cinema_select dl{width:710px; padding:5px}
+.Cinema_select dt{}
+.Cinema_select dd{}
+.Cinema_select a{padding: 0 3px; margin:0 2px; white-space:nowrap; color:#636363}
+.Cinema_select .sel,.Cinema_select a:hover{color:#FFFFFF; background:#ff800d; text-decoration:none}
 .Cinema_selectpop1{position:relative; z-index:0;}
 
 /****影片列表样式****/

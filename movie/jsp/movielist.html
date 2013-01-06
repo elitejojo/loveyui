@@ -13,8 +13,8 @@
 	$(document).ready(function(){
 	$("#play_stage ul li").click(function(){
 $(this).addClass("circleRoundder").siblings().removeClass("circleRoundder");
-var index=$("#play_stage ul li").index(this);
-$(".tab_box .tab ").eq(index).show().siblings().hide();
+//var index=$("#play_stage ul li").index(this);
+//$(".tab_box .tab ").eq(index).show().siblings().hide();
 })			
 	});
 </script>
@@ -36,16 +36,13 @@ $(".tab_box .tab ").eq(index).show().siblings().hide();
                     <div class="col-main">
                         <div class="main-wrap">
 							<div class="movie_list_container top_img_back E0_bl E0_bt">
-								<div class="E0_bb tabs mr10 pl20 mb10 pb4" id="play_stage">
+								<div class="E0_bb tabs pl20 mb10 pb4" id="play_stage">
                                 
                                 <ul>
-                                    <li class="circleRoundder"><span>正在上映</span></li>
-                                    <li><span>即将上映</span></li>
+                                     <li class="circleRoundder round"><span>所有影片</span></li>
+                                    <li class="round"><span>所有影院</span></li>
                                   </ul>
-						<!--			<a  href="#" >
-										<span class="circleRoundder">正在上映</span>
-									</a>
-									<a href="#"><span >即将上映</span></a>-->
+			
 								</div>
 		<div class="tab_box">				
 							
@@ -66,6 +63,8 @@ $(".tab_box .tab ").eq(index).show().siblings().hide();
 											</select>	
 										</div>
 									</div>
+                                    <!--   END HD-->
+                                    
 									<div class="clearfix"></div>
 									<div id="movie_list" class="movie_list pl10 pr10">
 										<div class="play_stage_tab_item ">
@@ -75,6 +74,9 @@ $(".tab_box .tab ").eq(index).show().siblings().hide();
 														<a href="#">
 															<img src="../images/movie001.jpg" width="120" height="160" >
 														</a>
+                                                        <span class="go_select_seat fr">
+																	<input type="button" value="去选座" id="go_select_seat"/>
+																</span>
 													</div>
 													<div class="movie_text">
 														<div class="title">
@@ -117,13 +119,12 @@ $(".tab_box .tab ").eq(index).show().siblings().hide();
 																<span class="movie_price">
 																		<sup class="f14 c_orange fb">￥8</sup><sub class="f14 c_orange">.3元</sub><span  class="c_gray">起</span>
 																</span>
-																<span class="go_select_seat fr">
-																	<input type="button" value="去选座" id="go_select_seat"/>
-																</span>			
+																			
 															</div>			
 														</div>
 													</div>
 												</li>
+                                                
 												<li class="movie_info odd">
 													<div class="movie_pic">
 														<a href="#">
@@ -250,10 +251,10 @@ $(".tab_box .tab ").eq(index).show().siblings().hide();
 								<!--end play_stage_tab_items-->
                  
                  </div>
-                 <div class=" tab hide" title="即将上映">
+              <!--   <div class=" tab hide" title="即将上映">
                  
                  	即将上映
-                 </div>
+                 </div>-->
              
         </div>
                             		

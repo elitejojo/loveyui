@@ -2,23 +2,308 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Sample page</title>
- <link rel="alternate" href="../css/bootstrap.css">
+	<title>影片列表页</title>
+ <link rel="stylesheet"  href="../css/bass.css">
+ <link rel="stylesheet"  href="../css/layout.css">
+ <link  rel="stylesheet" href="../css/global.css">
+ <link  rel="stylesheet"  href="../css/style_movie.css">
+  <link  rel="stylesheet"  href="../css/movie.css">
+ <script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("#play_stage ul li").click(function(){
+$(this).addClass("circleRoundder").siblings().removeClass("circleRoundder");
+//var index=$("#play_stage ul li").index(this);
+//$(".tab_box .tab ").eq(index).show().siblings().hide();
+})			
+	});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<div id="page">
-    <div id="header">
-        <!-- page head -->
-    </div>
-    <div id="content">
-        <!-- page content -->
-    </div>
-    <div id="footer">
-        <!-- page foot -->
+<div id="page"  class="w950">
+
+        <div id="header" class="w950">
+            <img src="../images/common/Process_two.png" width="950" height="59" alt="流程">
+    
+        </div>
+    <div id="content"  class="mt10">
+
+        <!-- 通栏：.grid-m -->
+    	
+        <div class="layout grid-m0s5">
+                    <div class="col-main">
+                        <div class="main-wrap">
+							<div class="movie_list_container top_img_back E0_bl E0_bt">
+								<div class="E0_bb tabs  pl20 mb10 pb4" id="play_stage">
+                                
+                                <ul>
+                                    <li class="circleRoundder round"><span>所有影院</span></li>
+                                    <li class="round"><span>所有影片</span></li>
+                                  </ul>
+								</div>
+		<div class="tab_box">				
+        	<div class="tab" >
+                 <div class="play_stage_tab_items">
+									<div class="movie_list_heard">
+                                        <div class="Cinema_select fl">
+                                            <dl class="fl">
+                                                <dt onclick="text()" class="fl"><b>选择区域：</b></dt>
+                                                <dd class="fl">
+                                                <a class="fl" id="areaAll" onclick="getChangeValue(0,this,'AreaCinema',null)" name="AreaCinema" href="javascript:void(0);">全部<span class="c999 f12">(<span id="ctl00_ContentPlaceHolder1_labAreaCinemaCount">7</span>)</span></a>
+                                                     <span id="ctl00_ContentPlaceHolder1_labAreaCinema"><a id="area440103" onclick="getChangeValue(440103,this,&quot;AreaCinema&quot;,2)" class="fl" name="AreaCinema" href="javascript:void(0)">荔湾区<span class="c999 f12">(2)</span></a><a id="area440105" onclick="getChangeValue(440105,this,&quot;AreaCinema&quot;,1)" class="fl" name="AreaCinema" href="javascript:void(0)">海珠区<span class="c999 f12">(1)</span></a><a id="area440106" onclick="getChangeValue(440106,this,&quot;AreaCinema&quot;,1)" class="fl" name="AreaCinema" href="javascript:void(0)">天河区<span class="c999 f12">(1)</span></a><a id="area440111" onclick="getChangeValue(440111,this,&quot;AreaCinema&quot;,2)" class="fl" name="AreaCinema" href="javascript:void(0)">白云区<span class="c999 f12">(2)</span></a><a id="area440112" onclick="getChangeValue(440112,this,&quot;AreaCinema&quot;,1)" class="fl sel" name="AreaCinema" href="javascript:void(0)">黄埔区<span class="c999 f12">(1)</span></a></span>
+                                                </dd>
+                                            </dl>
+                                 </div>
+                                    <!--  区域end-->
+                                    
+                                    
+										<div class="total_movie ml10 c_gray">
+											共<span class="c_orange">26</span>部影片
+										</div>
+										<div class="sort_movie_oper mr10">
+											<label for="sort_id" class="c_gray">排序:</label>
+											<select name="sort_id" id="sort_id">
+												<option value="0">默认(按排片)</option>
+												<option value="1">按日期(由近到远)</option>
+									
+											</select>	
+										</div>
+									</div>
+                                    <!--   END HD-->
+                                    
+									<div class="clearfix"></div>
+									<div id="movie_list" class="movie_list pl10 pr10">
+										<div class="play_stage_tab_item ">
+											<ul>
+												<li class="movie_info">
+													<div class="movie_pic">
+														<a href="#">
+															<img src="../images/movie001.jpg" width="120" height="160" >
+														</a>
+													</div>
+													<div class="movie_text">
+														<div class="title">
+															<h2 class="movie_name">
+																<a href="#">
+																	<b class="c_333">人在囧途之泰囧</b>		
+																</a>
+															</h2>
+															&nbsp;&nbsp;
+															<sub class="fb c_gray ">2D</sub>
+															<div class="descri">
+																<span class="descri_text c_gray">
+																	精彩看点:"风景如画，狼狈不堪"
+																</span>	
+																<span class="more">
+																	<em class="initRating">
+																		<span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="no"></span>
+																	</em>
+																	<sup class="f14 c_orange fb">8</sup><sub class="f14 c_orange">.3</sub>
+																</span>
+																<span class="b_dash"></span>
+																<table class="movie_info_descri">
+																	<tr>
+																		<td class="w65 c_gray">上映时间:</td>
+																		<td class="w220">2012年12月12日</td>
+																		<td class="w65 c_gray">片长:</td>
+																		<td class="w220">102分钟</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">电影类型:</td>
+																		<td class="w220">喜剧</td>
+																		<td class="w65 c_gray">语言:</td>
+																		<td class="w220">普通话</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">导演/主演:</td>
+																		<td class="w220">徐铮/徐铮/王宝强</td>
+																	</tr>
+																</table>
+																<span class="movie_price">
+																		<sup class="f14 c_orange fb">￥8</sup><sub class="f14 c_orange">.3元</sub><span  class="c_gray">起</span>
+																</span>
+																<span class="go_select_seat fr">
+																	<input type="button" value="去选座" id="go_select_seat"/>
+																</span>			
+															</div>			
+														</div>
+													</div>
+												</li>
+                                                
+												<li class="movie_info odd">
+													<div class="movie_pic">
+														<a href="#">
+															<img src="../images/movie001.jpg" width="120" height="160" >
+														</a>
+													</div>
+													<div class="movie_text">
+														<div class="title">
+															<h2 class="movie_name">
+																<a href="#">
+																	<b class="c_333">人在囧途之泰囧</b>		
+																</a>
+															</h2>
+															&nbsp;&nbsp;
+															<sub class="fb c_gray ">2D</sub>
+															<div class="descri">
+																<span class="descri_text c_gray">
+																	精彩看点:"风景如画，狼狈不堪"
+																</span>	
+																<span class="more">
+																	<em class="initRating">
+																		<span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="no"></span>
+																	</em>
+																	<sup class="f14 c_orange fb">8</sup><sub class="f14 c_orange">.3</sub>
+																</span>
+																<span class="b_dash"></span>
+																<table class="movie_info_descri">
+																	<tr>
+																		<td class="w65 c_gray">上映时间:</td>
+																		<td class="w220">2012年12月12日</td>
+																		<td class="w65 c_gray">片长:</td>
+																		<td class="w220">102分钟</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">电影类型:</td>
+																		<td class="w220">喜剧</td>
+																		<td class="w65 c_gray">语言:</td>
+																		<td class="w220">普通话</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">导演/主演:</td>
+																		<td class="w220">徐铮/徐铮/王宝强</td>
+																	</tr>
+																</table>
+																<span class="movie_price">
+																		<sup class="f14 c_orange fb">8</sup><sub class="f14 c_orange">.3元</sub><span  class="c_gray">起</span>
+																</span>
+																<span class="go_select_seat fr">
+																	<input type="button" value="去选座" id="go_select_seat"/>
+																</span>			
+															</div>			
+														</div>
+													</div>
+												</li>
+												<li class="movie_info">
+													<div class="movie_pic">
+														<a href="#">
+															<img src="../images/movie001.jpg" width="120" height="160" >
+														</a>
+													</div>
+													<div class="movie_text">
+														<div class="title">
+															<h2 class="movie_name">
+																<a href="#">
+																	<b class="c_333">人在囧途之泰囧</b>		
+																</a>
+															</h2>
+															&nbsp;&nbsp;
+															<sub class="fb c_gray ">2D</sub>
+															<div class="descri">
+																<span class="descri_text c_gray">
+																	精彩看点:"风景如画，狼狈不堪"
+																</span>	
+																<span class="more">
+																	<em class="initRating">
+																		<span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="all"></span><span class="half"></span><span class="no"></span>
+																	</em>
+																	<sup class="f14 c_orange fb">8</sup><sub class="f14 c_orange">.3</sub>
+																</span>
+																<span class="b_dash"></span>
+																<table class="movie_info_descri">
+																	<tr>
+																		<td class="w65 c_gray">上映时间:</td>
+																		<td class="w220">2012年12月12日</td>
+																		<td class="w65 c_gray">片长:</td>
+																		<td class="w220">102分钟</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">电影类型:</td>
+																		<td class="w220">喜剧</td>
+																		<td class="w65 c_gray">语言:</td>
+																		<td class="w220">普通话</td>
+																	</tr>
+																	<tr>
+																		<td class="w65 c_gray">导演/主演:</td>
+																		<td class="w220">徐铮/徐铮/王宝强</td>
+																	</tr>
+																</table>
+																<span class="movie_price">
+																		<sup class="f14 c_orange fb">8</sup><sub class="f14 c_orange">.3元</sub><span  class="c_gray">起</span>
+																</span>
+																<span class="go_select_seat fr">
+																	<input type="button" value="去选座" id="go_select_seat"/>
+																</span>			
+															</div>			
+														</div>
+													</div>
+												</li>
+											</ul>	
+										</div>
+										<div class="pager">
+											<a href="javascript:;" class="off">上一页</a>	
+											<a href="javascript:;">1</a>
+											<a href="javascript:;">2</a>
+											<a href="javascript:;">3</a>
+											<a href="javascript:;">4</a>
+											<a href="javascript:;">5</a>
+											<a href="javascript:;" class="off">下一页</a>
+										</div>
+										<!--end play_stage_tab_item-->
+									</div>
+									<!--end movie_list-->
+								</div>
+								<!--end play_stage_tab_items-->
+                 
+                 </div>
+                 <div class=" tab hide" title="即将上映">
+                 
+                 	即将上映
+                 </div>
+             
+        </div>
+                            		
+								
+							</div>
+							<!--end movie_list_container-->
+						</div>
+						<!--end main-wrap-->
+                    </div>
+                    <div class="col-sub">
+                        <div id="" class="hotActivity">
+                            <div id="" class="hd_ht">
+                                <h3>热门活动</h3>
+                            </div>
+                            <div id="" class="hot_bd">
+                                <div class="hotlist">
+                                    <div class="hotlist_hd">
+                                        <a href="#">
+                                            <img src="../images/temp/re1.jpg" width="70" height="100">   
+                                        </a>
+                                    </div>
+                                    <div class="hotlist_bd">
+                                        <h3><a href="#">末日狂欢低价观影</a></h3>
+                                        <p><span class="c_gray9">时间:</span>12月12日</p>
+                                        <p><span class="c_orange">192</span>人已参加</p>
+                                        <p class="anchor"><span><a href="">参&nbsp;加  </a></span></p>
+                                    </div>
+                                </div><!-- / -->
+                                
+                            </div><!-- / -->
+
+                    </div>
+        </div>   
+             <!-- 通栏：.grid-m  end -->  
     </div>
 
+  	</div>
+    <div id="footer" class="w950 "><img src="../images/other/index_4.jpg" width="950" height="103">
+
+    </div>
 </div>
-
+</body>
 </body>
 </html>
 		
