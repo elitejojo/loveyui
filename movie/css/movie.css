@@ -106,7 +106,7 @@
 
 .movie_list{margin-top:0px;}
 .movie_list ul{width:100%;}
-.movie_list ul li{width:100%;display:inline-block;padding:15px 0px;margin:0px 15px 0px 10px;}
+.movie_list ul li{width:100%;display:inline-block;padding:15px 0px;border-bottom:1px solid #D0D0D0;}
 .movie_list ul .odd{border-top:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;background:#EDF6FF}
 .movie_pic{display:inline-block;width:120px;padding:0px 10px 10px 0px;height:160px;line-height:160px;margin-left:10px}
 .movie_pic img{ width:120px; height:160px; font-size:0}
