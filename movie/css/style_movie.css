@@ -9,17 +9,8 @@ text-align: center;}
 .hotlist_bd{ padding-left: 80px;}
 .hotlist_bd h3 {background: none; font-size: 14px;height: auto;margin: 0 0 5px;}
 .hotlist_bd h3  a{color: #2E2926}
-.anchor span {
-    background-color:	#18A2E0;
-    border-radius: 2px 2px 2px 2px;
-    color: #336699;
-    display: block;
-    height: 24px;
-    line-height: 24px;
-    margin: 0 auto;
-    text-align: center;
-    width: 72px;
-}
+.anchor span { background-color:	#18A2E0;border-radius: 2px 2px 2px 2px;color: #336699;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
+	cursor:pointer}
 .anchor span a{color: #fff}
 
 
@@ -257,7 +248,7 @@ f14{font-size:14px;}
 
 /****影片列表样式****/
 .Prompt{width:621px; height:40px; line-height:40px; padding:0 10px; background:#efefef; text-align:left;}
-.movie_list{margin-top:20px; border-bottom:solid 1px #efefef; padding-bottom:20px;}
+.movie_list{ padding-bottom:20px;}
 .movie_list .movie_listimg{width:170px; height:240px;}
 .movie_list ul{width:451px; text-align:left;}
 .movie_list ul li{width:451px; line-height:28px;}
@@ -527,8 +518,6 @@ f14{font-size:14px;}
 .actions_list li{ margin-bottom:15px; border-bottom:1px dashed #ccc; padding-bottom:10px;}
 .actions_list li p{ width:426px;margin-left:15px; line-height:27px;}
 .actions_content p{line-height:22px;}
-
-
 
 
 

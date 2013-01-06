@@ -7,14 +7,19 @@
  <link rel="stylesheet"  href="../css/layout.css">
  <link  rel="stylesheet" href="../css/global.css">
  <link  rel="stylesheet"  href="../css/style_movie.css">
- <link  rel="stylesheet"  href="../css/style_movie_pay.css">
- <link  rel="stylesheet"  href="../css/style_movie_movieList.css">
+  <link  rel="stylesheet"  href="../css/movie.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-				
+	$("#play_stage ul li").click(function(){
+$(this).addClass("circleRoundder").siblings().removeClass("circleRoundder");
+var index=$("#play_stage ul li").index(this);
+$(".tab_box .tab ").eq(index).show().siblings().hide();
+})			
 	});
 </script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
 <div id="page"  class="w950">
@@ -32,14 +37,22 @@
                         <div class="main-wrap">
 							<div class="movie_list_container top_img_back E0_bl E0_bt">
 								<div class="E0_bb tabs mr10 pl20 mb10 pb4" id="play_stage">
-									<a  href="#" >
+                                
+                                <ul>
+                                    <li class="circleRoundder"><span>正在上映</span></li>
+                                    <li><span>即将上映</span></li>
+                                  </ul>
+						<!--			<a  href="#" >
 										<span class="circleRoundder">正在上映</span>
 									</a>
-									<a href="#"><span>即将上映</span></a>
+									<a href="#"><span >即将上映</span></a>-->
 								</div>
-								
-									
-								<div class="play_stage_tab_items">
+		<div class="tab_box">				
+							
+        
+                 <div class="tab" title="正在上映">正在上映
+                 
+                 <div class="play_stage_tab_items">
 									<div class="movie_list_heard">
 										<div class="total_movie ml10 c_gray">
 											共<span class="c_orange">26</span>部影片
@@ -49,7 +62,7 @@
 											<select name="sort_id" id="sort_id">
 												<option value="0">默认(按排片)</option>
 												<option value="1">按日期(由近到远)</option>
-												<option value="0">按购票(由高到低)</option>
+									
 											</select>	
 										</div>
 									</div>
@@ -235,6 +248,16 @@
 									<!--end movie_list-->
 								</div>
 								<!--end play_stage_tab_items-->
+                 
+                 </div>
+                 <div class=" tab hide" title="即将上映">
+                 
+                 	即将上映
+                 </div>
+             
+        </div>
+                            		
+								
 							</div>
 							<!--end movie_list_container-->
 						</div>
@@ -272,7 +295,7 @@
 
     </div>
 </div>
-
+</body>
 </body>
 </html>
 		
