@@ -72,8 +72,9 @@
 
 .play_tab_con{padding-left:76px;clear:both; width:642px}
 .play_tab_con dt,dd{float:left;display:inline;}
-.play_tab_con dt{text-align: right;margin-top:2px;width: 66px;color: #999999;margin-left:-76px;}
-.play_tab_con dd{height: 100%;overflow: hidden;}
+.play_tab_con dt{margin-top:2px;color: #999999;margin-left:-76px;}
+.play_tab_con dt span{ float:left}
+.play_tab_con dd{}
 .play_tab_con a {
     color: #333333;
     display: inline-block;
@@ -110,7 +111,7 @@
 .play_data_header{height:50px;}
 .play_data_table{width:100%;}
 .play_data_table .data_table_header{display:inline-block;width:100%;height:34px;line-height:34px;background:#F2F2F2;}
-.play_data_table .data_table_header span{display:inline-block;border-right:1px solid  #BBBBBB;text-align:center;min-width:86px;height:34px;line-height:34px;}
+.play_data_table .data_table_header span{display:inline-block;border-right:1px solid  #BBBBBB;text-align:center;min-width:86px;height:34px;line-height:34px; float:left}
 
 .play_data_table .data_table_body{position:relative;width:100%;height:304px;background:#fff;z-index:0;overflow:hidden;clear:both;}
 .play_data_table .data_table_body table{position:relative;_position:absolute;float:left;width:100%;height:304px;text-align:center;overflow:hidden;z-index:0;}
