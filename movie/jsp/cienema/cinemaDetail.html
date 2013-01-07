@@ -15,7 +15,13 @@
 	<script type="text/javascript" src="../../js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="../../js/movieScroller.js"></script>
 	<script type="text/javascript">
-			$(document).ready(function(){		
+			$(document).ready(function(){	
+
+				var tab_operObj = $(".playList_tab_item");
+					$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});
+					function tabCallBack(){
+						//dealPlayDateEvent();		
+					}	
 				$("#play_list_info").movieScroller();//设置滑动条
 			});
 	</script>
@@ -27,19 +33,63 @@
             <img src="../../images/common/Process_two.png" width="950" height="59" alt="流程">
     
         </div>
+        
+ <div class="detail_head ">
+	<div class="detail_head_pic">
+    	<img src="../../images/other/detail_01.jpg" width="165" height="165">
+    </div>
+   
+   	<div class="detail_head_desc">
+		<div class="detail_head_name">
+			<h1>南京万达电影城-河西店</h1>
+		</div>
+		<div class="mt20">
+			<dl class="ui_abeam">
+				<dt class="uipic f mr0">详细地址：</dt>
+				<dd class="uiText f"><a target="_blank" href="/movie/searchCinema.xhtml?countycode=320105" class="brown">建邺区</a>江东中路98号万达广场娱乐楼四楼 <span class="ffst">[<a href="/common/baiduMap.xhtml?id=37950440&amp;tag=cinema" class="blue">地图</a>]</span><a ;="" onClick="showTemplate()" href="javascript:void(0)" style="width:1px; height:20px; background-position:-157px -743px; vertical-align:middle;" title="免费发送地址到手机" class="freeTag0"></a></dd>
+			</dl>
+			<dl class="ui_abeam">
+				<dt class="uipic  f mr0">联系电话：</dt>
+				<dd class="uiText f">025-84783828 025-68132777</dd>
+			</dl>
+			<dl class="ui_abeam">
+				<dt class="uipic  f mr0">交通路线：</dt>
+				<dd class="uiText f">地铁</dd>
+			</dl>
+		</div>
+		<div class="allbtn mt10">
+			<span>
+				<a href="">选座购票</a>
+			</span>
+			<span>
+				<a href="">购买兑换券</a>
+			</span>
+			
+
+		</div>
+	</div>
+   
+</div>
+ 
+
+
+        
+        
     <div id="content"  class="mt10">
+
 
         <!-- 通栏：.grid-m -->
     	
-        <div class="layout grid-m0s5">
-             <div class="col-main">
+     <div class="layout grid-m0s5">
+             <div class="col-main ">
 				  <div class="main-wrap">
                          
 				      <div class="top_img_back E0_bl E0_bt  pb10 f">	
                       		 <div class="f">
-                             <h2 class="E0_bb hthd pl20">影院介绍</h2>
+                             <h2 class="E0_bb hthd pl20">影院特色：</h2>
                              <div class="uiText p10">
-                                        <p class="l" style="width:529px">           南京万达影城河西店完全按照流线型的现代化风格打造，并增加了更为人性化设计的VIP贵宾影厅以及别具一格的咖啡休闲区，匠心独具的天花板设计给人以强烈的梦幻感，此外，无线上网服务可让等候观影的消费者轻松自在的消磨时光，9米挑高的举架让观众不会感到任何压抑，接近千平米的大堂和多功能区，在设计细节方面，万达国际影城的阶梯式座椅排距达1.2米，银幕采用墙对墙整面墙式，</p>
+                                        <p class="l" style="width:529px">           环境好，服务也好，使广大观众得到超一流的视听震撼和娱乐文化休闲为一体的享受。
+就在家旁边，很方便，看完电影边走回家边和老公回味电影</p>
                                         <div class="r" style="width:200px"><img  class="pl10" src="../../images/other/map_1.jpg" width="181" height="149">
                                         </div>
                                                  
@@ -56,22 +106,21 @@
 									<span id="2012-12-18">12月21日&nbsp;周五</span>
 									<a href="#" >更多日期>></a>
 								</div>
-								<dl class="play_tab_con green_back pb20 pt10 pr20 f ">
-									<dt>正在热映：</dt>
-									<dd>
-										<div class="clearfix">
-                                        
+								<dl class="play_tab_con green_back   f ">
+									<dt><span>正在热映：</span>
+                                    
+                                
+													<span>
 
-         
 											<a class="select" href="javascript:;">人再囧途之泰囧</a>
 											<a id="" href="javascript:;">十二生肖</a>
 											<a href="javascript:;">大上海</a>
 											<a href="javascript:;">血滴子</a>
 											<a href="javascript:;">艺术家</a>
 						
-										</div>
+										</span>
 										
-									</dd>
+							    </dt>
 								</dl>		
                                 
                                 <dl class="ui_abeam f pt10">

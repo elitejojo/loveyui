@@ -1,6 +1,6 @@
 ﻿.mian_bg{ width:100%; height:373px; background:url(../images/bg/index_s_bg.png) no-repeat ;}
 .hotActivity{}
-.hotActivity .hd_ht{width:190px;height:40px;background:#ff6600 url(../images/bg/lefthdbg.png) no-repeat bottom;
+.hotActivity .hd_ht{width:190px;height:40px; line-height:30px;background:#ff6600 url(../images/bg/lefthdbg.png) no-repeat bottom;
 text-align: center;}
 .hotActivity h3{color: #fff9d9;}
 .hotActivity  .hot_bd{ background:#fff2d3;height:100%; display:inline-block }
@@ -12,8 +12,12 @@ text-align: center;}
 .anchor span { background-color:	#18A2E0;border-radius: 2px 2px 2px 2px;color: #336699;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
 	cursor:pointer}
 .anchor span a{color: #fff}
+.allbtn span { float:left; margin-right: 20px; display:inline; background-color:#F9A101;border-radius: 2px 2px 2px 2px;color: #336699;height: 36px;line-height: 36px; text-align: center;  width: 72px;padding: 0 5px;
+	cursor:pointer;font-size: 14px}
+.allbtn span a{color: #fff}
 
-.select_btn{float:left;border:2px solid #f5c178;color:#FFF;display: block;height: 26px;line-height: 26px;margin: 0 auto; text-align: center; width: 72px;
+
+.select_btn{float:left;border:2px solid #f5c178;color:#FFF;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
 	cursor:pointer;background-color: #fca43a;
 background-image: -webkit-gradient(linear, left top, left bottom, from(#fda038), to(#d1440c));
 background-image: -webkit-linear-gradient(top, #fda038, #d1440c);
@@ -531,8 +535,19 @@ f14{font-size:14px;}
 .actions_content p{line-height:22px;}
 
 
+/****活动列表样式****/
+.detail_head{float: left; background: #F3F3F3;width: 950px; margin-bottom:10px }
+.detail_head_pic{ float: left;padding: 9px 45px 15px;  width: 165px;}
+.detail_head_pic img{ border:1px solid #999 ; width: 165px; height: 165px} 
+.detail_head_desc{float: left;   padding: 10px 20px 15px 0; width: 660px}
+.detail_head_name h1 { font-family: '微软雅黑','宋体'; font-size: 28px;  font-weight: normal;  line-height: 30px;}
+.actions_content p{line-height:22px;}
+.detail_head_desc .uiText {
+    width: 86.5%;
+}
+
 /****影院排片页面****/
-.hthd{ height:32px; line-height:32px; font-size:14px}
+.hthd{ height:32px; line-height:32px; font-size:14px; text-align:left; float:left; width:730px}
 
 
 .ui_abeam {
@@ -542,9 +557,7 @@ f14{font-size:14px;}
     z-index: 0;
 }
 .uipic {
-	
     display: inline-block;
-    margin-right: 10px;
     text-align: center;
     width: auto;
 }
@@ -555,9 +568,10 @@ title, .titleB {
     width: 100%;
     z-index: 0;
 }
-uiTextA em, .uiText em {
+.uiTextA em, .uiText em {
     color: #999999;
 }
+.uiText p{ text-align:left; line-height: 22px; padding: 10px 0}
 sub {
     color: #FF6600;
     font-size: 22px;
