@@ -531,4 +531,48 @@ f14{font-size:14px;}
 .actions_content p{line-height:22px;}
 
 
+/****影院排片页面****/
+.hthd{ height:32px; line-height:32px; font-size:14px}
 
+
+.ui_abeam {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+.uipic {
+	
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    width: auto;
+}
+title, .titleB {
+    height: 26px;
+    line-height: 26px;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+uiTextA em, .uiText em {
+    color: #999999;
+}
+sub {
+    color: #FF6600;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+sup {
+    color: #FF6600;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 20px;
+    margin-left: 2px;
+    vertical-align: top;
+}

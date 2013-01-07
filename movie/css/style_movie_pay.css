@@ -70,7 +70,7 @@
 .E0_bb{border-bottom:1px solid #E0E0E0;}
 .E0_br{border-right:1px solid #E0E0E0;}
 
-.play_tab_con{padding-left:76px;clear:both;}
+.play_tab_con{padding-left:76px;clear:both; width:642px}
 .play_tab_con dt,dd{float:left;display:inline;}
 .play_tab_con dt{text-align: right;margin-top:2px;width: 66px;color: #999999;margin-left:-76px;}
 .play_tab_con dd{height: 100%;overflow: hidden;}
