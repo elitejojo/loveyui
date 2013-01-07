@@ -58,7 +58,11 @@
 				resetPlayPos();	
 				return false;			
 			});		
-		}			
+
+		
+
+		}				
+
 	})(jQuery);	
 	</script>
 	
@@ -70,11 +74,13 @@
 						//dealPlayDateEvent();		
 					}
 
+
 					var diary_tab_operObj = $(".diary_tab_item");
 					$("#play_dairy_tab").movieTab({syn:true,callBack:diarytabCallBack,operClass:diary_tab_operObj});
 					function diarytabCallBack(){
 						//dealPlayDateEvent();		
 					}
+
 			//异步加载放映信息			
 			function initPageInfo(){
 				initPlayDateData();//加载放映时间信息
@@ -155,6 +161,7 @@
 			function playDataTable(data){
 				//重置滑动条，$("#play_list_info").movieScroller();	
 			}
+
 			$("#play_list_info").movieScroller();//设置滑动条
 			//留言输入事件	
 			$("#replycontent").keyup(function(){
@@ -177,6 +184,8 @@
 			}
 			
 
+				
+
 		});
 		
 	</script>	
@@ -194,19 +203,25 @@
         <div class="layout grid-m0s5">
              <div class="col-main">
 				  <div class="main-wrap">
+
 				      <div class="play_body top_img_back E0_bl E0_bt pt20 pl10 pb10">			
 								<div class="play_tab_select movie_tab mr10" id="playDate_tab">
+
+				     
+
 									<span id="2012-12-18" >12月18日&nbsp;今天</span>
 									<span id="2012-12-18">12月19日&nbsp;周三</span>
 									<span id="2012-12-18">12月20日&nbsp;周四</span>
 									<span id="2012-12-18">12月21日&nbsp;周五</span>
 									<a href="#" >更多日期>></a>
 								</div>
+
 								<dl class="play_tab_con green_back pb20 mr10 pt10 pr20 clearfix">
 									<dt>选择区域:</dt>
 									<dd>
 										<div class="clearfix">
 											<a class="select" href="javascript:;">热门影院</a>
+
 											<a id="" href="javascript:;">杨浦</a>
 											<a href="javascript:;">杨浦</a>
 											<a href="javascript:;">杨浦</a>
@@ -226,7 +241,13 @@
 											<a href="javascript:;">杨浦</a>
 											<a href="javascript:;">杨浦</a>
 											<a href="javascript:;">杨浦</a>
+
 										</div>
+
+									<dd>
+										
+										
+
 										<div class="clearfix con_innerBox">
 <a id="63364" class="310110 select" config="cinema" rel="310110" href="javascript:void(0)">五角场万达电影城</a>
 <a id="15" class="310106 " config="cinema" rel="310106" href="javascript:void(0)">环艺电影城</a>
@@ -236,9 +257,11 @@
 										</div>
 									</dd>
 								</dl>		
+
 								<div id="play_data" class="mr10">
 									<div class="play_data_header">test</div>
 									<div class="play_data_table mt20 mb20 b_border">	
+
 										<div class="data_table_header  b_border_b">
 											<span class="w86">放映时间</span>	
 											<span class="w110">语言版本</span>	
@@ -345,6 +368,7 @@
 									</div>
 								</div>
 				
+<<<<<<< HEAD
 								<div class="data_table_footer b_border_t">dddd</div>
 							</div>	
 						</div>
@@ -384,7 +408,7 @@
 						</div>	
 					</div>
 					</div>	
-					
+
 				</div>
 				<!--end main-wrap-->
 			</div>
