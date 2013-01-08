@@ -16,18 +16,20 @@
 	<script type="text/javascript" src="../js/movieScroller.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			
+			// TAB  切换效果
 				var tab_operObj = $(".playList_tab_item");
-					$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});
-					function tabCallBack(){
-						//dealPlayDateEvent();		
-					}
+				$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});
+				function tabCallBack(){
+				dealPlayDateEvent();		
+				}
 
 
-					var diary_tab_operObj = $(".diary_tab_item");
-					$("#play_dairy_tab").movieTab({syn:true,callBack:diarytabCallBack,operClass:diary_tab_operObj});
-					function diarytabCallBack(){
-						//dealPlayDateEvent();		
-					}
+				//	var diary_tab_operObj = $(".diary_tab_item");
+				//	$("#play_dairy_tab").movieTab({syn:true,callBack:diarytabCallBack,operClass:diary_tab_operObj});
+			//	function diarytabCallBack(){
+			//		dealPlayDateEvent();		
+			//}
 
 			//异步加载放映信息			
 			function initPageInfo(){
@@ -111,7 +113,18 @@
 			}
 
 			$("#play_list_info").movieScroller();//设置滑动条
-			//留言输入事件	
+			//鼠标效果
+
+$(function(){
+    $(".ui_view_solide").mousemove(function(){
+    	$(this).addClass("hover");
+    	});	
+    $(".ui_view_solide").mouseout(function(){
+    	$(this).removeClass("hover");
+    	});
+ 	});
+
+			//留言 模块 输入事件	
 			$("#replycontent").keyup(function(){
 				resetCommentLength();
 				validateReplycontent();	
@@ -130,12 +143,7 @@
 					$("#comment_length").text(0);
 				}
 			}
-			
-
-				
-
 		});
-		
 	</script>	
 </head>
 <div id="page"  class="w950">
@@ -208,7 +216,7 @@
 								</dl>		
 
 								<div id="play_data" class="mr10">
-									<div class="play_data_header">test</div>
+						
 									<div class="play_data_table mt20 mb20 b_border">	
 										<div class="data_table_header  b_border_b">
 											<span class="w86">放映时间</span>	
@@ -225,7 +233,7 @@
 											<td class="w110">111111</td>
 											<td class="w110">111111</td>
 											<td class="w130">111111</td>
-											<td>22222</td>
+											<td> <a href="" class=""></a></td>
 										</tr>
 										<tr class="odd">
 											<td class="w86" >111111</td>
@@ -233,7 +241,7 @@
 											<td class="w110">111111</td>
 											<td class="w110">111111</td>
 											<td class="w130">111111</td>
-											<td>22222</td>
+											<td><a href="" class="select_btn">选座购票</a></td>
 										</tr>
 										<tr>
 											<td class="w86" >111111</td>
@@ -317,50 +325,97 @@
 								</div>
 				
 
-								<div class="data_table_footer b_border_t">dddd</div>
+								<div class="data_table_footer b_border_t">
+									<p class="pl10">*现价已包含服务费，该影院订座放映前120分钟关闭售票</p>
+									<p class="pl10">*本放映时刻表预告时间仅作参考，具体播放时间以影院实际播放为准</p>
+									
+								</div>
 							</div>	
 						</div>
-						<div class="diary clearfix mr10">
-						<div class="play_diary_select movie_tab" id="play_dairy_tab">
-							<span>热门影评</span>
-							<span>购买咨询</span>
-						</div>
-						<div class="play_diary_con diary_tab_item mt10 clearfix">
-							<dl class="diary_edit">
-								<dt class="diary_aside">
-									<a href="javascript:;" class="pubpic" id="logonMember"><img src="../images/comment_hear_img.png" id="logonMemberPic" width="50" height="50"></a>
-									<span class="nikename c_gray">司令1982</span>
-								</dt>
-								<dd>
-									<form id="diary_form">
-										<div id="comment_edit">
-											<i class="t">
-												♦<i>♦</i>
-											</i>
-											<div class="edit_alt"></div>
-											<div class="diary_textarea">
-												<textarea id="replycontent" lang="default" name="replycontent"></textarea>
-											</div>
-											<div class="" >
-													<b id="comment_length" class="comment_length">140</b>
-											</div>
-										</div>
-									</form>	
-								</dd>	
-							</dl>
-							<div class="diary_comment">
-								<dl>
-								
-								</dl>
-							</div>		
-						</div>	
-					</div>
-					</div>	
+                        
+<!--  start  留言  -->
+<div class="play_diary_select movie_tab" id="play_dairy_tab">
+		<span class="blue">热门影评</span>
+	</div>
+<div class="ui_message mt10">                        
+    <dl class="ui_wala_listing">
+		<dt class="ui_wala_aside">
+			<a id="logonMember" class="pubpic" href="javascript:void(0);">
+				<img width="50" height="50" 
+				src="../images/temp/ren_2.png"></a>
+		</dt>
+		<dd class="ui_wala_wrap">
+		
+				<!-- 评分 -->
+		<!-- 		<div class="modify_alt">
+		<b class="left mt5">我要评分：</b>
+					<ul class="ui_big_ratings" id="walageneralmark">
+												<li lang="不推荐，不考虑" id="1" class=""></li>
+												<li lang="不推荐，不考虑" class="no" id="2"></li>
+												<li lang="不推荐，不考虑" id="3" class=""></li>
+												<li lang="凑合，别无选择可考虑" class="no" id="4"></li>
+												<li lang="凑合，别无选择可考虑" id="5" class=""></li>
+												<li lang="不错，值得考虑" class="no" id="6"></li>
+												<li lang="不错，值得考虑" id="7" class=""></li>
+												<li lang="很棒，推荐大家去" class="no" id="8"></li>
+												<li lang="很棒，推荐大家去" id="9" class=""></li>
+												<li lang="最佳，绝对首选" class="no" id="10"></li>
+					</ul>
+					<sub class="ml10 mr10 left" id="walageneralmarkPoint"></sub>
+					<span id="walageneralmarkDesc" class="brown left"></span>
+					
+				</div> -->
+	<form id="bodyForm">
+			<div id="isModify" class="page_wala">
+				<i class="l">◆<i>◆</i></i>
+	<div class="ui_wala_textArea">
+		<textarea id="replycontent" lang="default" name="replycontent"></textarea>
+	</div>
+				
+			<div class="page_modify_dialog  page_modify_dialog_mini ">
 
-				</div>
-				<!--end main-wrap-->
+				<em class="right">
+				<a class="select_btn r" href="javascript:();">发&nbsp;&nbsp;布</a>	
+				<b id="comment_length" class="comment_length">140</b>
+				</em>
 			</div>
+			</div>
+			</form>
+		</dd>
+	</dl>
+    
+      <!--  end 留言-->  
 
+<div class="ui_wala_comment">
+
+<dl class="ui_wala_original comment76649986">
+	<dt class="uipic">
+		<a class="pubpic" title="jasephine" target="_blank" href="/">
+		<img width="50" height="50" src="../images/temp/ren_1.jpg"></a>
+	</dt>
+	<dd class="ui_view_solide">
+		<div class="page_wala">
+			<i class="l">◆<i>◆</i></i>
+	
+			<div class="page_wala_talk ">
+				<p>
+				<a target="_blank" href="">jasephine</a>：
+					(<span class="ui_grades ui_grade7" title="7.0分">7.0</span>)不错  值得推荐 									
+				</p>		
+			</div>
+		</div>
+	</dd>
+</dl>
+</div>
+
+</div>
+<!-- end-->        
+                    
+                        
+                    
+			</div>		</div>		</div>	
+				<!--end main-wrap-->
+				
                     <div class="col-sub">
                         <div id="" class="hotActivity">
                             <div id="" class="hd_ht">

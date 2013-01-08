@@ -17,7 +17,7 @@ text-align: center;}
 .allbtn span a{color: #fff}
 
 
-.select_btn{float:left;border:2px solid #f5c178;color:#FFF;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
+.select_btn{border:2px solid #f5c178;color:#FFF;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
 	cursor:pointer;background-color: #fca43a;
 background-image: -webkit-gradient(linear, left top, left bottom, from(#fda038), to(#d1440c));
 background-image: -webkit-linear-gradient(top, #fda038, #d1440c);
@@ -548,45 +548,125 @@ f14{font-size:14px;}
 
 /****影院排片页面****/
 .hthd{ height:32px; line-height:32px; font-size:14px; text-align:left; float:left; width:730px}
+.ui_abeam {overflow: hidden;  position: relative; width: 100%; z-index: 0;}
+.uipic {display: inline-block;text-align: center;  width: auto;}
+.title, .titleB {  height: 26px;   line-height: 26px;position: relative;   width: 100%;   z-index: 0;}
+.uiTextA em, .uiText em {  color: #999999;}
+.uiText p{ text-align:left; line-height: 22px; padding: 10px 0}
+sub {  color: #FF6600;  font-size: 22px;  font-style: italic;  font-weight: bold;  line-height: 24px; margin-left: 10px; vertical-align: middle;}
+sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal; line-height: 20px;margin-left: 2px;  vertical-align: top;}
 
-
-.ui_abeam {
-    overflow: hidden;
+/****留言****/
+.ui_message {  overflow: hidden; width: 100%;}
+.ui_wala_listing {
+    padding-left: 70px;
     position: relative;
-    width: 100%;
-    z-index: 0;
+    vertical-align: top;
 }
-.uipic {
-    display: inline-block;
-    text-align: center;
+.ui_wala_textArea {
+    background-color: #FFFFFF;
+    border: 1px solid #A8A8A8;
+    border-radius: 5px 5px 5px 5px;
+    height: 60px;
+    padding: 4px;
     width: auto;
 }
-title, .titleB {
+.pubpic span, .pubpic img {
+    border-radius: 3px 3px 3px 3px;
+}
+.page_modify_dialog {
     height: 26px;
-    line-height: 26px;
+    line-height: 12px;
+    margin: 5px 0 10px;
     position: relative;
     width: 100%;
-    z-index: 0;
 }
-.uiTextA em, .uiText em {
-    color: #999999;
+.pubpic, .picmin, .picmax {
+    background: none repeat scroll 0 0 #F9F9F9;
+    display: inline-block;
+    height: 50px;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    width: 50px;
 }
-.uiText p{ text-align:left; line-height: 22px; padding: 10px 0}
-sub {
-    color: #FF6600;
-    font-size: 22px;
-    font-style: italic;
-    font-weight: bold;
-    line-height: 24px;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-sup {
-    color: #FF6600;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: normal;
+.page_wala_talk a {color: #C03B0C;}
+
+.ui_wala_textArea textarea {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    display: block;
+    font-size: 14px;
+    height:58px;
     line-height: 20px;
-    margin-left: 2px;
-    vertical-align: top;
+    margin: 0;
+    overflow-y: auto;
+    position: relative;
+    resize: none;
+    width: 98%;
+    z-index: 5;
+}
+
+.ui_wala_listing .ui_wala_wrap .page_wala i.l {color: #A8A8A8;  left: 67px;}
+.ui_wala_listing .ui_wala_wrap .page_wala i.l i { color: #FFFFFF;}
+
+.page_wala i { display: inline-block;   font-family: 'SimSun'; font-size: 16px;
+ font-style: normal; height: 22px;line-height: 26px;overflow: hidden; position: absolute;}
+.ui_wala_wrap{ width: 646px}
+.ui_wala_listing { padding-left: 70px; position: relative; vertical-align: top;}
+.ui_wala_listing .ui_wala_aside { left: 10px; position: absolute; top: 12px;}
+
+
+.ui_wala_original { clear: both;margin-top: 10px;overflow: hidden; padding-left: 70px;}
+.ui_wala_original .uipic {
+    float: left;
+    margin-left: -70px;
+    margin-right: 0;
+    overflow: hidden;
+    width: 70px;
+}
+.ui_wala_original .page_wala {
+    padding: 5px 10px;
+}
+.ui_view_solide { width: 637px;  height: 58px; background: none repeat scroll 0 0 #F8F8F8;
+ border: 1px solid #DFDFDF; border-radius: 5px 5px 5px 5px;position: relative;}
+
+.page_replay {color: #999999;height: 24px; line-height: 24px;position: relative;width: 100%;z-index: 1;}
+.page_wala i.l {
+    color: #DFDFDF;
+    left: -8px;
+    top: 10px;
+}
+.ui_message .hover i.l {
+    color: #FFE3BD;
+}
+.page_wala i.l i {
+    color: #F8F8F8;
+    left: 1px;
+    top: 0;
+}
+.ui_message .hover i.l i {
+    color: #FFF6EE;
+}
+.page_wala .t {
+    color: #DDDDDD;
+    left: 20px;
+    top: -13px;
+}
+.page_wala i.t i {
+    color: #FFFFFF;
+    left: 0;
+    top: 1px;
+}
+.ui_message .hover i.t {
+    color: #DDDDDD;
+    left: 20px;
+    top: -13px;
+}
+.ui_message .hover i.t i {
+    color: #FFFFFF;
+    left: 0;
+    top: 1px;
+}
+.ui_message .hover {  background:#FFF6EE;
+    border-color:#FFE3BD; 
 }
