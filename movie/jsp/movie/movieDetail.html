@@ -2,18 +2,18 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Sample page</title>
-	<link  rel="stylesheet"  href="../css/movie_tab.css">
- 	<link rel="stylesheet"  href="../css/bass.css">
- 	<link rel="stylesheet"  href="../css/layout.css">
-	<link  rel="stylesheet" href="../css/global.css">
-	<link  rel="stylesheet"  href="../css/style_movie.css">
-	<link  rel="stylesheet"  href="../css/style_movie_pay.css">
-	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/movieTab.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui.js"></script>
-	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
-	<script type="text/javascript" src="../js/movieScroller.js"></script>
+	<title>影片排片页</title>
+	<link  rel="stylesheet"  href="../../css/movie_tab.css">
+ 	<link rel="stylesheet"  href="../../css/bass.css">
+ 	<link rel="stylesheet"  href="../../css/layout.css">
+	<link  rel="stylesheet" href="../../css/global.css">
+	<link  rel="stylesheet"  href="../../css/style_movie.css">
+	<link  rel="stylesheet"  href="../../css/style_movie_pay.css">
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../js/movieTab.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="../../js/movieScroller.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			
@@ -143,15 +143,91 @@ $(function(){
 					$("#comment_length").text(0);
 				}
 			}
+		   //留言请求事
+		   function initPlayCinema(messagesArea){
+				var data = messagesArea;
+				var rul = "";
+				$.post({
+					url:url,
+					data:data,
+					success:messagesArea,
+					error:function(){
+						alert("对不起,请求失败!");
+					}				
+					});
+				function playCinema(){
+					//生成的内容中需要给每个影院添加选中事件
+				}
+			}
+
 		});
 	</script>	
 </head>
 <div id="page"  class="w950">
 
         <div id="header" class="w950">
-            <img src="../images/common/Process_two.png" width="950" height="59" alt="流程">
+            <img src="../../images/common/Process_two.png" width="950" height="59" alt="流程">
     
         </div>
+
+ <!-- 通栏：end -->
+<div class="movie_head ">
+	<div class="movie_head_pic">
+    	<img src="../../images/movie001.jpg" width="180" height="210">
+    </div>
+   
+   	<div class="movie_head_desc">
+   		<div class="desc_left">
+			<div class="movie_head_name">
+				<h1>南京万达电影城-河西店</h1><span>22sss</span>
+			</div>
+			<div class="mt20">				
+					<dl class="ui_abeam">
+						<dt class=" f mr0">上映日期：</dt>
+						<dd class="f">2012-12-12</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class=" f mr0">国家地区：</dt>
+						<dd class=" f">中国大陆 中文</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class="f mr0">类型：</dt>
+						<dd class="f">喜剧</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class="f mr0">影片导演：</dt>
+						<dd class="f">徐峥 王宝强 黄渤 陶虹 谢楠</dd>
+					</dl>
+				</div>
+				<div class="allbtn mt10">
+					<span>
+						<a href="">选座购票</a>
+					</span>
+			    </div>	
+		</div>
+		<div class="desc_right">
+			<div class="bgs">
+				<h2>剧情简介：</h2>
+				<p>
+	    电影《人在囧途之泰囧》就是“发
+	生在泰国的囧事”。影片的灵感来自于
+	导演在泰国旅游时，亲眼目睹的诸多好
+	玩事儿。徐峥、王宝强“囧”人依旧，
+	搞笑加码，还有一位超重量级神秘喜感
+	大咖——黄渤倾情加盟，联袂主演，形
+	成2012最强喜剧组合阵容，搞笑系数全
+	面升级！徐峥和王宝强泰国相逢，再遇
+	囧事一箩筐，徐峥饰演的成功商务男依
+	旧对王…</p>
+			</div>
+		</div>
+
+	</div>
+   
+</div>
+ 
+ <!-- 通栏：end -->
+
     <div id="content"  class="mt10">
 
         <!-- 通栏：.grid-m -->
@@ -342,7 +418,7 @@ $(function(){
 		<dt class="ui_wala_aside">
 			<a id="logonMember" class="pubpic" href="javascript:void(0);">
 				<img width="50" height="50" 
-				src="../images/temp/ren_2.png"></a>
+				src="../../images/temp/ren_2.png"></a>
 		</dt>
 		<dd class="ui_wala_wrap">
 		
@@ -391,7 +467,7 @@ $(function(){
 <dl class="ui_wala_original comment76649986">
 	<dt class="uipic">
 		<a class="pubpic" title="jasephine" target="_blank" href="/">
-		<img width="50" height="50" src="../images/temp/ren_1.jpg"></a>
+		<img width="50" height="50" src="../../images/temp/ren_1.jpg"></a>
 	</dt>
 	<dd class="ui_view_solide">
 		<div class="page_wala">

@@ -51,7 +51,7 @@
 #prefer_info ul li dl dd p{width:205px;}
 
 #prefer_info div dl{float:left;width:868px;}
-#prefer_info div dl dt,dd{float:left;display:inline;padding:0 5px; line-height:22px;color:#000;}
+#prefer_info div dl dt{float:left;display:inline;padding:0 5px; line-height:22px;color:#000;}
 #prefer_info div dl dt{text-align:right;padding-top:2px;}
 
 #prefer_result{color:#333;font-weight:700;font-size:16px;text-align:left;padding:20px 30px;}
@@ -78,19 +78,17 @@
 .play_tab_con dd{}
 .play_tab_con a {
     color: #333333;
-    display: inline-block;
+    display: inline;
     float: left;
     height: 22px;
-    line-height: 23px;
+    line-height: 22px;
     margin: 2px 3px 2px 0;
     overflow: hidden;
-    padding: 0 5px;
-    text-decoration: none !important;
-}
+    padding: 0 5px;}
 .play_tab_con a.select,.play_tab_con a:hover {
     background: none repeat scroll 0 0 #4fa7ff;
     border-radius: 3px 3px 3px 3px;
-    color: #FFFFFF;
+    color: #FFFFFF;text-decoration: none;
 }
 .con_innerBox{
 	background: none repeat scroll 0 0 #FFFFFF;
@@ -101,7 +99,7 @@
 }
 
 .con_innerBox a {
-    display: block;
+    display:inline; padding: 2px;
     float: left;
     margin-right: 4px;
     width: 114px;
@@ -147,6 +145,12 @@ float: right;
 }
 .diary_edit .diary_textarea{background-color: #FFFFFF;border: 1px solid #A8A8A8;height: 60px; padding: 2px 4px;width: auto;}
 .diary_edit .diary_textarea textarea{background: #FFFFFF;border:  none; display: block;font-size: 14px;height:54px;line-height: 20px;margin: 0;overflow-y: auto;position: relative;resize: none;width:auto;z-index: 5;}
+
+/* tab 表头*/
+.movie_tab{height:27px;border-bottom:2px solid #4fa7ff;padding-left:10px ; width:728px}
+.movie_tab .blue{background:url("../images/tab_back_blue.gif") 0 0 no-repeat;color:#fff;font-weight:700;}
+.movie_tab .gray{background:url("../images/tab_back_gray.gif") 0 0 no-repeat;}
+.movie_tab span{display:inline-block;width:114px;height:27px;line-height:27px;text-align:center;margin:0px 5px;font-size:12px;}
 
 
 
