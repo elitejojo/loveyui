@@ -2,352 +2,144 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Sample page</title>
-	<link  rel="stylesheet"  href="../css/movie_tab.css">
+	<title>支付</title>
+
  	<link rel="stylesheet"  href="../css/bass.css">
  	<link rel="stylesheet"  href="../css/layout.css">
 	<link  rel="stylesheet" href="../css/global.css">
 	<link  rel="stylesheet"  href="../css/style_movie.css">
 	<link  rel="stylesheet"  href="../css/style_movie_pay.css">
 	<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/movieTab.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
 
-			var PREFER_BANK_AMT = 0;
-			var perfer_tab_operObj = $(".prefer_tab_item");
-			$("#prefer_tab").movieTab({syn:true,callBack:prefertabCallBack,operClass:perfer_tab_operObj});	
-			function prefertabCallBack(){
-						
-			}
+    <script type="text/javascript">
+	$(document).ready(function(){
+$(".pay_menu ul li").click(function(){
+$(this).addClass("serblue").siblings().removeClass("serblue");
+var index=$(".pay_menu ul li").index(this);
+$(".paytab_box .tabs").eq(index).show().siblings().hide();
+})
+})
+</script>
 
-			
-			var pay_tab_operObj = $(".pay_tool_item");
-			$("#pay_tool_tab").movieTab({syn:true,callBack:paytabCallBack,operClass:pay_tab_operObj});	
-			function paytabCallBack(){
-				//alert("e");		
-			}
-			//优惠银行切换
-			$("#prefer_bank_list").hide();
-			$("#pay_tool").show("slow");
-			$("#prefer_pay_sel").toggle(function(){
-				$(this).html("[-]取消支付优惠");
-				$("#prefer_bank_list").show("slow");
-			},function(){
-				$(this).html("[+]支付优惠");
-				$("#prefer_bank_list").hide("slow");
-				$("#pay_tool").show("slow");
-			});
-			//优惠银行事件
-			var preferBanks = $("#prefer_bank_list li dl dt input[type=radio]");
-			for(var i = 0 ; i < preferBanks.length ; i++){
-				$(preferBanks[i]).click(function(){
-					PREFER_BANK_AMT = $(this).val();
-					$("#pay_tool").hide("slow");
-					$("#prefer_bank_amt").html(PREFER_BANK_AMT);
-				});
-			}
-			
+    <script type="text/javascript">
 
-		});	
-	</script>
+
+
+</script>
+
 	
 </head>
 <body>
-<div id="page">
-    <div id="header">
-        <!-- page head -->
+<div id="page" class="w950">
+    
+        <div id="header" class="w950">
+   <img src="../images/common/Process_two.png" width="950" height="59" alt="流程">
+    
+        </div>
+
+ <!-- 通栏：end -->
+<div class="movie_head ">
+	<div class="movie_head_pic">
+    	<img src="../images/movie001.jpg" width="180" height="210">
     </div>
-    <div id="content">
-		<div id="movie_info" ></div>
-		<!--支付模块-->
-		<div class="oper_module">
-			<!--oper-->	
-			<div  class="oper_module_item top_img_back">	
-					<ul class="movie_tab" id="prefer_tab">
-						<li>抵用券</li>
-						<li>优惠券</li>
-						<li>折扣券</li>
-					</ul>
-					<div id="prefer_info" class="green_back">
-						<div class="prefer_tab_item module">	
-								<dl>
-									<dt>
-										抵用券密码:
-									</dt>
-									<dd>
-										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/> 
-									</dd>
-									<dd>
-										<input type="button" value="使用" class="use_btn m_top" />	
-									</dd>
-								</dl>
-								<dl>
-									<dt>&nbsp;
-											
-									</dt>
-									<dd class="c_gray">
-										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
-									</dd>
-									<dd>&nbsp;
-											
-									</dd>
-								</dl>
-						</div>
-						<div class="prefer_tab_item module disn">	
-								<dl>
-									<dt>
-										优惠券密码:
-									</dt>
-									<dd>
-										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/> 
-									</dd>
-									<dd>
-										<input type="button" value="使用" class="use_btn m_top" />	
-									</dd>
-								</dl>
-								<dl>
-									<dt>&nbsp;
-											
-									</dt>
-									<dd class="c_gray">
-										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
-									</dd>
-									<dd>&nbsp;
-											
-									</dd>
-								</dl>
-						</div>
-						<div class="prefer_tab_item module disn">	
-								<dl>
-									<dt>
-										折扣券密码:	
-									</dt>
-									<dd>
-										<input type="text" maxlength="13" value="请输入13位票券密码" class="w_150 h_30 gray_border"/>  
-									</dd>
-									<dd>
-										<input type="button" value="使用" class="use_btn m_top" />	
-									</dd>
-								</dl>
-								<dl>
-									<dt>&nbsp;
-											
-									</dt>
-									<dd class="c_gray">
-										说明:一个订单只能使用一种优惠券。现金券每单限用一张，其他优惠券可以使用多张。	
-									</dd>
-									<dd>&nbsp;
-											
-									</dd>
-								</dl>
-						</div>
-						<div class="module">
-							<a id="prefer_pay_sel" class="f18 c_red fb" href="javascript:;">[+]支付优惠</a>
-						<ul class="prefer_tab_item" id="prefer_bank_list">
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="prefer_bank" value="5"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="prefer_bank" value="10"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="prefer_bank" value="10"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>
-										<input type="radio" id="icbc" name="prefer_bank" value="5"/>
-									</dt>
-									<dd><img src="../images/bank_icbc.png"/></dd>
-									<dd>
-										<p>工行网银客户每单立减10元</p>
-										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
-									</dd>
-								</dl>
-							</li>
-						</ul>
-						</div>
-					</div>
-					<div id="prefer_result">
-							<span>商品金额</span>
-							<span id="GOODS_AMT">&nbsp;(&nbsp;110.0&nbsp;)&nbsp;元</span>
-							<span>&nbsp;-&nbsp;</span>
-							<span>优惠券</span>
-							<span>&nbsp;(&nbsp;0&nbsp;)&nbsp;元</span>
-							<span>&nbsp;-&nbsp;</span>
-							<span>优惠金额</span>
-							<span>&nbsp;(&nbsp;<label id="prefer_bank_amt">0</label>&nbsp;)&nbsp;元</span>
-					</div>
-					<div class="gray_img_border"></div>
-						
-					<div id="pay_result">
-							<span>应付总额</span>
-							<span class="c_red">90.00</span>
-							<span>元</span>		
-					</div>
-			</div>	
-			<!--优惠结束-->
-			<!--支付工具-->
-			<div id="pay_tool" class="oper_module_item">
-				<ul class="movie_tab" id="pay_tool_tab">
-						<li>现金支付</li>
-						<li>商城货币支付</li>
-						<li>M值或积分支付</li>
-				</ul>
-				<div id="pay_tool_info">
-						<div class="pay_tool_item  item_list mt20 w928">
-							<div id="pay_plat" class="left pb10 mb10 gray_back w928">
-								<div class="descri l_h50 txt_r w125">第三方支付平台:</div>
-								<ul class="content w768">
-									<li>
-										<span>
-											<input type="radio" id="zhb" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="green_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb2" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb3" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb4" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-								</ul>
-							</div>
-							<div id="pay_bank" class="left pb10 mb10 gray_back w928">
-								<div class="descri l_h50 txt_r w125">网银直接支付:</div>
-								<ul class="content w768">
-									<li>
-										<span >
-											<input type="radio" id="zhb" name="zhf" />
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="green_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb2" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb3" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb4" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-									<li>
-										<span>
-											<input type="radio" id="zhb5" name="zhf"/>
-										</span>
-										<span><img src="../images/pay_tool_zhb.png" class="gray_border3"/></span>
-									</li>
-								</ul>
-							</div>		
-						</div>
-						<div class="pay_tool_item disn pb10 mb10 mt20 pl20">	
-							<p class="ml30 f14 c_333 mt10 mb10">欢迎使用移动商城</p>
-							<p class="ml30 f14 c_333  mt10 mb10">合计金额</p>	
-						</div>
-						<div class="pay_tool_item disn pb10 mb10 mt20 pl20">	
-							<p class="ml30 f14 c_333 mt10 mb10">欢迎使用移动商城</p>
-							<p class="ml30 f14 c_333  mt10 mb10">合计金额</p>	
-						</div>
-						<input type="hidden" name="GOODS_AMT" id="GOODS_AMT" />
-						<input type="hidden" name="PREFER_AMT" id="PREFER_AMT" />
-						<input type="hidden" name="PAY_AMT" id="PAY_AMT"/>		
-					</div>
+   
+   	<div class="movie_head_desc">
+   		<div class="desc_left">
+		
+			<div class="mt20">			
+			   <dl class="ui_abeam">
+						<dt class=" f mr0 c_orange f14">确定订单信息：</dt>
+						<dd class="f">（订单号：1234323432）</dd>
+					</dl>	
+					<dl class="ui_abeam">
+						<dt class=" f mr0">影片：</dt>
+						<dd class="f">2012-12-12</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class=" f mr0">影院：</dt>
+						<dd class=" f">中国大陆 中文</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class="f mr0">类型：</dt>
+						<dd class="f">喜剧</dd>
+					</dl>
+					<dl class="ui_abeam">
+						<dt class="f mr0">影片导演：</dt>
+						<dd class="f">徐峥 王宝强 黄渤 陶虹 谢楠</dd>
+					</dl>
+				</div>
+				<div class="pay_phone_number"  >
 					
-					<!--end pay_tool_info-->
-					
-			</div>
-			<!--支付工具结束-->	
-			<div class="pay_submit">
-								<input type="button" value="确认支付" class="pay_btn fb cw"/>
-					</div>	
+						手机号码：      修改号码   如没收到取票短信可能会被手机软件拦截！			    </div>	
 		</div>
-		
-		<!--支付模块结束-->
+		<div class="desc_right">
+			<div class="bgs">
+				<h2>剩余支付时间：</h2>
+			
+	           <div class="paytime"><img src="../images/other/time.jpg" width="35" height="54">
+               <span>14分32秒</span>
+               </div>
+
+<span class="c_red">请在15分钟内完成付款</span>，否则系统将自动释放已经选座位
+		  </div>
+		</div>
+
 	</div>
-	<div class="gray_img_border w950"></div>
-	<div id="footer" style="height:50px;">
-		
-        <!-- page foot -->
-    </div>
+   
+</div>
+<div class="clearfix"></div>
+     <div id="content">
+    <div class="pay_tabbox  top_img_back mt10"> 
+                <div class="pay_menu">
+                      <ul>
+                             <li class="serblue">现金支付 </li>
+                            <li class="">商场币支付</li>
+                             <li class=""><span> M价或积分支付</span></li>
+                      </ul>
+                </div>
+               <div class="paytab_box"> 
+                     <div class="tabs">
+                     
+                                    <ul class="eBankList ">
+                                      <span class=" f l_h50">
+                                        第三方支付平台
+                                      </span>
+                                      <li >
+										<input type="radio" name="RadioGroup1"  class="redi">
+                                        <div class="bank-logo"><a href="#">
+                                          <img src="../images/other/zfb.jpg" width="132" height="44" alt="支付宝">
+                                        </a>
+                                        </div>
+										</li>
+                                   
+                                       <li clstag="payment|keycount|bank|z-cmpay" class="">
+																<input type="radio" name="RadioGroup1" value="cmpay" id="RadioGroup1_1"  class="redi" >
+															<a href="#">
+                                          <img src="../images/other/shoujzf.jpg" width="132" height="44" alt="手机支付" onClick="opteratorBank('cmpay')">
+                                        </a>																		
+										</li>                                                                                                    
+ 
+                                         <div class=" clearfix btnpay">
+                                            <a  class="select_btn" href="javascript:void(0);">确认支付</a>
+                                       <div>
+                                    </ul>
+              
+                      
+             </div>
+                     <div class="tabs hide"><div>
+欢迎您使用移动商场购票业务，点击"确定支付"将扣减您的M值或积分。
+合计金额：1340积分/M值 票数：2张</div>
+<div> <a id="BanksPop_wy" class="other_select" href="javascript:void(0);"></a></div></div>
+                     <div class="tabs hide">娱乐</div>
+               </div>
+        
+        </div>
+        <!--end-->
+     </div> <!--pay_tabbox-->
+ 
+ 
+ <!-- 通栏：end -->
+
 
 </div>
 
