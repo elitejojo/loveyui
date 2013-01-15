@@ -1,4 +1,7 @@
-﻿
+﻿/*
+@import "1";
+@import "/wp-content/themes/film/css/styles_article.css";
+*/
 
 /*理念：1. bass 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
      2. bass 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。

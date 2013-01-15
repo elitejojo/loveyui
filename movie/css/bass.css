@@ -17,6 +17,7 @@ body{ background-color: #fff;}
 .fb{font-weight:700}
 .f12{font-size:12px}
 .f14{font-size:14px}
+.f16{font-size:16px}
 .f18{font-size:18px}
 .f20{font-size:20px}
 .f22{font-size:22px}
@@ -91,3 +92,20 @@ body{ background-color: #fff;}
 
 /*圆角*/
 .round{-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;behavior: url(ie-css3.htc);background-color:#fff;}
+/* 按钮 */
+.anchor span { background-color:	#18A2E0;border-radius: 2px 2px 2px 2px;color: #336699;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
+	cursor:pointer}
+.anchor span a{color: #fff}
+.allbtn span { float:left; margin-right: 20px; display:inline; background-color:#F9A101;border-radius: 2px 2px 2px 2px;color: #336699;height: 30px;line-height: 30px; text-align: center;  width: 72px;padding: 0 5px;
+	cursor:pointer;font-size: 14px}
+.allbtn span a{color: #fff}
+.allbtn span a:hover{text-decoration: none}
+.select_btn,a.select_btn{border:2px solid #f5c178;color:#FFF;display: block; height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
+	cursor:pointer;background-color: #fca43a;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fda038), to(#d1440c));
+background-image: -webkit-linear-gradient(top, #fda038, #d1440c);
+background-image: -moz-linear-gradient(top, #fda038, #d1440c);
+background-image: -ms-linear-gradient(top, #fda038, #d1440c);
+background-image: -o-linear-gradient(top, #fda038, #d1440c);
+background-image: linear-gradient(top, #fda038, #d1440c);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndColorStr='#d1440c'); text-decoration: none}

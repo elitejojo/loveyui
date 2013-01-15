@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>通票购物</title>
+ <link rel="stylesheet"  href="../../css/bass.css">
+ <link rel="stylesheet"  href="../../css/layout.css">
+ <link  rel="stylesheet" href="../../css/global.css">
+ <link  rel="stylesheet"  href="../../css/style_movie.css">
+<link  rel="stylesheet"  href="../../css/style_movie_pay.css">
+  
+  <link  rel="stylesheet"  href="../../css/movie.css">
+  
+  
+  <link media="all" rel="stylesheet" href="../../css/csslib/common-lib.css" type="text/css" />
+<link media="all" rel="stylesheet" href="../../css/csslib/boxy.css" type="text/css" />
+<link media="all" rel="stylesheet" href="../../css/csslib/pay_booking.css" type="text/css" />
+
+ <script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("#play_stage ul li").click(function(){
+$(this).addClass("circleRoundder").siblings().removeClass("circleRoundder");
+//var index=$("#play_stage ul li").index(this);
+//$(".tab_box .tab ").eq(index).show().siblings().hide();
+})			
+	});
+</script>
+
+
+
+<script type="text/javascript" src="../../js/payment.js"></script>
+<script type="text/javascript" src="../../js/buystep1.js"></script>
+
+<script type="text/javascript">
+	function search(field, value) {
+		chanFirmsBycid(value,'');
+	}
+	// 选择城市事件
+	function checkCity(code,name) {
+		$(".select_citys").html(name+"<a href='#'></a>");
+		$("#cityId").val(code);
+		$(".ui-dropdown-cnt").hide();
+		// 根据城市查询当前影院
+		$.ajax({
+			url :piaolala.config.basepath+'/buy/getCurrentFirm.do',
+			data : {
+				cityCode : code
+			},
+			type : 'POST',
+			error : function(request) {
+			},
+			success : function(data) {
+				$.each(data, function(index, item) {
+					$("#firmAddrs").html(item.cinemaName+"<a href='#'></a>"); // 设置城市的默认影院
+					$(".address").html("地址："+ item.cinemaAddress);
+					getTtickets(item.cinemaCode);
+				});
+				if (data.length == 0) {
+					$("#firmAddrs").html("无影院信息"+"<a href='#'></a>");
+				} 
+			}
+		});
+		
+		$("#firmAddrs").click();
+	}
+$(document).ready(function(){	
+	//初始化影城数据
+	intCityInfo('3201','1','');
+	// piaolala.dropdown.init('#J-area');
+	// 下拉框区域单击事件
+	// 下拉框影院名单击事件
+	$('.J-toggle-cinema').click(function() {
+		var $states = $('.J-toggle-cinema').children('.J-states'),
+			stateUp = 'choose-cinema-list-up',
+			stateDown = 'choose-cinema-list-in';
+		if ($states.hasClass(stateUp)) {
+			$states.removeClass(stateUp).addClass(stateDown);
+		}
+		else if ($states.hasClass(stateDown)) {
+			$states.removeClass(stateDown).addClass(stateUp);
+		}
+	});
+})
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div id="page"  class="w950">
+
+        <div id="header" class="w950">
+            <img src="../../images/common/Process_two.png" width="950" height="59" alt="流程">
+    
+        </div>
+    <div id="content"  class="mt10">
+   <!--  -->
+   <div class="change_area">
+          
+        <!-- 通栏：.grid-m -->
+    	
+        
+<div class="movie_list_container top_img_back" style="width:948px">
+<div class=" E0_bb tabs pl20 mb10 pb4 f14 fb" > <ul><li>购买兑换劵</li></ul></div>                 
+<div class="clearfix"></div>
+
+ <!--  start  通票  -->
+      
+          <div id='load' style="text-align:center;display: none; position:absolute; color:#fff; line-height:30px; font-size:16px;">
+    <p>正在加载中，请稍候……</p>
+    <img src="../../images/common/loadingAnimation.gif" />  
+</div>
+<div id="layerPage" style="opacity:0.5; filter:alpha(opacity:50); background:#000;position:absolute; left:0; top:0; display:none;"></div>
+<!--------------------主体内容区域------------------->
+<div class="container cf" style="position:relative;">
+
+ <div class="ui-dropdown-cnt  ui-city pay_ui_citys" style="position:absolute; top:0; margin-top:78px; width:357px;z-index:10;">
+				      <a href="#" class="close" style="margin-top:-20px;"></a>
+				      <form id="J-city-form" class="ui-search suggestion-on" action="/" style="margin-top:-20px;">
+				      	<input class="ui-search-input suggestion-input" name="city" autocomplete = "off" type="search" placeholder="输入城市名字" />
+				        <div class="suggestion-list"></div>
+				      	<input class="ui-search-btn" type="submit" value="搜索"/>
+				        <span class="hot-cities">
+				          热门城市:
+				          <a href="javascript:checkCity('4301','苏州');">苏州</a>
+				          <a href="javascript:checkCity('4403','南京;">南京</a>
+				          <a href="javascript:checkCity('4401','上海');">上海</a>
+				        </span>
+				      </form>
+				      <div class="city-list">
+				      	<ul>
+							<li>
+								<span class="first-letter">A</span>
+				                <a href="#" onclick="intCityInfo('5204','0','安顺');"> 安顺</a>   
+				                <a href="#" onclick="intCityInfo('3408','0','安庆');"> 安庆</a>   
+							</li>		 	
+							<li>
+								<span class="first-letter">B</span>
+				                <a href="#" onclick="intCityInfo('1508','0','巴彦淖尔');"> 巴彦淖尔</a>   
+				                <a href="#" onclick="intCityInfo('5224','0','毕节');"> 毕节</a>   
+				                <a href="#" onclick="intCityInfo('1502','0','包头');"> 包头</a>   
+				                <a href="#" onclick="intCityInfo('3716','0','滨州');"> 滨州</a>   
+				                <a href="#" onclick="intCityInfo('1101','0','北京');"> 北京</a>   
+							</li>		 	
+							<li>
+								<span class="first-letter">C</span>
+				                <a href="#" onclick="intCityInfo('1309','0','沧州');"> 沧州</a>   
+				                <a href="#" onclick="intCityInfo('1504','0','赤峰');"> 赤峰</a>   
+				                <a href="#" onclick="intCityInfo('1404','0','长治');"> 长治</a>   
+				                <a href="#" onclick="intCityInfo('4301','0','长沙');"> 长沙</a>   
+				                <a href="#" onclick="intCityInfo('4307','0','常德');"> 常德</a>   
+				                <a href="#" onclick="intCityInfo('5101','0','成都');"> 成都</a>   
+				                <a href="#" onclick="intCityInfo('3204','0','常州');"> 常州</a>   
+				                <a href="#" onclick="intCityInfo('5001','0','重庆');"> 重庆</a>   
+				                <a href="#" onclick="intCityInfo('4310','0','郴州');"> 郴州</a>   
+							</li>		 	
+							<li>
+								<span class="first-letter">D</span>
+				                <a href="#" onclick="intCityInfo('5329','0','大理白族自治州');"> 大理白族自治州</a>   
+				                <a href="#" onclick="intCityInfo('3705','0','东营');"> 东营</a>   
+				                <a href="#" onclick="intCityInfo('5106','0','德阳');"> 德阳</a>   
+				                <a href="#" onclick="intCityInfo('3714','0','德州');"> 德州</a>   
+				                <a href="#" onclick="intCityInfo('5230','0','都匀');"> 都匀</a>   
+							</li>		 	
+							<li>
+								<span class="first-letter">F</span>
+				                <a href="#" onclick="intCityInfo('3501','0','福州');"> 福州</a>   
+				                <a href="#" onclick="intCityInfo('4406','0','佛山');"> 佛山</a>   
+							</li>		 	
+							<li>
+								<span class="first-letter">G</span>
+				                <a href="#" onclick="intCityInfo('5201','0','贵阳');"> 贵阳</a>   
+				                <a href="#" onclick="intCityInfo('2115','0','盖州');"> 盖州</a>   
+				                <a href="#" onclick="intCityInfo('4401','0','广州');"> 广州</a>   
+							</li>		 	
+						 	
+							
+				      		
+				      	</ul>
+				      </div>
+				    </div>
+
+
+
+	<form name="fTicket" id="fTicket" action="creatOrder.do"  method="post" onsubmit="return false;">
+	<input id="_temp_ticket" type="hidden" value=""/>
+	<input name="cityId" id="cityId" type="hidden"  value="3201"  />
+	<input name="cinemaCode" id="cinemaCode" type="hidden"  value="25017"  />
+	<input name="searchKey" id="searchKey" type="hidden"  value="南京+'电影票'"  />
+	<input name="cName" id="cName" type="hidden"  value="南京金字塔国际影城"  />
+	<input name="filmCode" id="filmCode" type="hidden"  value=""  />
+	<input name="filmTypeCode" id="filmTypeCode" type="hidden"  value=""  />
+	
+        <!----------兑换券页面头部流程展示----------><!----------电子兑换券区域---------->
+  <div class="change_area">
+            <!-----左边栏----->
+                 <div class="change_left">
+          <img src="../../images/temp/tmlogo.jpg" width="250" height="156">
+            </div>
+            <!-----右边栏----->
+            <div class="change_right">
+                <!----标题区域----->
+                <h1 class="show_title">
+                    <span class="cinema_name">南京金字塔国际影城</span>
+                    <span class="ticket_items">电子兑换券</span>
+                    <span class="city">南京</span>
+                    <span class="items">电影票</span>
+                </h1>
+                <!-----影院选择区域----->
+                <div class="select_cinema_area " >
+                <div style="position:relative; z-index:1000;"> 影院：        
+                    <span class="uncheck_tab" id="select_citys">南京
+                      <a href="#"></a>
+                    </span>
+                    
+                    <span class="uncheck_tab" id="firmAddrs" cinemaCode='25017'>南京金字塔国际影城
+                        <a href="#"></a>
+                    </span>
+                    <!----------影院弹出框---------->
+                    <div class="alert_box" style="background:#FFFFF;">
+                        <a href="#" class="close_btn"></a>
+                       <div class="alert_title">
+	                        <span>选择区域:</span>          
+                        <a id="all" class="cur">全部</a>
+                        <a id="320105">建邺区</a>
+                        <a id="320103">白下区</a>
+                        <a id="320111">浦口区</a>
+                        <a id="320107">下关区</a>
+                        <a id="320106">鼓楼区</a>
+                        <a id="320102">玄武区</a></div>
+                        <div class="cinema_list">
+                        </div>
+                    </div>
+                    </div>
+                    <p class="address">地址：江苏省南京市白下区石门坎165号</p>
+                </div>
+                <!-----选择票种区域----->
+                <div class="select_ticket_item">
+                    <span class="sort_tag">票种：</span>
+                    <div id="tTickets" style="width: 580px;  float:left;">
+                    <p id="06" class="cur_active"><span>普通票</span><span class="price">30元</span><input type="radio" notes="特殊限价片需补足差价" filmtype="06" dataprice="30" value="250171674" checked="checked" name="ticketId" id="250171674" style="display: none;"></p>
+                    
+                    <p id="02"><span>3D票</span><span class="price">40元</span><input type="radio" notes="特殊限价片需补足差价" filmtype="02" dataprice="40" value="250171675" name="ticketId" id="250171675" style="display: none;"></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <!-----详情内容显示区域----->
+                <div class="show_details">
+                    <div class="show_cur"></div>
+                    <!-----票种说明----->
+                    <div class="ticket_notes">
+                        <div class="ticket_sort" id="piaoname">普通票:</div>
+                        <div class="state_list">
+                            <p>1.有效期<span id="days"></span>天<span id="description"></span></p>
+                            <p>2.见面会、首映式、情人节、平安夜、圣诞节晚场及VIP厅等特殊场次兑换规则，以影院公告为准</p>
+                            <p>3.今日可兑换影片（仅供参考)<!-- 暂时没这功能 <a href="#" class="pack_up" id="pack_up">点击展开</a>--></p>
+                        </div>
+                    </div>
+                    <!-----影片展示区----->
+                    <div class="paiqiInfo fn-hide">
+                    <div class="slide_wrap" style="clear:both;">
+                    <div class="galleryWrap" id="slide_3">
+                        <div class="picWrap" >
+                            <ul>
+                            	<!-- 
+                                <li><a href="#"><img src="../default/css/green/img/pay_booking/movie.png"></a></li>
+                                <li><a href="#"><img src="../default/css/green/img/pay_booking/movie.png"></a></li>
+                                <li><a href="#"><img src="../default/css/green/img/pay_booking/movie.png"></a></li>
+                                 -->
+                            </ul>
+                            
+                        </div>
+                        
+                        <span class="prev3" id="prev_btn"></span>
+                        <span class="prev3" id="next_btn"></span>
+                    </div> 
+                   <!-----电影放映时间----->
+                     <div class="movie_showtime">
+			         <div id="paiqi"></div>
+			         <div style="clear:both;"></div>
+                      </div>
+                   </div>
+                   <div class="nofilm" style="margin: 0 auto;text-align:center;height:30px;line-height:30px;display:none; clear:both;"></div>
+                  </div>
+                  
+                  <!-----注意事项----->
+                  <div style="clear:both"></div>
+                  <p class="alarm" id="useDescription"></p>
+                </div>
+                <!-----票数----->
+                <div class="ticket_num">
+                  	 票数:
+                  	<div style="padding-left:4px; display:inline;">
+                  	<input name="ticketNum" id="ticketNum" type="hidden"  value="2" />
+                  	<!-- 
+                  	<input style="display: none;"  name="ticketNum" id="ticketNum1" type="radio"   value="1" />
+                  	<input style="display: none;"  name="ticketNum" id="ticketNum2" type="radio" checked="checked" value="2" />
+                  	<input style="display: none;"  name="ticketNum" id="ticketNum3" type="radio"  value="3" />
+                  	<input style="display: none;"  name="ticketNum" id="ticketNum4" type="radio"  value="4" />
+                  	 -->
+                    <span>1张</span>
+                    <span class="select_num" >2张</span>
+                    <span>3张</span>
+                    <span>4张</span>
+                    </div>
+                </div>
+                <a class="select_btn "  style=" margin-left:54px" target="_blank" id="tickformSubId" onclick="javascript:formSub();">立即购买</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        </form>
+
+<!--   end-->
+
+ <div class="clearfix"></div>
+ <!--  start  留言  -->
+
+
+<div class="ui_message mt10">   
+<div class="play_diary_select movie_tab" id="play_dairy_tab" style="width:938px">
+    <span class="blue">热门影评</span>
+  </div>                     
+    <dl class="ui_wala_listing">
+    <dt class="ui_wala_aside">
+      <a id="logonMember" class="pubpic" href="javascript:void(0);">
+        <img width="50" height="50" 
+        src="../../images/temp/ren_2.png"></a>
+    </dt>
+    <dd class="ui_wala_wrap">
+    
+      
+  <form id="bodyForm">
+      <div id="isModify" class="page_wala" style="width:857px" >
+        <i class="l" style="left:62px">◆<i>◆</i></i>
+  <div class="ui_wala_textArea">
+    <textarea id="replycontent" lang="default" name="replycontent"></textarea>
+  </div>
+        
+      <div class="page_modify_dialog  page_modify_dialog_mini ">
+
+        <em class="right">
+        <a class="select_btn r" href="javascript:();">发&nbsp;&nbsp;布</a>  
+        <b id="comment_length" class="comment_length">140</b>
+        </em>
+      </div>
+      </div>
+      </form>
+    </dd>
+  </dl>
+    
+      <!--  end 留言-->  
+
+<div class="ui_wala_comment">
+
+<dl class="ui_wala_original " >
+  <dt class="uipic">
+    <a class="pubpic" title="jasephine" target="_blank" href="/">
+    <img width="50" height="50" src="../../images/temp/ren_1.jpg"></a>
+  </dt>
+  <dd class="ui_view_solide" style="width:854px">
+    <div class="page_wala">
+      <i class="l">◆<i>◆</i></i>
+  
+      <div class="page_wala_talk ">
+        <p>
+        <a target="_blank" href="">jasephine</a>：
+          (<span class="ui_grades ui_grade7" title="7.0分">7.0</span>)不错  值得推荐                   
+        </p>    
+      </div>
+    </div>
+  </dd>
+</dl>
+</div>
+
+</div>
+<!-- end--> 
+<!-- end-->  
+
+
+	
+	        </div>							
+							</div>
+							<!--end movie_list_container-->
+						</div>
+						<!--end main-wrap-->
+                    </div>
+                    
+        </div>   
+             <!-- 通栏：.grid-m  end -->  
+    </div>
+
+  	</div>
+    <div id="footer" class="w950 "><img src="../../images/other/index_4.jpg" width="950" height="103">
+
+    </div>
+</div>
+
+</body>
+</html>
+		

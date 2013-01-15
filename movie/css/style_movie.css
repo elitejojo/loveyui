@@ -172,7 +172,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndC
 
 .Button_x3{height:32px; background:#90c302; border:0; color:#fff; text-align:center; cursor: pointer; display:block; line-height:24px; font-size:12px; padding:0 8px; font-weight:bold;}
 .Button_x3:hover{background:#a42536; color:#fff;}
-f14{font-size:14px;}
+.f14{font-size:14px;font-family:"微软雅黑";}
 .f16{font-family:"微软雅黑"; font-size:16px; font-weight:600;}
 .f20{font-family:"微软雅黑"; font-size:20px; font-weight:600; color:#333;}
 .f22{font-family:"Century Gothic"; font-size:22px; font-weight:500; color:#555;}
@@ -550,7 +550,7 @@ f14{font-size:14px;}
 .movie_head_desc{float: left;   padding: 10px 10px 15px 0; width: 700px}
 .desc_left{float: left;width: 430px}
 .desc_right{float: right; width: 230px; padding:6px;background:#fffbf1; border: 1px solid #faa200;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
-.desc_right .bgs{background: #fff;padding: 4px;-moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;}
+.desc_right .bgs{background: #fff;padding: 8px;-moz-border-radius: 9px;-webkit-border-radius: 9px;border-radius: 9px;}
 .desc_right h2{font-family: '微软雅黑','宋体';   font-weight: normal;  line-height:22px;}
 .movie_head_name h1 { float:left;font-family: '微软雅黑','宋体'; font-size: 28px;  font-weight: normal;  line-height: 30px;}
 .movie_head_name span{ padding:8px 0 0 5px; font-size: 14px; color: #707070;display: inline-block;}
@@ -570,11 +570,11 @@ sub {  color: #FF6600;  font-size: 22px;  font-style: italic;  font-weight: bold
 sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal; line-height: 20px;margin-left: 2px;  vertical-align: top;}
 
 /****留言****/
-.ui_message {  overflow: hidden; width: 100%;}
+.ui_message {  overflow: hidden; width: 100%;margin-bottom: 10px}
 .ui_wala_listing {
     padding-left: 70px;
     position: relative;
-    vertical-align: top;
+    vertical-align: top; margin-top:10px 
 }
 .ui_wala_textArea {
     background-color: #FFFFFF;
@@ -619,7 +619,7 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
     z-index: 5;
 }
 
-.ui_wala_listing .ui_wala_wrap .page_wala i.l {color: #A8A8A8;  left: 62px;}
+.ui_wala_listing .ui_wala_wrap .page_wala i.l {color: #A8A8A8;  left: 67px;}
 .ui_wala_listing .ui_wala_wrap .page_wala i.l i { color: #FFFFFF;}
 
 .page_wala i { display: inline-block;   font-family: 'SimSun'; font-size: 16px;
@@ -683,3 +683,55 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
 .ui_message .hover {  background:#FFF6EE;
     border-color:#FFE3BD; 
 }
+
+
+
+
+/* 通票*/
+.more-group {
+     margin: 8px 0 0;
+    padding:0 0 0 10px
+}
+.more-group ul li{ float: left;  margin: 5px 5px 0 0;
+    padding-bottom: 15px; position: relative;
+    width: 240px;
+}
+.more-group ul li h3{font: 12px;  text-align: left;padding:2px 0px 2px 10px; font-weight: 400}
+.more-group ul li h3 a{color: #3566CD}
+ .more-group ul li .pic {
+    border:1px solid #ddd;
+    height: 220px;
+    margin: 7px auto 0;
+    overflow: hidden;
+    position: relative;
+    width: 220px;
+    padding:5px;
+}
+.more-group ul li .buy-action .price em {
+    font-family: "Microsoft Yahei","Arial","Verda","tahoma";
+    font-size: 26px;
+    font-weight: bold;
+    margin-right: 3px;
+}.more-group ul li .buy-state .orig-price {
+    float: left;
+    font-size: 12px;
+    padding: 0 4px 0 10px;
+}
+.orig-price del {
+    text-decoration: line-through;
+}
+.more-group ul li .buy-state .orig-price del, .more-group ul li .buy-state .orig-price strong {
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 3px;
+}
+.more-group ul .buy_info{padding:0 5px 0 10px}
+.more-group ul .buy_btn{ float: right;}
+.list-act-link{}
+.uiText{ padding-left: 5px}
+.list404{ margin: 50px auto; padding: 0 100px}
+.list404 dd,.list404 dt{ float: left;}
+.list404 dd{padding: 36px 0 0 46px ; background:url(../images/temp/404_r.jpg) no-repeat; width:378px; height: 125px; margin-top:75px}
+.list404 dd h2{ font-size: 20px}
+.list404 dd h3{ font-weight: normal; margin:10px 0}
+.list404 dd a{color: #0094c4; margin-left: 5px}

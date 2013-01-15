@@ -94,7 +94,7 @@
 
 
 /*  style_movie_movieList.css  */
-.movie_list_container{min-height:50px;height:auto;padding-top:10px;margin-left:2px;text-align:center; border:1px solid #E0E0E0}
+.movie_list_container{ width:748px; float:left;height:auto;padding-top:10px; border:1px solid #E0E0E0}
 .E0_bl{border-left:1px solid #E0E0E0;}
 .E0_bt{border-top:1px solid #E0E0E0;}
 .E0_bb{border-bottom:1px solid #E0E0E0;}
