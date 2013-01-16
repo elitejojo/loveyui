@@ -18,7 +18,27 @@ var index=$("#play_stage ul li").index(this);
 $(".tab_box .tab ").eq(index).show().siblings().hide();
 })			
 	});
+	$(document).ready(function(){
+	 var TABID="${ETF.TABID}";
+	 if(TABID=="tab1"){
+	 	//快捷
+	 	
+	 	if(KJCZ_FLG=="1"){
+	 		ppCardSep2(BANKID,TXN_AMT);
+	 	}else{
+	 		ppCardClick();
+	 	}
+	 	
+	 }else if(TABID=="tab2"){
+	 	//网银
+	 	ebankClick();
+	 }
+});
+
 </script>
+
+
+
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
