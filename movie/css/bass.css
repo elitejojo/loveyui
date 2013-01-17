@@ -1,10 +1,10 @@
-ï»¿
+
 body{ background-color: #fff;} 
 .left,.f,.right,.r,.l{display:inline;float:left}
 .right,.r{float:right}
 
 
-.c_orange,.c_orange a{color:#F9A101}
+.c_orange,.c_orange a{color:#fc7f09} 
 .c_yellow,.c_yellow a{color:#ff0}
 .c_red,.c_red a{color:#F00}
 .c_blue,.c_blue a{color:#07F}
@@ -90,9 +90,9 @@ body{ background-color: #fff;}
 .h{height:100%;}
 .hide{ display:none}
 
-/*åœ†è§’*/
+/*Ô²½Ç*/
 .round{-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;behavior: url(ie-css3.htc);background-color:#fff;}
-/* æŒ‰é’® */
+/* °´Å¥ */
 .anchor span { background-color:	#18A2E0;border-radius: 2px 2px 2px 2px;color: #336699;display: block;height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
 	cursor:pointer}
 .anchor span a{color: #fff}

@@ -11,6 +11,9 @@
 			var tr_h = $($("#data_table_body tr")[0]).height();
 			var m_sroll_h = 5*tr_h+4;
 			var trs = $("#data_table_body tr").length;
+			if(trs.length>0){
+				$("#data_table_body tr:odd").addClass("odd")
+			}
 			if(trs<=5){
 				$($(".scroller")[0]).hide();
 				$("#data_table_body").width($(this).width());

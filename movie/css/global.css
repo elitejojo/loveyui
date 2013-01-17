@@ -1,7 +1,4 @@
-﻿/*
-@import "1";
-@import "/wp-content/themes/film/css/styles_article.css";
-*/
+﻿
 
 /*理念：1. bass 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
      2. bass 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
@@ -79,7 +76,16 @@ button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie
 /* 注：optgroup 无法扶正 */
 
 
-
+.btn{width:60px;height:25px;cursor: pointer;border-width:0px;background-image: url(../images/btn-bg2.gif);letter-spacing: 3px;}
+#page_and_btn {height:auto;overflow:hidden;padding:10px 0px 0px 0px;margin:10px  }
+#page_and_btn ul { margin:0px;list-style:none;float:right;width:auto;height:100%;overflow:hidden;padding:0px;}
+#page_and_btn ul li { float:left; border:1px solid #CCCCCC; height:20px; line-height:20px; margin:0px 2px; text-align:center;padding:2px 5px}
+#page_and_btn ul li a{color:#333; text-decoration:none;text-align:center;}
+#page_and_btn ul li a:hover{ background:#FAFBFD;}
+#page_and_btn ul li a, .pageinfo { display:block; padding:0px 6px; background:#FAFBFD;}
+#page_and_btn  { color:#555;}
+.current { background:#ccced4; display:block; padding:0px 6px; font-weight:bold;}
+.page_and_btn div{float:left;}
 
 
 

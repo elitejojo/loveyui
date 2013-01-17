@@ -1,4 +1,4 @@
-ï»¿.oper_module{width:948px;margin:0 auto;border:1px solid #e7e7e7}
+.oper_module{width:948px;margin:0 auto;border:1px solid #e7e7e7}
 .oper_module_item{width:918px;min-height:50px;height:auto;padding-top:15px;padding-left:10px;}
 .top_img_back{background:url("../images/tab_top_back.png") 0 0 no-repeat;}
 .use_btn{background:url("../images/use_btn.png") 0 0 no-repeat;width:61px;height:26px;color:#fff;text-align:center;border:none;}
@@ -37,7 +37,7 @@
 .item_list .content{float:left;}
 .item_list .content li{float:left;display:inline-block;white-space:nowrap;min-width:30px;margin:8px;}
 .item_list .content li span{float:left;display:inline;height:50px;line-height:50px;margin:auto 2px;}
-.item_list .content li span input{height:15px;width:15px;_margin-top:20px;}/*IE6éœ€è¦è®¾ç½®inputçš„å®½åº¦*/
+.item_list .content li span input{height:15px;width:15px;_margin-top:20px;}/*IE6ĞèÒªÉèÖÃinputµÄ¿í¶È*/
 
 
 #prefer_info{width:950px;display:inline-block;min-height:50px;}
@@ -46,7 +46,7 @@
 
 #prefer_info ul li dl{width:100%;}
 #prefer_info ul li dl dt{float:left;display:inline-block;padding:0 5px;text-align:center;line-height:46px;height:46px;}
-#prefer_info ul li dl dt input{width:15px;height:15px;_margin-top:18px}/*IE6éœ€è¦è®¾ç½®inputçš„å®½åº¦*/
+#prefer_info ul li dl dt input{width:15px;height:15px;_margin-top:18px}/*IE6ĞèÒªÉèÖÃinputµÄ¿í¶È*/
 #prefer_info ul li dl dd{float:left;display:inline-block;padding:5px 3px;height:46px;line-height:20px;overflow:hidden;}
 #prefer_info ul li dl dd p{width:205px;}
 
@@ -64,7 +64,7 @@
 
 
 
-/*æ”¾æ˜ åˆ—è¡¨*/
+/*·ÅÓ³ÁĞ±í*/
 .E0_bl{border-left:1px solid #E0E0E0;}
 .E0_bt{border-top:1px solid #E0E0E0;}
 .E0_bb{border-bottom:1px solid #E0E0E0;}
@@ -111,7 +111,7 @@
 
 .play_data_table .data_table_body{width:100%;height:304px;background:#fff; overflow:hidden}
 .play_data_table .data_table_body table{float:left;width:100%;height:304px;text-align:center;overflow:hidden;}
-.play_data_table .data_table_body table tr{height:58px;line-height:58px;}
+.play_data_table .data_table_body table tr{height:58px;line-height:58px;  width:740px}
 
 
 .play_data_table .data_table_body table .odd{background:#FDF9EE;border-width:1px 0;border-style:solid;border-color:#FBECCB;}
@@ -126,14 +126,14 @@
 .handle .handleR {background-position: right -117px;height: 100%; width: 14px;}
 .handle .handleC {background-position: 0 center;height: 100%;width: 14px;}
 .play_data_table .data_table_footer{height:50px;background:#F2F2F2;}
-/*è¯„è®º*/
+/*ÆÀÂÛ*/
 
-/* tab è¡¨å¤´*/
+/* tab ±íÍ·*/
 .movie_tab{height:27px;border-bottom:2px solid #4fa7ff;padding-left:10px ; width:728px}
 .movie_tab .blue{background:url("../images/tab_back_blue.gif") 0 0 no-repeat;color:#fff;font-weight:700;}
 .movie_tab .gray{background:url("../images/tab_back_gray.gif") 0 0 no-repeat;}
 .movie_tab span{display:inline-block;width:114px;height:27px;line-height:27px;text-align:center;margin:0px 5px;font-size:12px;}
-/* æ”¯ä»˜ */
+/* Ö§¸¶ */
 .pay_tabbox{width:928px ;padding:10px;border:1px solid #e7e7e7}
 .pay_tabbox .tabs{ padding:40px}
 .pay_menu{height:27px;border-bottom:2px solid #4fa7ff;width:928px}
@@ -147,7 +147,9 @@ ul.eBankList  li{ float:left; width:170px; }
 .btnpay{ width:100%; display:inline-block}
 .redi{ }
 .pay_phone_number{ margin-top:10px; padding:10px; border:1px solid #c7c7c7; background:#FFF}
-
+#countDownMin{ font-size:40px; }
+#countDownSec{font-size:40px; }
+.paytime{ font-size:30px;color:#F9A101 ;10px}
 
 
 
