@@ -48,7 +48,7 @@
 			___titleClass: "boxTitle",
 			___closeID:"",
 			___triggerID:"",
-			___boxBdColor:"#E9F3FD",
+			___boxBdColor:"#919191",
 			___boxBdOpacity:"1",
 			___boxWrapBdColor:"#A6C9E1",
 			___windowBgColor:"#AAAAAA",

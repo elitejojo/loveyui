@@ -1,0 +1,13 @@
+/*评分*/
+.comment_integration{width:200px;padding:10px;}
+.comment_initRating{display:inline-block;height:24px;line-height:24px;}
+.comment_initRating i{display: inline-block;background:url("../images/comment_star.png") no-repeat;width:12px;height:24px;line-height:24px;cursor:pointer;overflow:hidden;}
+.comment_initRating .c_left{background-position:0 0;}
+.comment_initRating .c_right{background-position:-13px 0;}
+.comment_initRating .gray_left{background-position:-25px 0;}
+.comment_initRating .gray_right{background-position:-38px 0;}
+.comment_integratio .c_i{background:none;font-size:12px;color:red;}
+sub.c_sub { color: #FF6600; font-size: 22px; font-style: italic;font-weight: bold; line-height: 24px;margin-left: 10px;vertical-align: middle;
+}
+sup.c_sup { color: #FF6600;font-size: 16px;font-style: italic;font-weight: normal;line-height: 20px;margin-left: 2px;vertical-align: top;
+}

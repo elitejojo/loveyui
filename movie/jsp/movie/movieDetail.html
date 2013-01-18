@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />
 	<title>影片排片页</title>
@@ -10,7 +10,6 @@
 	<link  rel="stylesheet"  href="../../css/style_movie.css">
 	<link  rel="stylesheet"  href="../../css/style_movie_pay.css">
 	<script type="text/javascript" src="../../js/jquery.js"></script>
-	<script type="text/javascript" src="../../js/movieTab.js"></script>
 	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
 	<script type="text/javascript" src="../../js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="../../js/movieScroller.js"></script>
@@ -18,11 +17,11 @@
 		$(document).ready(function(){
 			
 			// TAB  切换效果
-				var tab_operObj = $(".playList_tab_item");
-				$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});
-				function tabCallBack(){
-				dealPlayDateEvent();		
-				}
+			//	var tab_operObj = $(".playList_tab_item");
+			//	$("#playDate_tab").movieTab({syn:true,callBack:tabCallBack,operClass:tab_operObj});
+			//	function tabCallBack(){
+			//	dealPlayDateEvent();		
+			//	}
 
 
 				//	var diary_tab_operObj = $(".diary_tab_item");
@@ -280,8 +279,7 @@ $(function(){
 									<dd>
 										
 										
-
-										<div class="clearfix con_innerBox">
+<div class="clearfix con_innerBox">
 <a id="63364" class="310110 select" config="cinema" rel="310110" href="javascript:void(0)">五角场万达电影城</a>
 <a id="15" class="310106 " config="cinema" rel="310106" href="javascript:void(0)">环艺电影城</a>
 <a id="1" class="310101 " config="cinema" rel="310101" href="javascript:void(0)">大光明电影院</a>
@@ -291,9 +289,9 @@ $(function(){
 									</dd>
 								</dl>		
 
-								<div id="play_data" class="mr10">
+				<div id="play_data" class="mr10">
 						
-									<div class="play_data_table mt20 mb20 b_border">	
+					<div class="play_data_table mt20 mb20 b_border">	
 										<div class="data_table_header  b_border_b">
 											<span class="w86">放映时间</span>	
 											<span class="w110">语言版本</span>	
@@ -301,36 +299,79 @@ $(function(){
 											<span class="w110">现价(元)</span>	
 											<span class="w130">说明</span>	
 										</div>
-										<div class="data_table_body" id="play_list_info">
-											<table  id="data_table_body" class="scroll_content" >
-											<tr>
-											<td class="w86" >111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w130">111111</td>
-											<td> <a href="" class=""></a></td>
-										</tr>
-										<tr class="odd">
-											<td class="w86" >111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w130">111111</td>
-											<td><a href="" class="select_btn">选座购票</a></td>
-										</tr>
-										<tr>
-											<td class="w86" >111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w110">111111</td>
-											<td class="w130">111111</td>
-											<td>22222</td>
-										</tr>
-										
+							<div class="data_table_body" id="play_list_info">
+								<ul  id="data_table_body" class="scroll_content" >
+										<li>
+											<span class="w86" >111121</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>
+											<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>		<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>		<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>		<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>		<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>		<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li><li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>
+												<li>
+											<span class="w86" >111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w110">111111</span>
+											<span class="w130">111111</span>
+											<span class="w170"> <a  style="margin-top:13px" href="" class="select_btn">选座购票</a></span>
+										</li>
+												
+												
 				            
-									</table>
-									<div class="scroller vertical" id="listTableScroll">
+									</ul>
+							 <div class="scroller vertical" id="listTableScroll">
 										<span class="decrease"></span>
 										<div class="scroll">
 											<div class="handle">
@@ -343,16 +384,20 @@ $(function(){
 										</div>
 										<span class="increase"></span>
 									</div>
-								</div>
-				
-
-								<div class="data_table_footer b_border_t">
+					
+					 </div>
+					        <div class="data_table_footer b_border_t">
 									<p class="pl10">*现价已包含服务费，该影院订座放映前120分钟关闭售票</p>
 									<p class="pl10">*本放映时刻表预告时间仅作参考，具体播放时间以影院实际播放为准</p>
 									
-								</div>
-							</div>	
-						</div>
+							</div>
+           
+          </div>                             
+<!--  start  留言  -->	   
+								
+		</div>
+                        
+                
                         
 <!--  start  留言  -->
 <div class="play_diary_select movie_tab" id="play_dairy_tab">
