@@ -47,23 +47,23 @@
 .clear{clear:both;}
 .Button_d{border:2px solid #f5c178;color:#FFF;display: block;margin: 0 auto; text-align: center;
 cursor:pointer;background-color: #fca43a;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#fda038), to(#d1440c));
-background-image: -webkit-linear-gradient(top, #fda038, #d1440c);
-background-image: -moz-linear-gradient(top, #fda038, #d1440c);
-background-image: -ms-linear-gradient(top, #fda038, #d1440c);
-background-image: -o-linear-gradient(top, #fda038, #d1440c);
-background-image: linear-gradient(top, #fda038, #d1440c);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndColorStr='#d1440c'); text-decoration: none;width:80px; height:32px; font-size:14px; font-weight:600; color:#fff; text-align:center; display:block; line-height:32px; padding: 0 10px}
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fca43a), to(#d54f12));
+background-image: -webkit-linear-gradient(top, #fca43a, #d54f12);
+background-image: -moz-linear-gradient(top, #fca43a, #d54f12);
+background-image: -ms-linear-gradient(top, #fca43a, #d54f12);
+background-image: -o-linear-gradient(top, #fca43a, #d54f12);
+background-image: linear-gradient(top, #fca43a, #d54f12);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndColorStr='#d54f12'); text-decoration: none;width:80px; height:32px; font-size:14px; font-weight:600; color:#fff; text-align:center; display:block; line-height:32px; padding: 0 10px}
 .Button_d:hover{background:#a42536; color:#fff;}
 .Button_x{width:87px; height:28px; line-height:28px;  border:0; color:#fff; text-align:center; cursor: pointer; display:block;font-weight:bold; padding:0px 10px;border:2px solid #f5c178;color:#FFF;display: block;margin: 0 auto; text-align: center;
 	cursor:pointer;background-color: #fca43a;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#fda038), to(#d1440c));
-background-image: -webkit-linear-gradient(top, #fda038, #d1440c);
-background-image: -moz-linear-gradient(top, #fda038, #d1440c);
-background-image: -ms-linear-gradient(top, #fda038, #d1440c);
-background-image: -o-linear-gradient(top, #fda038, #d1440c);
-background-image: linear-gradient(top, #fda038, #d1440c);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndColorStr='#d1440c'); text-decoration: none;}
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fca43a), to(#d54f12));
+background-image: -webkit-linear-gradient(top, #fca43a, #d54f12);
+background-image: -moz-linear-gradient(top, #fca43a, #d54f12);
+background-image: -ms-linear-gradient(top, #fca43a, #d54f12);
+background-image: -o-linear-gradient(top, #fca43a, #d54f12);
+background-image: linear-gradient(top, #fca43a, #d54f12);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndColorStr='#d54f12'); text-decoration: none;}
 .Button_x:hover{background:#a42536; color:#fff;}
 .Button_x2{height:24px; background:#90c302; border:0; color:#fff; text-align:center; cursor: pointer; display:block; line-height:24px; font-size:12px; padding:0 8px; font-weight:bold;}
 .Button_x2:hover{background:#a42536; color:#fff;}
@@ -298,15 +298,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndC
 
 
 /****活动列表样式****/
-.detail_head{float: left; background: #F3F3F3;width: 950px; margin-bottom:10px }
+.detail_head{float: left; background: #F3F3F3;width: 950px; margin-bottom:10px; padding-bottom:5px}
 .detail_head_pic{ float: left;padding: 10px 45px 15px;  width: 165px;}
-.detail_head_pic img{ border:1px solid #999 ; width: 165px; height: 165px} 
+.detail_head_pic img{ width: 165px; height: 165px} 
 .detail_head_desc{float: left;   padding: 10px 20px 15px 0; width: 660px}
 .detail_head_name h1 { font-family: '微软雅黑','宋体'; font-size: 28px;  font-weight: normal;  line-height: 30px;}
 .actions_content p{line-height:22px;}
-.detail_head_desc .uiText {
-    width: 86.5%;
-}
+.detail_head_desc .uiText { width: 86.5%;}
+
 /****电片列表样式****/
 .movie_head{float: left; background: #F3F3F3;width: 950px; margin-bottom:10px }
 .movie_head_pic{ float: left;padding: 10px 30px 15px;  width: 210px;}
@@ -320,11 +319,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fda038', EndC
 .movie_head_name span{ padding:8px 0 0 5px; font-size: 14px; color: #707070;display: inline-block;}
 .actions_content p{line-height:22px; }
 .movie_head_desc .uiText {}
-
-
+.uiTextP {padding:10px 10px 10px 20px;float:left}
+.uiTextP p {width:520px;text-indent:22px;}
 /****影院排片页面****/
 .ffst a{color:##16A2E0}
-.ui_abeam dd,.ui_abeam dt{ line-height:24px}
+.ui_abeam dd,.ui_abeam dt{ line-height:24px ;font-size:14px}
+.ui_abeam dt{ text-align: right; width: 72px;padding-right:5px}
 .hthd{ height:32px; line-height:32px; font-size:14px; text-align:left; float:left; width:730px}
 .ui_abeam {overflow: hidden;  position: relative; width: 100%; z-index: 0; }
 .uipic {display: inline-block;text-align: center;  width: auto;}
@@ -335,6 +335,8 @@ sub {  color: #FF6600;  font-size: 22px;  font-style: italic;  font-weight: bold
 sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal; line-height: 20px;margin-left: 2px;  vertical-align: top;}
 
 /****留言****/
+.page_modify_dialog {margin:5px}
+.comment_length{ padding-right:5px}
 .ui_message {  overflow: hidden; width: 100%;margin-bottom: 10px}
 .ui_wala_listing {padding-left: 70px;position: relative; vertical-align: top; margin-top:10px }
 .ui_wala_textArea {   background-color: #FFFFFF;border: 1px solid #A8A8A8; border-radius: 5px 5px 5px 5px; height: 60px; padding: 4px; width: auto;}
@@ -380,8 +382,7 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
 .more-group ul li .buy-state .orig-price del, .more-group ul li .buy-state .orig-price strong {    font-family: Arial;  font-weight: bold;  margin-left: 3px;}
 .more-group ul .buy_info{padding:0 5px 0 10px}
 .more-group ul .buy_btn{ float: right;}
-.list-act-link{}
-.uiText{ padding-left: 5px}
+
 /*****400 *****/
 .list404{ margin: 50px auto; padding: 0 100px}
 .list404 dd,.list404 dt{ float: left;}
@@ -389,6 +390,7 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
 .list404 dd h2{ font-size: 20px}
 .list404 dd h3{ font-weight: normal; margin:10px 0}
 .list404 dd a{color: #0094c4; margin-left: 5px}
+.uiText{ padding-left: 5px}
 .uiText b a{ color:#000000}
 .go_select_seat{display: block;text-align: center;}
 #table_SeatList a{ display: inline-block;margin: 2px;}

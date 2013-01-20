@@ -1,47 +1,47 @@
-ï»¿
 
-/*ç†å¿µï¼š1. bass çš„ç›®çš„ä¸æ˜¯æ¸…é™¤æµè§ˆå™¨çš„é»˜è®¤æ ·å¼ï¼Œè¿™ä»…æ˜¯éƒ¨åˆ†å·¥ä½œã€‚æ¸…é™¤å’Œé‡ç½®æ˜¯ç´§å¯†ä¸å¯åˆ†çš„ã€‚
-     2. bass çš„ç›®çš„ä¸æ˜¯è®©é»˜è®¤æ ·å¼åœ¨æ‰€æœ‰æµè§ˆå™¨ä¸‹ä¸€è‡´ï¼Œè€Œæ˜¯å‡å°‘é»˜è®¤æ ·å¼æœ‰å¯èƒ½å¸¦æ¥çš„é—®é¢˜ã€‚
-     3. bass æœŸæœ›æä¾›ä¸€å¥—æ™®é€‚é€šç”¨çš„åŸºç¡€æ ·å¼ã€‚ä½†æ²¡æœ‰é“¶å¼¹ï¼Œæ¨èæ ¹æ®å…·ä½“éœ€æ±‚ï¼Œè£å‰ªå’Œä¿®æ”¹åå†ä½¿ç”¨ã€‚
-ç‰¹è‰²ï¼š1. é€‚åº”ä¸­æ–‡ï¼›2. åŸºäºæœ€æ–°ä¸»æµæµè§ˆå™¨ã€‚
-ç»´æŠ¤ï¼š 
+
+/*ÀíÄî£º1. bass µÄÄ¿µÄ²»ÊÇÇå³ıä¯ÀÀÆ÷µÄÄ¬ÈÏÑùÊ½£¬Õâ½öÊÇ²¿·Ö¹¤×÷¡£Çå³ıºÍÖØÖÃÊÇ½ôÃÜ²»¿É·ÖµÄ¡£
+     2. bass µÄÄ¿µÄ²»ÊÇÈÃÄ¬ÈÏÑùÊ½ÔÚËùÓĞä¯ÀÀÆ÷ÏÂÒ»ÖÂ£¬¶øÊÇ¼õÉÙÄ¬ÈÏÑùÊ½ÓĞ¿ÉÄÜ´øÀ´µÄÎÊÌâ¡£
+     3. bass ÆÚÍûÌá¹©Ò»Ì×ÆÕÊÊÍ¨ÓÃµÄ»ù´¡ÑùÊ½¡£µ«Ã»ÓĞÒøµ¯£¬ÍÆ¼ö¸ù¾İ¾ßÌåĞèÇó£¬²Ã¼ôºÍĞŞ¸ÄºóÔÙÊ¹ÓÃ¡£
+ÌØÉ«£º1. ÊÊÓ¦ÖĞÎÄ£»2. »ùÓÚ×îĞÂÖ÷Á÷ä¯ÀÀÆ÷¡£
+Î¬»¤£º 
 */
 
 
 
-/** æ¸…é™¤å†…å¤–è¾¹è· **/
+/** Çå³ıÄÚÍâ±ß¾à **/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,button,input,textarea,p,blockquote,th,td,blockquote { margin:0;padding:0;}
 body { font: 12px/1.6 tahoma, \5b8b\4f53, sans-serif;margin:0 auto; padding:0; }
-/** é‡ç½®åˆ—è¡¨å…ƒç´  **/
+/** ÖØÖÃÁĞ±íÔªËØ **/
 ul, ol { list-style: none; }
 li,ol{list-style:none}
-/** é‡ç½®æ–‡æœ¬æ ¼å¼å…ƒç´  **/
+/** ÖØÖÃÎÄ±¾¸ñÊ½ÔªËØ **/
 a { text-decoration: none; }
-a:hover { text-decoration: underline; }
-sup { vertical-align: text-top; } /* é‡ç½®ï¼Œå‡å°‘å¯¹è¡Œé«˜çš„å½±å“ */
+/*a:hover { text-decoration: underline; }*/
+sup { vertical-align: text-top; } /* ÖØÖÃ£¬¼õÉÙ¶ÔĞĞ¸ßµÄÓ°Ïì */
 sub { vertical-align: text-bottom; }
-/** é‡ç½®è¡¨æ ¼å…ƒç´  **/
+/** ÖØÖÃ±í¸ñÔªËØ **/
 table {border-collapse:collapse;border-spacing:0;}
-/* é‡ç½® HTML5 å…ƒç´  */
+/* ÖØÖÃ HTML5 ÔªËØ */
 article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
 summary, time, mark, audio, video {display: block; margin: 0;  padding: 0;}
-/** è®¾ç½®é»˜è®¤å­—ä½“ **/
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* ç»Ÿä¸€ç­‰å®½å­—ä½“ */
-small { font-size: 12px; } /* å°äº 12px çš„ä¸­æ–‡å¾ˆéš¾é˜…è¯»ï¼Œè®© small æ­£å¸¸åŒ– */
-address, cite, dfn, em, var { font-style: normal; } /* å°†æ–œä½“æ‰¶æ­£ */
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* ç»Ÿä¸€ç­‰å®½å­—ä½“ */
+/** ÉèÖÃÄ¬ÈÏ×ÖÌå **/
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* Í³Ò»µÈ¿í×ÖÌå */
+small { font-size: 12px; } /* Ğ¡ÓÚ 12px µÄÖĞÎÄºÜÄÑÔÄ¶Á£¬ÈÃ small Õı³£»¯ */
+address, cite, dfn, em, var { font-style: normal; } /* ½«Ğ±Ìå·öÕı */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* Í³Ò»µÈ¿í×ÖÌå */
 
-/** é‡ç½®è¡¨å•å…ƒç´  **/
+/** ÖØÖÃ±íµ¥ÔªËØ **/
 legend { color: #000; } /* for ie6 */
-fieldset, img { border: 0; } /* img æ­è½¦ï¼šè®©é“¾æ¥é‡Œçš„ img æ— è¾¹æ¡† */
-button, input, select, textarea { font-size: 100%; } /* ä½¿å¾—è¡¨å•å…ƒç´ åœ¨ ie ä¸‹èƒ½ç»§æ‰¿å­—ä½“å¤§å° */
+fieldset, img { border: 0; } /* img ´î³µ£ºÈÃÁ´½ÓÀïµÄ img ÎŞ±ß¿ò */
+button, input, select, textarea { font-size: 100%; } /* Ê¹µÃ±íµ¥ÔªËØÔÚ ie ÏÂÄÜ¼Ì³Ğ×ÖÌå´óĞ¡ */
 button, input, select, textarea /* for ie */ { font: 12px tahoma, arial, \5b8b\4f53, sans-serif;vertical-align:middle;}
-/* é‡ç½®æ ‡é¢˜ */
+/* ÖØÖÃ±êÌâ */
 h1,h2,h3,h4,h5,h6{font-size:14px;font-weight:700;}
 del,ins{text-decoration:none}
-address, cite, dfn, em, var { font-style: normal; } /* å°†æ–œä½“æ‰¶æ­£ */
-code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* ç»Ÿä¸€ç­‰å®½å­—ä½“ */
-small { font-size: 12px; } /* å°äº 12px çš„ä¸­æ–‡å¾ˆéš¾é˜…è¯»ï¼Œè®© small æ­£å¸¸åŒ– */
+address, cite, dfn, em, var { font-style: normal; } /* ½«Ğ±Ìå·öÕı */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* Í³Ò»µÈ¿í×ÖÌå */
+small { font-size: 12px; } /* Ğ¡ÓÚ 12px µÄÖĞÎÄºÜÄÑÔÄ¶Á£¬ÈÃ small Õı³£»¯ */
 /* float clearing for IE7 */
 
 table,td,input,textarea{font-size:12px}
@@ -53,7 +53,7 @@ select,input,button,textarea{font:100% Tahoma,Helvetica,Arial,sans-serif}
 *+html .clearfix{ min-height: 1%;}
 /* float clearing for IE6 */
 * html .clearfix{ height: 1%; overflow: visible;}
-/*ä¸¤ç§æ¸…æµ®åŠ¨æ–¹æ³•*/
+/*Á½ÖÖÇå¸¡¶¯·½·¨*/
 .clearfix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 .clearfix {display: inline-block; }
 /* Hides from IE-mac */
@@ -61,19 +61,14 @@ select,input,button,textarea{font:100% Tahoma,Helvetica,Arial,sans-serif}
 .clearfix {display: block;}
 /* End hide from IE-mac */
 .clear{clear:both;height:0;font:0/0 Arial;visibility:hidden;}
-/*ä¸¤ç§æ¸…æµ®åŠ¨æ–¹æ³•*/
+/*Á½ÖÖÇå¸¡¶¯·½·¨*/
 
-/** é‡ç½®æ–‡æœ¬æ ¼å¼å…ƒç´  **/
-a {text-decoration: none; }
-a:hover {text-decoration: underline; }
-sup {vertical-align: text-top; } /* é‡ç½®ï¼Œå‡å°‘å¯¹è¡Œé«˜çš„å½±å“ */
-sub {vertical-align: text-bottom; }
 
-/** é‡ç½®è¡¨å•å…ƒç´  **/
+/** ÖØÖÃ±íµ¥ÔªËØ **/
 legend { color: #000; } /* for ie6 */
-fieldset, img { border: 0; } /* img æ­è½¦ï¼šè®©é“¾æ¥é‡Œçš„ img æ— è¾¹æ¡† */
-button, input, select, textarea { font-size: 100%; } /* ä½¿å¾—è¡¨å•å…ƒç´ åœ¨ ie ä¸‹èƒ½ç»§æ‰¿å­—ä½“å¤§å° */
-/* æ³¨ï¼šoptgroup æ— æ³•æ‰¶æ­£ */
+fieldset, img { border: 0; } /* img ´î³µ£ºÈÃÁ´½ÓÀïµÄ img ÎŞ±ß¿ò */
+button, input, select, textarea { font-size: 100%; } /* Ê¹µÃ±íµ¥ÔªËØÔÚ ie ÏÂÄÜ¼Ì³Ğ×ÖÌå´óĞ¡ */
+/* ×¢£ºoptgroup ÎŞ·¨·öÕı */
 
 
 .btn{width:60px;height:25px;cursor: pointer;border-width:0px;background-image: url(../images/btn-bg2.gif);letter-spacing: 3px;}

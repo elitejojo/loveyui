@@ -56,11 +56,6 @@
 
 #pay_tool_info{min-height:50px;padding-top:5px;min-height:395px;}
 
-
-
-
-
-
 /*放映列表*/
 .E0_bl{border-left:1px solid #E0E0E0;}
 .E0_bt{border-top:1px solid #E0E0E0;}
@@ -97,8 +92,8 @@
 .handle .handleL { background-position: 0 bottom;height: 99%;overflow: hidden;padding: 2px 0;width: 14px;}
 .handle .handleR {background-position: right -117px;height: 100%; width: 14px;}
 .handle .handleC {background-position: 0 center;height: 100%;width: 14px;}
-.play_data_table .data_table_footer{height:50px;background:#F2F2F2;}
-#play_list_info{ width:740px; overflow:hidden}
+.play_data_table .data_table_footer{height:50px;background:#F2F2F2;padding-top:5px}
+#play_list_info{ width:740px; }
 
 /* tab 表头*/
 .movie_tab{height:27px;border-bottom:2px solid #4fa7ff;padding-left:10px ; width:728px}

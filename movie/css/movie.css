@@ -27,6 +27,7 @@
 .m_top{_margin-top:4px;}
 .l_h50{height:50px;line-height:50px;}
 .w125{width:125px;}
+.w45{width:45px;}
 .w55{width:55px;}
 .w816{width:816px;}
 .w768{width:768px;}
@@ -126,7 +127,7 @@ em { font-style: normal;}
 .movie_text .movie_info_descri .w230{width:230px;}
 .movie_info_descri a{color:#17A3E0}
 .hover{background:#EDF6FF}
-
+.tabs span a{color:#000}
 .tabs{overflow:hidden;}
 .tabs span{	display: inline-block; float: left;font-weight:700;font-size:14px;text-align:center;padding:4px 15px;
 }

@@ -1,4 +1,4 @@
-/*è¯„åˆ†*/
+/*´óÐÇºÅÆÀ·Ö*/
 .comment_integration{width:200px;padding:10px;}
 .comment_initRating{display:inline-block;height:24px;line-height:24px;}
 .comment_initRating i{display: inline-block;background:url("../images/comment_star.png") no-repeat;width:12px;height:24px;line-height:24px;cursor:pointer;overflow:hidden;}
@@ -10,4 +10,16 @@
 sub.c_sub { color: #FF6600; font-size: 22px; font-style: italic;font-weight: bold; line-height: 24px;margin-left: 10px;vertical-align: middle;
 }
 sup.c_sup { color: #FF6600;font-size: 16px;font-style: italic;font-weight: normal;line-height: 20px;margin-left: 2px;vertical-align: top;
+}
+
+/*Ð¡ÐÇºÅ¾²Ì¬ÏÔÊ¾ÆÀ·Ö 7*4/14 */
+.comment_integration_min{width:140px; height:20px; padding:4px 4px 2px 4px;}
+.comment_initRating_min{display:inline-block;height:14px;line-height:14px;}
+span.comment_initRating_min s{display: inline-block;background:url("../images/comment_star_min.png") no-repeat;width:7px;height:14px;line-height:14px;cursor:pointer;overflow:hidden;}
+.comment_initRating_min .c_left_min{background-position:0 0;}
+.comment_initRating_min .c_right_min{background-position:-7px 0;}
+.comment_initRating_min .gray_left_min{background-position:-14px 0;}
+.comment_initRating_min .gray_right_min{background-position:-21px 0;}
+.comment_initRating_min .c_i_min{background:none;font-size:12px;color:red;}
+font.c_font_min { color: #FF6600; font-size: 12px; font-style: italic;font-weight: bold; line-height: 14px;margin-left: 5px;vertical-align: middle;
 }
