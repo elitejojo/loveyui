@@ -26,7 +26,10 @@
 				$(".scroller").show();
 				$( ".handle" ).height(Math.round(container_h/content_h*m_sroll_h));
 			}
-	
+			//滚动的最高点
+			var min_top = parseInt($($( ".scroll" )[0]).offset().top);
+			//滚动的最低点
+			var max_top = parseInt($($( ".increase" )[0]).offset().top)-$($( ".handle" )[0]).height();
 			//初始化滚动条的拖拽
 			$($( ".handle" )[0]).draggable({ axis: "y",containment: "parent",drag:resetPlayPos});
 			//拖动事件，修改播放列表的层的显示位置
@@ -34,10 +37,7 @@
 				var sroll_length = parseInt($($( ".handle" )[0]).offset().top)-min_top;
 				sroll_length = Math.round(sroll_length*(content_h/m_sroll_h));
 				$("#data_table_body").offset({top:parseInt($($( ".scroller" )[0]).offset().top)-sroll_length});
-			}		//滚动的最高点
-			var min_top = parseInt($($( ".scroll" )[0]).offset().top);
-			//滚动的最低点
-			var max_top = parseInt($($( ".increase" )[0]).offset().top)-$($( ".handle" )[0]).height();
+			}
 		
 			$("#data_table_body").mousewheel(function(event, delta, deltaX, deltaY){
 				var tem_top ;
