@@ -1,25 +1,25 @@
-JSP  ³ÌĞòÒ³Ãæ
+JSP  ç¨‹åºé¡µé¢
 
-index.html Ê×Ò³
+index.html é¦–é¡µ
 
-movielist.html     Ó°Æ¬ÁĞ±íÒ³
-playtable.html     Ó°Æ¬ÅÅÆ¬
-moviegoseat.html   Ó°Æ¬Ñ¡×ùÎ» 
+movielist.html     å½±ç‰‡åˆ—è¡¨é¡µ
+playtable.html     å½±ç‰‡æ’ç‰‡
+moviegoseat.html   å½±ç‰‡é€‰åº§ä½ 
 
-cinemalist.html    Ó°ÔºÁĞ±íÒ³
-cinemtable.html    Ó°ÔºÅÅÆ¬
-cinemagoseat.html  Ó°ÔºÑ¡×ùÎ» 
+cinemalist.html    å½±é™¢åˆ—è¡¨é¡µ
+cinemtable.html    å½±é™¢æ’ç‰‡
+cinemagoseat.html  å½±é™¢é€‰åº§ä½ 
 
-commoncoupon.html  Í¨„»Ñ¡ÔñÒ³
-commonbuy.html     Í¨È¯¹º¹ºÂòÒ³
+commoncoupon.html  é€šåŠµé€‰æ‹©é¡µ
+commonbuy.html     é€šåˆ¸è´­è´­ä¹°é¡µ
 
-couponlist.html          ¶Ò»»„»Ñ¡ÔñÒ³
-couponbuy .html         ¶Ò»»„»¹ºÂòÒ³
-moviepay.html      Ö§¸¶È·ÈÏÒ³
+couponlist.html          å…‘æ¢åŠµé€‰æ‹©é¡µ
+couponbuy .html         å…‘æ¢åŠµè´­ä¹°é¡µ
+moviepay.html      æ”¯ä»˜ç¡®è®¤é¡µ
 
-¹²ÓÃÎÄ¼ş¼Ğ
+å…±ç”¨æ–‡ä»¶å¤¹
 
-common/404.html       ´íÎóÒ³
+common/404.html       é”™è¯¯é¡µ
 common/500.jsp          500
-common/success.jsp      ³É¹¦Ò³
-common/failed.jsp       Ê§°ÜÒ³
+common/success.jsp      æˆåŠŸé¡µ
+common/failed.jsp       å¤±è´¥é¡µ

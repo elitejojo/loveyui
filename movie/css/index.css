@@ -1,5 +1,5 @@
 ﻿.mian_bg{ width:100%; height:369px; border-top:4px solid #ed004e;background:#414141 bottom}
-
+.hotlist{padding: 0;border: none; width: 100%}
 
 .grid-m180 .main-wrap { width:180px; margin-right: 10px; float:left ; display:inline}
 .grid-m180  .col-sub { width:760px }
@@ -13,21 +13,9 @@
 .inputsearh{float: left;font-size: 12px;height: 26px;line-height: 26px;border:1px solid #e81854;color:#a1a1a1;-webkit-border-radius:5px 0 0 5px;box-shadow:0 0 3px #ffa200 inset;font-size:14px; padding: 0 10px 0 5px;
     width: 91px;}.txt_input:focus{color:#000}
 .aclose { background:#e81854;border:1px solid #e81854;box-shadow:0 1px 2px #fff inset;-webkit-border-radius:0 5px 5px 0;color:#fff;font-size:12px;padding:0px 10px; height:28px; cursor:pointer}
-.searchcont {
-    background: none repeat scroll 0 0 #CFE2FF;
-    border: 1px solid #A9B9D1;
-    border-radius: 8px 8px 8px 8px;
-    color: #627EA6;
-    font-size: 16px;
-    height: 23px;
-    left: 60px;
-    line-height: 23px;
-    padding: 0 6px;
-    position: absolute;
-    text-align: center;
-    top: 14px;
-    z-index: 50;
-}
+.searchcont { background: none repeat scroll 0 0 #CFE2FF;border: 1px solid #A9B9D1;
+    border-radius: 8px 8px 8px 8px;color: #627EA6;font-size: 16px;height: 23px;left: 60px;line-height: 23px;
+    padding: 0 6px; position: absolute;text-align: center;top: 14px;z-index: 50;}
 /* 通用导航 */
 .hdh3{ float:left;color:#666; font-size:16px;font-family:"微软雅黑"; font-weight:200;width:100px; padding-left:10px; }
 .hdh3 b{  font-size:18px}
@@ -37,7 +25,8 @@
 .c_z{ color:#9b5db0}
 .c_fs{ color:#bdbdbd} 
 .c_ss{ color:#fd6b15} 
-.c_ss2{ color:#89b46d} 
+.c_ss2{ color:#89b46d}
+.hotlist_box ul{width: 100%} 
 .hotlist_box ul li{ width:188px; border-right:1px dotted #a8a8a8 ;float:left}
 .hotlist_box ul li a{ float:left}
 .hotlist_box ul li a:hover{ text-decoration:none}

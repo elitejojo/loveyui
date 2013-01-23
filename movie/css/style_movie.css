@@ -1,14 +1,4 @@
 
-/*   热门活动  */
-.hotActivity{}
-.hotActivity .hd_ht{width:190px;height:40px; line-height:30px;background:#ff6600 url(../images/bg/lefthdbg.png) no-repeat bottom;text-align: center;}
-.hotActivity h3{color: #fff9d9;}
-.hotActivity  .hot_bd{ background:#fff2d3;height:100%; display:inline-block }
-.hotlist{padding:10px 5px; width: 180px;border-bottom:1px dashed #D9B5A9}
-.hotlist_hd{float: left;width:70px;}
-.hotlist_bd{ padding-left: 80px;}
-.hotlist_bd h3 {background: none; font-size: 14px;height: auto}
-.hotlist_bd h3  a{color: #2E2926}
 
 
 /*   弹出框  */
@@ -137,8 +127,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndC
 
 /****影院列表样式****/
 
-.cinem_pic{display:inline-block;width:130px;margin-left:6px}
-.cinem_pic img{ flaot:left; width:128px; height:128px; border:1px solid #b6b6b6;display:black}
+.cinem_pic{float:left;display:inline-block;width:130px;margin-left:6px}
+.cinem_pic img{ width:128px; height:128px; border:1px solid #b6b6b6;display:black}
 .movie_list .Cinema_listimg{width:170px; height:170px;}
 .movie_list ul .Cinema_name dl dt{width:351px;}
 .movie_list ul .Cinema_name dl dd{width:100px; text-align:right;}
@@ -154,6 +144,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndC
 
 .movie_list ul .hot_buyInfo{width:417px; background:#efefef; height:28px; line-height:28px; padding:5px 10px; margin:8px 0;}
 .movie_list ul .hot_buyInfo .Button_x2{width:40px;}
+#play_stage ul li{ float:left}
 
 
 
@@ -319,11 +310,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndC
 .movie_head_name span{ padding:8px 0 0 5px; font-size: 14px; color: #707070;display: inline-block;}
 .actions_content p{line-height:22px; }
 .movie_head_desc .uiText {}
-.uiTextP {padding:10px 10px 10px 20px;float:left}
-.uiTextP p {width:520px;text-indent:22px;}
+.uiTextP {padding:10px 10px 10px 20px;float:left; height:156px; overflow:hidden;text-overflow: ellipsis;}
+.uiTextP p {width:520px;text-indent:22px; font-size:14px}
 /****影院排片页面****/
 .ffst a{color:##16A2E0}
-.ui_abeam dd,.ui_abeam dt{ line-height:24px ;font-size:14px}
+.ui_abeam dd,.ui_abeam dt{ line-height:24px ;}
 .ui_abeam dt{ text-align: right; width: 72px;padding-right:5px}
 .hthd{ height:32px; line-height:32px; font-size:14px; text-align:left; float:left; width:730px}
 .ui_abeam {overflow: hidden;  position: relative; width: 100%; z-index: 0; }
@@ -382,6 +373,7 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
 .more-group ul li .buy-state .orig-price del, .more-group ul li .buy-state .orig-price strong {    font-family: Arial;  font-weight: bold;  margin-left: 3px;}
 .more-group ul .buy_info{padding:0 5px 0 10px}
 .more-group ul .buy_btn{ float: right;}
+.J_MorePrice{ line-height:28px}
 
 /*****400 *****/
 .list404{ margin: 50px auto; padding: 0 100px}
@@ -392,6 +384,6 @@ sup {  color: #FF6600; font-size: 16px; font-style: italic; font-weight: normal;
 .list404 dd a{color: #0094c4; margin-left: 5px}
 .uiText{ padding-left: 5px}
 .uiText b a{ color:#000000}
-.go_select_seat{display: block;text-align: center;}
+.go_select_seat{padding-left:20px;text-align: center;}
 #table_SeatList a{ display: inline-block;margin: 2px;}
 

@@ -107,10 +107,13 @@
 
 .movie_info{width:100%;display:inline-block;padding:15px 0px;border-bottom:1px solid #D0D0D0; float:left}}
 .movie_list{margin-top:0px;}
-.movie_list ul{width:100%;margin: 20px 0}
+.movie_list ul{width:100%;}
 /****影院列表样式****/
 .movie_list ul .odd{border-top:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;background:#EDF6FF}
-.movie_pic{display:inline-block;width:120px;padding:0px 10px 10px 0px;height:160px;line-height:160px;margin-left:10px}
+.movie_pic{display:inline;width:120px;padding:0px 10px 10px 0px;height:160px;line-height:160px;margin-left:10px;  position:relative;float:left}
+.d2{ background:url(../images/common/2d.gif) no-repeat ; width:55px; height:44px ; position:absolute ;top:1px; left:0}
+.d3{background:url(../images/common/3d.gif) no-repeat ;width:55px; height:44px ; position:absolute ;top:1px; left:0}
+.imax{background:url(../images/common/imax.gif) no-repeat;width:55px; height:44px ; position:absolute ;top:1px; left:0}
 .movie_pic img{ width:120px; height:160px; font-size:0}
 .movie_text{float:right;display:inline-block;width:580px;padding-left;10px;}
 .movie_list ul li .b_dash{display:inline-block;border-bottom:1px dashed  #EED4B9;height:1px;line-height:1px;width:100%;}

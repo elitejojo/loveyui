@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* breadcrumb 面包屑导航
+ * mail: hellolijm@gmail.com
+ */
+.bread{color:#999;font-size:12px;}
+.bread-current{color:#888;}
+.bread-cite{color:#888;}
+.bread a{color:#666;font-size: 14px}
+.bread a:hover{  background-color: #FF820A;color: #FFF;}
+
+.curumb-box{margin-bottom: 5px;padding: 10px;border-bottom: 1px solid #E0E0E0}
+
+/* article-box 详细页
+ */
+.article-box{margin-bottom:30px;border: 1px solid #E0E0E0}
+
+
+/* 杂
+ */
+ .article-bd{  padding: 2px 20px 20px;position: relative;}
+ .new_title{font-size: 20px;font-weight: bold;height: 40px; line-height: 40px;overflow: hidden;
+    text-align: center;}
+ .new_titletag{ height: 34px;letter-spacing: 1px;line-height: 34px; margin: 10px 0 0;
+ text-align: center; background: #fef9ed;  border-top:1px solid #f6bd91;border-bottom:1px solid #f6bd91;}
+ .one_more {line-height: 150%; padding-top: 10px;}
+ .one_more p {padding: 8px 0;}

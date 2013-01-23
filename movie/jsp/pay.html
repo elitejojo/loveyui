@@ -24,41 +24,128 @@ $(document).ready(function(){
 });
 
 //时间倒计时
-var millisec = 900000;
-function countDown() {
-	if(millisec >= 0) {
-		window.setTimeout('doUpdate('+millisec+')', 1000);
-		millisec = millisec - 1000;
-		window.setTimeout('countDown()', 1000);
-	} else {
-		alert("要跳转了！！");
-		//这里改成你想要去的地方
-		window.location = "http://www.baidu.com";
+	var millisec = 600000;
+	function countDown() {
+		if(millisec >= 0) {
+			window.setTimeout('doUpdate('+millisec+')', 1000);
+			millisec = millisec - 1000;
+			window.setTimeout('countDown()', 1000);
+		} else {
+			alert("订单超时");
+			//这里改成你想要去的地方
+			window.location = "/";
+		}
 	}
-}
-
-function doUpdate(ms) {
-	var fen = Math.ceil((ms/1000)/60);
-	var miao = (ms/1000)%60;
-	if(miao != 0) {
-		fen -= 1;
+	
+	function doUpdate(ms) {
+		var fen = Math.ceil((ms/1000)/60);
+		var miao = (ms/1000)%60;
+		if(miao != 0) {
+			fen -= 1;
+		}
+		if(fen < 10) {
+			fen = "0"+fen;
+		}
+		if(miao < 10) {
+			miao = "0"+miao;
+		}
+		$("#countDownMin").html(fen);
+		$("#countDownSec").html(miao);
 	}
-	if(fen < 10) {
-		fen = "0"+fen;
+	
+	function checkPara(){
+		var flag;
+		//if (!document.getElementById('payType').checked) {
+		//	alert("请选择支付方式");
+		//	flag=false;
+		//	return flag;
+		//}
+		
+		var objValue = document.getElementById('mblNo').value;
+			if(typeof(objValue)=="undefined"){
+				flag=false;
+			    return flag;
+			}
+			if(objValue=="" || objValue==null){
+			    alert("请输入接收电子码的手机号");
+			    flag=false;
+			    return flag;
+			}
+			if(objValue.length!=11){
+				alert('请输入11位手机号码！');
+				flag=false;
+				return flag;
+			}
+			var myreg = /^(1[3-9]{1}[0-9]{1})\d{8}$/;
+			if(!myreg.test(objValue)){
+				alert('请输入合法的手机号码！');
+				flag=false;
+				return flag;
+			}
+		
+		flag=true;
+		return flag;
 	}
-	if(miao < 10) {
-		miao = "0"+miao;
+	
+	function changeAmt(){
+		var rate = $('input:radio:checked').val();
+		var amt = document.getElementById("amt").value;
+		var disamt = rate*amt;
+		$("#disamt").html(disamt+"元");
 	}
-	$("#countDownMin").html(fen);
-	$("#countDownSec").html(miao);
-}
-</script>
-
-    <script type="text/javascript">
-
-
-
-</script>
+	
+  //修改手机号码
+  function ChangeMobile()
+  {
+      var btnText = $("#btnChangeMobile").text();
+      var reg = /^(13[0-9]|15[0-9]|18[0-9]|14[0-9])\d{8}$/;
+      var moblieNo = $("#ctl00_ContentPlaceHolder1_txtMobile").val();
+      if (btnText == "修改")
+      {
+          $("#btnChangeMobile").text("确认");
+          $("#b_mobileno").hide();
+          $("#ctl00_ContentPlaceHolder1_txtMobile").val($("#b_mobileno").text());
+          $("#ctl00_ContentPlaceHolder1_txtMobile").show();
+      }
+      else
+      {
+          if (reg.test(moblieNo))
+          {
+              $("#btnChangeMobile").text("修改");
+              $("#b_mobileno").show();
+              $("#b_mobileno").text($("#ctl00_ContentPlaceHolder1_txtMobile").val());
+              $("#input_mobileno").val($("#ctl00_ContentPlaceHolder1_txtMobile").val());
+              $("#ctl00_ContentPlaceHolder1_txtMobile").hide();
+          /*     $.ajax(
+              {
+                  type: "POST",
+                  dataType: "text",
+                  async: false,
+                  url: "CheckTicket.ashx", //提交到一般处理程序请求数据                
+                  data: "mobileNo=" + moblieNo + "&orderno=" + $("#ctl00_ContentPlaceHolder1_hidOrderNo").val(),
+                  success: function (data)
+                  {
+                      if (data != null)
+                      {
+                          if (data == "-1")
+                          {
+                              alert("failed");
+                          }
+                      }
+                  },
+                  error: function (msg, url, line)
+                  {
+                      alert("error");
+                  }
+              }); */
+          }
+          else
+          {
+              alert("请输入有效的手机号码！");
+              $("#ctl00_ContentPlaceHolder1_txtMobile").focus();
+          }
+      }
+  }</script>
 
 	
 </head>
@@ -103,9 +190,11 @@ function doUpdate(ms) {
 						<dd class="f c_orange f18"  >110  金额</dd>
 					</dl>
 				</div>
-				<div class="pay_phone_number"  >
-					
-						手机号码：<span class="f16">139223243343 </span>     修改号码   如没收到取票短信可能会被手机软件拦截！			    </div>	
+	
+				<div class="pay_phone_number" >手机号码：<b id="b_mobileno">${mblNo}</b>
+			<input name="ctl00$ContentPlaceHolder1$txtMobile" type="text" id="ctl00_ContentPlaceHolder1_txtMobile"maxlength="11" style="display:none;">
+			 <font color="red">*</font><a class="select_btn" href="javascript:void(0);" id="btnChangeMobile" onClick="ChangeMobile()">修改</a>   如没收到取票短信可能会被手机软件拦截！</div>
+			 
 		</div>
 		<div class="desc_right">
 			<div class="bgs">

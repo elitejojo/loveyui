@@ -11,7 +11,7 @@
 
 /** 清除内外边距 **/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,button,input,textarea,p,blockquote,th,td,blockquote { margin:0;padding:0;}
-body { font: 12px/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif , \5b8b\4f53;margin:0 auto; padding:0; }
+body { font: 12px/1.6 , \5b8b\4f53, "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0 auto; padding:0; }
 /** 重置列表元素 **/
 ul, ol { list-style: none; }
 li,ol{list-style:none}

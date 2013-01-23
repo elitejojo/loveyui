@@ -100,7 +100,7 @@ body{ background-color: #fff;}
 	cursor:pointer;font-size: 14px}
 .allbtn span a{color: #fff}
 
-.select_btn,a.select_btn{border:2px solid #f5c178;color:#FFF;display: inline-block; height: 28px;line-height: 28px;margin: 0 auto; text-align: center; width: 72px;
+.select_btn,a.select_btn{border:2px solid #f5c178;color:#FFF;display: inline-block; height: 24px;line-height: 24px;margin: 0 auto; text-align: center; width: 72px;
 	cursor:pointer;background-color: #fca43a;
 background-image: -webkit-gradient(linear, left top, left bottom, from(#fca43a), to(#d54f12));
 background-image: -webkit-linear-gradient(top, #fca43a, #d54f12);
@@ -115,7 +115,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndC
 .hotActivity .hd_ht{width:190px;height:40px; line-height:30px;background:#ff6600 url(../images/bg/lefthdbg.png) no-repeat bottom;text-align: center;}
 .hotActivity h3{color: #fff9d9;}
 .hotActivity  .hot_bd{ background:#fff2d3;height:100%; display:inline-block }
-.hotlist{padding:10px 5px; width: 180px;border-bottom:1px dashed #D9B5A9;display: inline-block;}
+.hotlist{padding:10px 5px; width: 180px;border-bottom:1px dashed #D9B5A9}
 .hotlist_hd{float: left;width:70px;}
 .hotlist_bd{ padding-left: 80px;}
 .hotlist_bd h3 {background: none; font-size: 14px;height: auto}
