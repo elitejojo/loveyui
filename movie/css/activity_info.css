@@ -30,7 +30,7 @@
 .list-b a{ color: #999}
 /* article-box 详细页
  */
-.article-box{margin-bottom:30px;border: 1px solid #E0E0E0}
+.article-box{float:left;border: 1px solid #E0E0E0;width:748px}
 .wd50{overflow: hidden;position: relative;width: 50%; z-index: 0;}
 .inputsearh{float: left;font-size: 12px;height: 26px;line-height: 26px;border:1px solid #e81854;color:#a1a1a1;-webkit-border-radius:5px 0 0 5px;box-shadow:0 0 3px #ffa200 inset;font-size:14px; padding: 0 10px 0 5px;
     width: 91px;}.txt_input:focus{color:#000}
@@ -44,8 +44,21 @@
     line-height: 23px;
     padding-right: 14px;
 }
-
-
+/* bss 详细页
+ */
+ .wd86 {overflow: hidden;position: relative;width: 86%; z-index: 0;}
+.wd12 { overflow: hidden; padding-top: 5px;  position: relative;  width: 14%;  z-index: 0;}
+.userInfo {border-bottom: 1px solid rgb(170, 170, 170);  clear: both; height: 25px; line-height: 25px;}
+.pubpic { background: none repeat scroll 0 0 rgb(249, 249, 249);border-radius: 3px 3px 3px 3px;
+box-shadow: 0 2px 3px rgb(204, 204, 204);display: block;height: 50px; margin: 0 auto 5px;width: 50px;}
+.pubpic img {border-radius: 3px 3px 3px 3px;cursor: pointer; display: inline-block; height: 50px; width: 50px;}
+.fck {  clear: both; font-size: 12px; line-height: 22px; margin: 20px 40px; overflow: hidden;}
+.restory{ border-top:1px solid rgb(170, 170, 170) }
+.reply_ico .overv { background: none repeat scroll 0 0 rgb(255, 255, 255); height: 100%;
+ left: 0;opacity: 0.5;position: absolute;top: 0;width: 100%; z-index: 1;}
+ .reply_ico .un { background: none repeat scroll 0 0 rgb(255, 255, 255); left: 160px;line-height: 44px;text-align: center;
+    top: 122px;z-index: 3;height: 44px; position: absolute;  width: 390px;}
+.reply_ico {height: auto;  overflow: hidden; position: relative; width: 100%;}
 /* Form */
 .modifyH1 {   color: rgb(51, 51, 51);display: block;font-family: "微软雅黑","黑体",Arial;
     font-size: 2.2em;font-weight: normal;letter-spacing: 0.6mm;line-height: 36px;margin: 10px 0;}

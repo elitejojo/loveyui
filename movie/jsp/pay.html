@@ -170,7 +170,7 @@ $(document).ready(function(){
 		
 			<div class="mt20">			
 			   <dl class="ui_abeam">
-						<dt class=" f mr0 c_orange f14">确定订单信息：</dt>
+						<dt class=" f mr0 c_orange f14">订单信息：</dt>
 						<dd class="f">（订单号：1234323432）</dd>
 					</dl>	
 					<dl class="ui_abeam">
@@ -214,6 +214,9 @@ $(document).ready(function(){
 <div class="clearfix"></div>
      <div id="content">
      
+     
+   <!--end 优惠信息-->   
+          
      <div id="prefer_info" class="green_back">
 <div class="module">
 							<a id="prefer_pay_sel" class="f18 c_red fb" href="javascript:;">[+]支付优惠</a>
@@ -223,7 +226,7 @@ $(document).ready(function(){
 									<dt>
 										<input type="radio" id="icbc" name="prefer_bank" value="5">
 									</dt>
-									<dd><img src="../images/bank_icbc.png"></dd>
+									<dd><img src="/images/bank_icbc.png"></dd>
 									<dd>
 										<p>工行网银客户每单立减10元</p>
 										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
@@ -235,7 +238,7 @@ $(document).ready(function(){
 									<dt>
 										<input type="radio" id="icbc" name="prefer_bank" value="10">
 									</dt>
-									<dd><img src="../images/bank_icbc.png"></dd>
+									<dd><img src="/images/bank_icbc.png"></dd>
 									<dd>
 										<p>工行网银客户每单立减10元</p>
 										<p class="c_gray9">每张订单必须购买至少2张票才能参加...</p>
@@ -244,8 +247,35 @@ $(document).ready(function(){
 							</li>
 							
 						</ul>
+
+						<table class="list-b mt10">  
+ <thead>  
+        <tr>
+        	<th>选择</th>
+        	<th>抵用券类别</th>
+        	<th>有效期</th>
+        	<th class="tit-reply">面值</th>
+        	<th class="txt_c">使用说明</th>
+        </tr>  
+ </thead> 
+ 
+    <tbody>  
+        <tr>  
+         <td class="author">
+         	<input type="radio" id="icbc" name="prefer_bank" value="10"></td> 
+            <td class="author">折扣</td>  
+            <td class="author">2013-01-21到2013-02-20 </td>    
+            <td class="date">￥10</td>   
+            <td class="">用户每选择一种优惠，页面下方的结算金额做相应扣减，计算实际需支付金额</td>  
+        </tr>  
+    
+    </tbody>  
+</table>  
+  <!--end start-->
 						</div>
      </div>	
+     
+      <!--end-->
     <div class="pay_tabbox  top_img_back mt10"> 
                 <div class="pay_menu">
                       <ul>
@@ -262,9 +292,10 @@ $(document).ready(function(){
                               欢迎您使用移动商场购票业务，点击"确定支付"将进入第三方支付
 合计金额：<span class="c_red">90元</span>票数：<span class="c_red">2张</span>
                                                                                                                               
-            
+             <br />
+             <br />
                              
-                                       <span class="clearfix mt10"> <a  class="select_btn " href="javascript:void(0);">一下步</a>
+                                       <span> <a  class="select_btn" href="javascript:void(0);">一下步</a>
                                      </span>
                                 </div>
                   
@@ -272,24 +303,25 @@ $(document).ready(function(){
                      </div>
                            <!-- end mos-->
       <div class="tabs hide">
-          <div>
+        
          欢迎您使用移动商场购票业务，点击"确定支付"将扣减您的<span class="c_red">商城币</span>。
 合计金额：<span class="c_red">90元</span>票数：<span class="c_red">2张</span>
-        </div>
-    
-          <span>
-
-                                     <a  class="select_btn" href="javascript:void(0);">一下步</a>
-           </span>
+       
+     <br />
+     <br />
+          <span >
+             <a  class="select_btn" href="javascript:void(0);">一下步</a>
+          </span>
     </div>
          <!-- end mos-->
  
                      <div class="tabs hide">
                      欢迎您使用移动商场购票业务，点击"确定支付"将扣减您的<span class="c_red">M值或积分</span>。
 合计金额：<span class="c_red">1340积分/M值 </span>票数：<span class="c_red">2张</span>
-						  <span>
-
-                                     <a  class="select_btn" href="javascript:void(0);">一下步</a>
+	 <br />
+	 <br />
+				    <span>
+                          <a  class="select_btn" href="javascript:void(0);">一下步</a>
                      </span>
 
                </div>
@@ -302,7 +334,27 @@ $(document).ready(function(){
   </div>
   </div>
 
-
-</body>
+  
+    <form action="${content.commiturl }" method="${content.method }">
+	    <input type="hidden" name="apiid" id="apiid" value="${content.apiid }">
+	    <input type="hidden" name="applicationid" id="applicationid" value="${content.applicationid }">
+	    <input type="hidden" name="apiversion" id="apiversion" value="${content.apiversion }">
+	    <input type="hidden" name="userid" id="userid" value="${content.userid }">
+	    <input type="hidden" name="businessdate" id="businessdate" value="${content.businessdate }">
+	    <input type="hidden" name="paymentdate" id="paymentdate" value="${content.paymentdate }">
+	    <input type="hidden" name="requestjournal" id="requestjournal" value="${content.requestjournal }">
+	    <input type="hidden" name="responsejournal" id="responsejournal" value="${content.responsejournal }">
+	    <input type="hidden" name="securitylevel" id="securitylevel" value="${content.securitylevel }">
+	    <input type="hidden" name="signaturemethod" id="signaturemethod" value="${content.signaturemethod }">
+	    <input type="hidden" name="sessionid" id="sessionid" value="${content.sessionid }">
+	    <input type="hidden" name="operationtime" id="operationtime" value="${content.operationtime }">
+	    <input type="hidden" name="keyinformation" id="keyinformation" value="${content.keyinformation }">
+	    <input type="hidden" name="responsemessage" id="responsemessage" value="${content.responsemessage }">
+	    <input type="hidden" name="responsecode" id="responsecode" value="${content.responsecode }">
+	    <input type="hidden" name="signaturevalue" id="signaturevalue" value="${content.signaturevalue }">
+	    <input type="hidden" name="userpassword" id="userpassword" value="${content.userpassword }">
+	    <input type="submit" name="确认支付" value="确认支付">
+    </form>
+  </body>
 </html>
 		

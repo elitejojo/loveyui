@@ -38,6 +38,21 @@ function bind()
         });
     }
 }
+function fabiao()
+{
+    $.XYTipsWindow(
+    {
+        ___title: "温馨提示",
+        ___content : "text:h22222",
+        ___width: "400",
+        ___height: "290",
+        ___showbg: true,
+        ___boxBdColor: "#A6C9E1",
+        ___boxBdOpacity: "0.5",
+        ___boxWrapBdColor: "#ABABAB",
+        ___drag: "___boxTitle"
+    });
+}
 
 //显示支付温馨提示
 function ShowPayResult(orderNo)

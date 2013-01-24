@@ -249,7 +249,7 @@ function setPlayList(){
 function initPlayLisTable(dataArray){
 	 if( dataArray=='undefined'||dataArray==null||dataArray.length==0 )
 	 {
-		 var html ='<li><span colspan=\"10\">影院当前还没有更新排片！..你可以: <a class=\"c_red pl4\" href=\"movie.html\">选择其他影院或其他日期</span></li>';
+		 var html ='<li ><span style=\"margin-top:50px;float:none\" >影院当前还没有更新排片！..你可以: <a class=\"c_red pl4\" href=\"movie.html\">选择其他影院或其他日期</span></li>';
 		$("#data_table_body").empty().append(html);
 		$("#play_list_info").movieScroller();//设置滑动条
 		return ;

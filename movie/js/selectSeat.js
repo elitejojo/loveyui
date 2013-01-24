@@ -3,11 +3,11 @@
  */
 function changeImg(obj, imgs)
 { //修改选中座位图片
-//    if (!checkIsLogin()) //TODO
-//    { //快速登录 
-//        return false;
-//    }
-//    else
+  if (!checkIsLogin()) //TODO
+  { //快速登录 
+       return false;
+   }
+   else
     {
         var $_l = $(obj).parent().prev().find("a"); //获取上一个座位 
         var $_r = $(obj).parent().next().find("a"); //获取下一个座位 
@@ -284,7 +284,7 @@ function changeImg(obj, imgs)
             }
             else
             {
-                selectedVal = selectedVal + "|" + $(this).attr("id");
+                selectedVal = selectedVal + "," + $(this).attr("id");
             }
         });
         var countNum = "";
@@ -418,6 +418,31 @@ function validateInput()
         $("#ctl00_ContentPlaceHolder1_txtVerifyCode").focus();
         return false;
     }
+    
+	//异步获取验证码值
+    var txtVerifyCode="";
+	var url_code=$("#path").val();
+	$.ajax({
+		url:url_code,
+		type:'get',
+		async:false,
+		data:"",
+		dataType:"text",
+	 	success:function(data){
+			txtVerifyCode=data;
+		},
+		error:function(){
+			alert("系统繁忙，稍后再试");
+		}			
+	});
+	//校验验证码
+    if ($("#ctl00_ContentPlaceHolder1_txtVerifyCode").val().replace(/ /g, "").toUpperCase() != txtVerifyCode)
+    {
+        ShowErrorMessage("请输入正确的验证码号码！");
+        $("#ctl00_ContentPlaceHolder1_txtVerifyCode").focus();
+        return false;
+    }
+    
     $("#ctl00_ContentPlaceHolder1_btnNext").attr("enabled", true);
     return true;
 }

@@ -49,9 +49,6 @@
 				$(".handle").offset({top:tem_top});	
 				resetPlayPos();	
 				return false;			
-			});		
-
-		
-
+			});	
 		}
 })(jQuery);

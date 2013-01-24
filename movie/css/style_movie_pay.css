@@ -121,5 +121,19 @@ ul.eBankList  li{ float:left; width:170px; }
 .paytime{ font-size:30px;color:#F9A101 ;10px}
 .prefer_tab_item li{line-height:28px;}
 
+/* BBS List or Table */
+.list-b { width:100%;color:#666; }
+.list-b th { padding:4px;border-bottom:1px dashed #ccc;color:#fff;  background: none repeat  rgb(253, 175, 113);}
+.list-b td { padding:4px;border-bottom:1px dashed #ccc;vertical-align:top; }
+.list-b .author, .list-b .count, .list-b .date { width:6em;text-align:right;white-space:nowrap; }
+.list-b .count { width:4em; }
+.list-b .author ,.list-b .group{ text-align:center }
+.list-b .tit-reply, .list-b .tit-last { text-align:right; }
+.list-b  tbody tr:nth-child(odd) td,
+.list-b  tbody tr:nth-child(odd) th {background-color: #f9f9f9;}
+.list-b  tbody tr:hover td,
+.list-b  tbody tr:hover th {background-color: #f5f5f5;}
+.html-table-first {white-space: nowrap;}
 
+.list-b a{ color: #999}
 

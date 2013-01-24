@@ -8,7 +8,11 @@
     <link rel="stylesheet"  href="../../css/layout.css">
     <link  rel="stylesheet" href="../../css/global.css">
     <link  rel="stylesheet" href="../../css/activity_info.css">
-    
+     <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/jquery.XYTipsWindow.2.8.js">
+    </script>
+    <script type="text/javascript" src="../../js/login.js"></script>
+
 </head>
 <body>
 <div id="page" class="w950">
@@ -26,7 +30,7 @@
 <div class="layout grid-m0s5">
     <div class="col-main">
         <div class="main-wrap">
-            <div class="article-box">
+            <div class="article-box" style="float:none">
                 
               <div class="p10">
                   
@@ -42,7 +46,7 @@
                 </dd>
                 <dd id="fabiao" class="allbtn wd50">
                     <span style="float:right;margin:0">
-                        <a href="">我要发帖</a>
+                        <a  onclick="fabiao()">我要发帖</a>
                     </span>
                    
                 </dd>
@@ -157,6 +161,23 @@
 
 </div>
 
+
+<!--页面弹出框必须使用到的内容如下-->
+ <div id="div_errormsg" class="login_left fl" style=" width:350px; border:solid 3px #ffa823; background:#fff; padding:0 0 20px 0; text-align:left; display:none;">
+<h2 class="f16" align="left" style="background:#ffa823; line-height:30px; margin-bottom:10px;">&nbsp; 温馨提示</h2>
+<div style="width:340px; margin-left:30px;">
+<div class="fl" style="text-align:left; border:solid 1px #ffa823; width:320px; margin:6px 0 10px 0;">
+<p class="prompt_bj fl" style="margin-top:5px; margin-left:2px"></p> <p id="p_msg" style="width:260px; padding-left:15px; line-height:30px;" class="fl"></p>
+</div>
+</div>
+</div>
+<div id="div_loading" class="login_left fl" style=" width:350px; border:solid 3px #ffa823; background:#fff; padding:0 0 20px 0; text-align:left; display:none;">
+<div style="width:340px; margin-left:30px;">
+<div class="fl" style="text-align:left; border:solid 1px #ffa823; width:320px; margin:6px 0 10px 0;">
+<p class="prompt_bj fl" style="margin-top:5px; margin-left:2px"></p> <p id="p_loading" style="width:260px; padding-left:15px; line-height:30px;" class="fl"></p>
+</div>
+</div>
+</div> 
 </body>
 </html>
         

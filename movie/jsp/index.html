@@ -31,33 +31,78 @@ $(document).ready(function(){
 </head>
 <body>
 <div id="page"  class="mt20">
-    <div class="mian_bg">
+
     	<div class="w950 layout grid-m180 ">
          <div class="main-wrap ">
-
-
-      <div class="ui_menu">
-          <h2 style="height:101px"><img src="../images/index/index_03.png" width="180" height="101"></h2>
+      <div class="ui_menu mt5">
+          <h2 class="hdlogo"><img src="../images/index/newlogo.png" width="188" height="82" ></h2>
           <div id="sidebar">
-          <div class="sidelist">
-          <span>
-            <h3 >
-              <a href="#">
-               快速订票
-              </a>
-            </h3>
-            <s></s>
-          </span>
-          <div class="i-list">
-            <ul>
-              <li><a href="##">桶装</a></li><li><a href="##">儿童</a></li><li><a href="##">盒装</a></li><li><a href="##">咖啡味</a></li><li><a href="##">草莓味</a></li><li><a href="##">杏仁味</a></li><li><a href="##">原味</a></li><li><a href="##">原味</a></li><li><a href="##">鸡蛋</a></li>   
-            </ul>
-          </div> 
-
-               </div>
-           </div>
+            <div class="sidelist">
+              <span>
+                <h3  class="icon_a">
+                  <a href="#">
+                   快速订票
+                  </a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+       
+            <div class="sidelist">
+              <span>
+                <h3  class="icon_b">
+                  <a href="#">在线选座</a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+         
+        
+            <div class="sidelist">
+              <span>
+                <h3  class="icon_c">
+                  <a href="#">兑换劵购买 
+                  </a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+      
+        
+            <div class="sidelist">
+              <span>
+                <h3  class="icon_c">
+                  <a href="#">
+                   通劵购买 
+                  </a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+               <div class="sidelist">
+              <span>
+                <h3  class="icon_d">
+                  <a href="#">
+                   团购影票 
+                  </a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+               <div class="sidelist">
+              <span>
+                <h3  class="icon_e">
+                  <a href="#">
+                   会员优惠 
+                  </a>
+                </h3>
+                <s></s>
+            </span>
+            </div>
+         </div> 
   </div>
   </div>   
+  <!--  menu -->
                 	   <div class="col-sub "> 
                        
                        <div id="carousel">
@@ -141,87 +186,57 @@ $(document).ready(function() {
         
         </div>
        </div>
-  </div>
-       <!--  mod -->  
+  
+      <!--  mod -->  
   <div class="w950">
-<div class=" grid-m180 layout  mt10">
-       		
-       			 <div class="main-wrap ">
-                     <h2 class="hdh3 mb4">搜片/搜影院</h2>
-                     <div class="clearfix"></div>
+
+  <div class="search_br mt10"> 
+      <div class="p10 f " style="width:175px">
+        <h2 class="sea_icon">搜片/搜影院</h2>           
         <form method="post" accept-charset="UTF-8" action="/search">
             <input type="text" onBlur="if(document.getElementById('searchcont').innerHTML == '搜片/搜影院' && this.value == '')this.value='搜片/搜影院';" onFocus="if(this.value=='搜片/搜影院')this.value='';" value="搜片/搜影院" name="keyword" maxlength="38" autocomplete="off" class="inputsearh"  id="search_input">
      
              <input type="submit" value="去看看" class="aclose" id="search_btn">
             <input type="hidden" value="" name="">  
         </form>
-                 </div>
-                 <div class="col-sub ">
-     <img src="../images/index/index_16.png" width="760" height="59"></div>
-       </div>
-        <!--  mod -->     
-     
-             <!--  mod -->     
-<div class="hotlist">
+      </div>         
+      <div class="r">         
+      <img src="../images/index/stepindex.png" width="750" height="75"> 
+      </div>     
+  </div> 
+        <!--  mod -->  
+<div class="mt10">
   <div class="mod_hd">
-                    <span class="hdh3"><b class="mlr4 c_z">1F </b> <span>热门活动</span></span><span class="f12 c_fs">popular</span>
-                </div>
-               <div class="hotlist_box">
-               		<ul>
-                    <li>
-                        <a  class="picimg" href="#">
-                            <img src="../images/index/index_23.png" width="56" height="67">
-                        </a>
-                        <a href="#" class="hot_tit"> 
-                            <span class="c_z f18">马上选座</span>
-                            <span class="c_z  f14">点击进入</span>  
-                            <span class="c_fs">快捷/方便/快速</span>
-                         </a>
-                    </li>
-                            <li>
-                        <a  class="picimg" href="#">
-                            <img src="../images/index/index_17.png" width="74" height="73">
-                        </a>
-                        <a href="#" class="hot_tit"> 
-                            <span class="c_orange f18">移动全电影</span>
-                            <span class="c_orange  f14">点击进入</span>  
-                            <span class="c_fs">快捷/方便/快速</span>
-                         </a>
-                    </li>
-                            <li>
-                        <a  class="picimg" href="#">
-                            <img src="../images/index/index_26.png" width="58" height="57">
-                        </a>
-                        <a href="#" class="hot_tit"> 
-                            <span class="c_red f18">兑换券</span>
-                            <span class="c_red  f14">点击进入</span>  
-                            <span class="c_fs">快捷/方便/快速</span>
-                         </a>
-                    </li>
-                            <li>
-                        <a  class="picimg" href="#">
-                            <img src="../images/index/index_28.png" width="80" height="68">
-                        </a>
-                        <a href="#" class="hot_tit"> 
-                            <span class=" c_ss f18">购通劵</span>
-                            <span class="c_ss  f14">点击进入</span>  
-                            <span class="c_fs">快捷/方便/快速</span>
-                         </a>
-                    </li>
-                            <li>
-                        <a  class="picimg" href="#">
-                            <img src="../images/index/index_20.png" width="73" height="70">
-                        </a>
-                        <a href="#" class="hot_tit"> 
-                            <span class="c_ss2 f18">团购观影</span>
-                            <span class="c_ss2  f14">点击进入</span>  
-                            <span class="c_fs">快捷/方便/快速</span>
-                         </a>
-                    </li>
-                    </ul>
+        <span class="hdh3"><b class="mlr4 c_z">1F </b> <span>热门活动</span></span><span class="f12 c_fs">popular</span>
+   </div>
+               <div class="hotdl">  
+        <div class="item">  
+          <div class="pic">  
+              <a  href="" class="nbg"><img alt="" src="../images/temp/temr.png"></a>  
+            </div>  
+          
+            <div class="info">  
+                 
+                <ul>  
+                    <li class="f18 c_red">活动一：积分也能看电影 </li>
+                    <li><span class="l">时间：2013。1。2--2014。2。2</span>
+                        <span class="r"> 参加人数<em>322</em>人</span>
+                      </li>  
+                    <li>地点：电影俱乐部网站</li>  
+                   
+                </ul>  
+                <ul>  
+                    <li class="f18 c_red">活动二：积分也能看电影 </li>
+                    <li><span class="l">时间：2013。1。2--2014。2。2</span>
+                        <span class="r"> 参加人数<em>322</em>人</span>
+                      </li>  
+                    <li>地点：电影俱乐部网站</li>  
+                   
+                </ul>  
+            </div>  
+        </div>  
+              </div>
 </div>
-             </div>
-        <!--  mod -->    
         <div class="clearfix"></div>
             
         <div class="moive_list mt10">
@@ -395,12 +410,8 @@ $(document).ready(function() {
         
              <!-- 通栏：.grid-m  end -->  
     </div>
-
-  	</div>
-    <div id="footer" class="w950"><img src="../images/other/index_4.jpg" width="950" height="103">
-
-    </div>
 </div>
+
 
 </body>
 </html>
