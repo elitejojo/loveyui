@@ -1,0 +1,438 @@
+
+.coupon_top {
+	border: 1px solid #e1dbce;
+	border-top: none;
+	background: #fff;
+	border-radius: 5px;
+}
+.coupon_top img {
+	float: left;
+}
+.coupon_list {
+	float: right;
+}
+.coupon_top .arrow {
+	display: block;
+	margin: 20px 0;
+}
+.coupon_pro {
+	width: 200px;
+	height: 50px;
+	float: left;
+	margin: 20px 5px;
+}
+.coupon_pro h1,.coupon_pro p {
+	padding-left: 60px;
+	line-height: 25px;
+	color: #333;
+	font-weight: bold;
+}
+.coupon_pro p {
+	font-weight: normal;
+}
+.coupon_top .pro_1 {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/pc_icon.png) no-repeat 10px center;
+}
+.coupon_top .pro_cur1 h1,.coupon_top .pro_cur1 p {
+	color: #00633a;
+}
+.coupon_top .pro_2 {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/phone_icon.png) no-repeat 10px center;
+}
+.coupon_top .pro_3 {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/movie_icon.png) no-repeat 10px center;
+}
+.change_area {
+	margin: 10px auto;
+	background: #fff;
+	width:936px
+}
+.change_left {
+	width: 260px;
+	float: left;
+}
+.change_left img {
+	display: block;
+	padding:2px;
+	border:1px solid #9f9f9f
+}
+.change_right {
+	float: left;
+	width: 656px;
+	padding: 10px;
+	position: relative;
+}
+.change_right .show_title span {
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 5px;
+	line-height: 50px;
+}
+.change_right .ticket_items {
+	color: #ff9000;
+}
+.change_right .city,.change_right .items {
+	color: #fff;
+	font-size: 0;
+}
+.select_cinema_area {
+	font-size: 16px;
+	position: relative;
+}
+.pay_ui_citys {
+	position: absolute;
+	left: 288px;
+	margin-top: 170px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 12px;
+	z-index: 1200;
+	*width: 400px;
+}
+.select_cinema_area .select_citys {
+	display: inline-block;
+	height: 31px;
+	line-height: 31px;
+	padding: 0 10px;
+	font-size: 18px;
+	background: #ededed;
+	margin: 0 3px;
+	cursor: pointer;
+}
+.select_cinema_area .uncheck_tab {
+	clear: both;
+	display: inline-block;
+	height: 31px;
+	line-height: 31px;
+	padding: 0 10px;
+	font-size: 18px;
+	background: #EDEDED;
+	cursor: pointer;
+	border-top: 1px solid #ededed;
+	border-right: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+	margin: 0 10px;
+}
+.select_cinema_area .uncheck_tab a,.select_cinema_area .select_citys a {
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	background: url(../../images/common/select_icons.png) no-repeat 5px 0;
+	_margin-top: 8px;
+}
+.select_cinema_area .address {
+	font-size: 12px;
+	color: #666;
+	line-height: 24px;
+	margin-left: 55px;
+}
+.alert_box {
+	width: 574px;
+	height: auto;
+	background: #fff;
+	position: absolute;
+	left: 50px;
+	top: 31px;
+	padding: 20px 10px;
+	z-index: -1;
+	display: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.alert_box .alert_title {
+	height: auto;
+	line-height: 35px;
+	font-size: 14px;
+	border-bottom: 1px solid #fff;
+}
+.alert_title span {
+	font-weight: bold;
+}
+.alert_title a {
+	display: inline-block;
+	padding: 5px 10px;
+	height: 18px;
+	text-align: center;
+	line-height: 18px;
+	font-size: 12px;
+	color: #333;
+	cursor: pointer;
+}
+.alert_title a.cur {
+	background: #00633c;
+	color: #fff;
+}
+.alert_title a: hover {
+	background: #00633c;
+	color: #fff;
+}
+.alert_box .cinema_list {
+	padding: 10px;
+}
+.alert_box .cinema_list a {
+	display: inline-block;
+	width: 125px;
+	height: 24px;
+	padding: 2px 5px;
+	font-size: 14px;
+	color: #000;
+}
+.alert_box .cinema_list a: hover {
+	background: #00633c;
+	color: #fff;
+	cursor: pointer;
+}
+.close_btn {
+	display: block;
+	width: 20px;
+	height: 20px;background: url(../../images/common/close_btn.png) no-repeat 0 0;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+.select_ticket_item {
+	width: 650px;
+	height: 70px;
+	line-height: 36px;
+	margin: 10px auto 0; 
+	font-size: 16px;
+	cursor: pointer;
+}
+.select_ticket_item .sort_tag {
+	float: left;
+	width: 60px;
+	display: block;
+}
+.select_ticket_item p {
+	height: 32px;
+	width: 160px;
+	padding: 0 6px;
+	border: 2px solid #ccc;
+	display: inline-block;
+	line-height: 32px;
+	text-align: center;
+	*float: left;
+	*margin: 0 10px;
+	margin: 0 5px 5px;
+}
+.select_ticket_item p span {
+	display: inline-block;
+}
+.select_ticket_item p span.price {
+	color: #f60;
+	display: inline-block;
+	margin: 0 5px;
+}
+.select_ticket_item .cur_active {
+	border: 2px solid #ff5d14; background:url(../../images/common/gou.png)  no-repeat right bottom
+}
+.show_details {
+	width: 590px;
+	margin: 0px 0 10px 52px;
+	background: #ededed;
+	height: 200px;
+	padding: 10px;
+	height: auto;
+	position: relative;
+	z-index: 1;
+	*z-index: -1;
+}
+.show_cur {
+	width: 65px;
+	height: 10px;
+	background: url(../../images/common/arrow_gray.png) no-repeat 0 0;
+	position: absolute;
+	top: -10px;
+}
+.pos1 {
+	left: 50px;
+}
+.pos2 {
+	left: 230px;
+}
+.pos3 {
+	left: 410px;
+}
+.ticket_notes .ticket_sort {
+	float: left;
+	color: #333;
+}
+.ticket_notes .state_list {
+	padding: 0 10px 0 50px;
+	color: #333;
+}
+.state_list .pack_up {
+	display: inline-block;
+	padding: 0 20px;
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/select_icons.png) no-repeat right center;
+	color: #00633a;
+}
+.state_list .pack_up_toggle {
+	display: inline-block;
+	padding: 0 20px;
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/select_icons_up.png) no-repeat right center;
+	color: #00633a;
+}
+.slide_wrap {
+	display: none;
+	background: #ededed;
+}
+.galleryWrap {
+	width: 590px;
+	height: 110px;
+	margin: 10px auto;
+	position: relative;
+	background: #ededed;
+}
+.picWrap {
+	width: 480px;
+	height: 132px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.picWrap ul {
+	width: 30000px;
+}
+.picWrap li {
+	float: left;
+	position: relative;
+}
+.picWrap li img {
+	width: 90px;
+	height: 110px;
+	margin: 0 3px;
+}
+.picWrap li img.cur_img {
+	border: 1px solid #00633a;
+}
+.prev_btn,.next_btn {
+	display: block;
+	width: 20px;
+	height: 24px;
+	position: absolute;
+	top: 40px;
+}
+.prev_btn {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/prev_icon.png) no-repeat 0 0;
+	left: 10px;
+	cursor: pointer;
+}
+.un_prev_btn,.un_next_btn {
+	display: block;
+	width: 20px;
+	height: 24px;
+	position: absolute;
+	top: 40px;
+}
+.un_prev_btn {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/prev_icon_un.png) no-repeat 0 0;
+	left: 10px;
+}
+.un_next_btn {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/next_icon_un.png) no-repeat 0 0;
+	right: 10px;
+}
+.next_btn {
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/next_icon.png) no-repeat 0 0;
+	right: 10px;
+	cursor: pointer;
+}
+.movie_showtime {
+	width: 490px;
+	height: auto;
+	margin: 10px auto;
+	*margin-top: 20px;
+	background: #fff;
+	position: relative;
+}
+.add_bd {
+	border: 1px solid #999;
+}
+.add_bg {
+	width: 11px;
+	height: 6px;
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/s_arrow.png) no-repeat 0 0;
+	position: absolute;
+	left: 45px;
+	top: 115px;
+	z-index: 100;
+}
+.arrow_pos {
+	position: relative;
+}
+.movie_showtime span {
+	line-height: 35px;
+	margin: 0 10px;
+	float: left;
+}
+.movie_showtime p.showtime {
+	height: auto;
+	line-height: 24px;
+	padding: 0 5px;
+}
+.movie_showtime p.showtime span {
+	font-weight: bold;
+	color: #555;
+	padding-left: 5px;
+	margin: 0;
+	line-height: 24px;
+	text-align: center;
+}
+.movie_showtime p.showtime span b {
+	font-weight: normal;
+	color: #999;
+	padding-left: 5px;
+}
+.movie_showtime .movie_sort {
+	background: #00633a;
+	color: #fff;
+	height: 20px;
+	padding: 0 5px;
+	line-height: 20px;
+	margin: 2px 5px;
+}
+.show_details .alarm {
+	color: #666;
+}
+.ticket_num {
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	margin: 26px auto;
+}
+.ticket_num span {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	border: 2px solid #ccc;
+	text-align: center;
+	line-height: 30px;
+	color: #000;
+	margin: 0 7px;
+	cursor: pointer;
+}
+.ticket_num span.select_num {
+	border: 2px solid #00633a;
+	border: 2px solid #ff5d14; background:url(../../images/common/gou.png)  no-repeat right bottom
+}
+.change_right .buy_now {
+	width: 167px;
+	height: 32px;
+	background: url(http: //www.piaolala.com/default/css/green/img/pay_booking/btn_bg.png) no-repeat 0 0;
+	display: block;
+	line-height: 32px;
+	text-align: center;
+	color: #fff;
+	margin: 10px 0 10px 100px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.pay_block {
+	width: 960px;
+	background: #f2f2f2;
+	margin: 10px auto;
+	border: 1px solid #fff;
+	border-radius: 5px;
+}
