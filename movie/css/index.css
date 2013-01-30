@@ -41,7 +41,7 @@
 /* 通用导航 */
 .hdh3{ float:left;color:#666; font-size:16px;font-family:"微软雅黑"; font-weight:200;width:100px; padding-left:10px; }
 .hdh3 b{  font-size:18px}
-.mod_hd{ width:100%; border-bottom:2px solid #b8b8b8; line-height:30px; margin-bottom:10px}
+.mod_hd{ width:100%; border-bottom:2px solid #FD0000; line-height:30px; margin-bottom:10px}
 
 /* 热门活动 */
 
@@ -67,7 +67,7 @@
 .Nes_mod  li span a:hover{color:#FD0000}
 /*   电影列表 */
 .moive_menu  .hd2f{ float:left;padding-left:10px; width:30px; font-size: 18px;   font-family: "微软雅黑"; line-height:24px;   font-weight: 200;}
-.moive_menu{ width:100%; height:29px;border-bottom:2px solid #b8b8b8;; float:left; position:relative}
+.moive_menu{ width:100%; height:29px;border-bottom:2px solid #FD0000;; float:left; position:relative}
 .moive_menu ul li{ position:absolute;padding:0 10px; text-align:center; height:29px; line-height:29px; float:left; color: #666666;
     font-family: "微软雅黑";font-size: 16px;font-weight: 200; margin-left:40px; overflow:hidden; left:0; top:0; }
 .moive_menu ul .hover_redtab{ position:absolute;height: 29px; color:#da150d;line-height: 29px;  font-family: "微软雅黑"; cursor:pointer; font-size: 16px;font-weight: 200; padding:0 10px;text-align:center; height:29px; line-height:29px; float:left;  background:#fff;
