@@ -108,7 +108,7 @@ background-image: -moz-linear-gradient(top, #fca43a, #d54f12);
 background-image: -ms-linear-gradient(top, #fca43a, #d54f12);
 background-image: -o-linear-gradient(top, #fca43a, #d54f12);
 background-image: linear-gradient(top, #fca43a, #d54f12);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndColorStr='#d54f12'); text-decoration: none ;font-size: 14px; padding: 0 10px}
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fca43a', EndColorStr='#d54f12'); text-decoration: none}
 
 /*   热门活动  */
 .hotActivity{}
