@@ -1,1 +1,0 @@
-response.end((request.queryString["callback"] || '') + "(" + JSON.stringify({info: "中文"}) + ")");

@@ -1,1 +1,0 @@
-﻿jsonp({"fullName":'Dom.propFix',"source":'Base_1.js',"sourceFile":'data/source/Base_1.js.html#Dom-propFix',"summary":'<p>\u7279\u6b8a\u5c5e\u6027\u96c6\u5408\u3002</p>\n',"memberType":'property',"type":'Object',"memberAttribute":'static',"memberAccess":'private',"name":'propFix',"memberOf":'Dom'});

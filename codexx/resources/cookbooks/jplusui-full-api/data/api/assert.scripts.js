@@ -1,1 +1,0 @@
-﻿jsonp({"fullName":'assert.scripts',"source":'Base.js',"sourceFile":'data/source/Base.js.html#assert-scripts',"summary":'<p>\u5168\u90e8\u5df2\u8f7d\u5165\u7684\u7ec4\u4ef6\u5168\u540d\u3002</p>\n',"type":'Array',"memberAccess":'private',"name":'scripts',"memberOf":'assert',"memberType":'field'});
